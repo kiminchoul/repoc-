@@ -1,0 +1,66 @@
+
+***CSV UTF確認****
+
+//#1 Subscription作成
+c:\～>ConsoleApplication subscription
+INPUT
+    file\2subscriptHeader.csv
+    file\2subscriptInfo.csv
+    file\2accountDB.csv,2ratePlanDB.csv,2ratePlanChargeDB.csv
+OUTPUT
+    file\2resultSubscript.txt（ログファイル）→ ★Error、「SubscriptionNumber":"A-」でgrep
+
+//#2 Subscription登録情報CSV作成
+c:\～>ConsoleApplication subscriptionMakeCSV
+INPUT
+    file\4makeSubscriptCsv.csv（#1のログファイルよりSubscription Number取得）
+OUTPUT
+    file\4csvForUpdate.csv
+    file\4resultMakeSubscriptCsv.txt（ログファイル） -> ★Value：falseでgrepしてエラー検索
+
+//#3 OyaSubscriptionNo更新
+c:\～>ConsoleApplication oya
+INPUT
+    file\4csvForUpdate.csv
+    file\4csvForUpdateDB.csv
+OUTPUT
+    file\6oyaAndDate.txt（ログファイル） -> ★「:false」、「: False」grepしてエラー検索
+
+//#4 Subscription更新
+c:\～>ConsoleApplication subscriptionUpdate
+INPUT
+    file\3csvForUpdateEdited.csv（#2の4csvForUpdate.csvを編集）
+OUTPUT
+    file\3resultCsvForUpdate.txt（ログファイル） -> ★「:false」、「: False」grepしてエラー検索
+
+4makeSubscriptCsv.csv 
+   2resultSubscript.txtより
+   SubscriptionNumberをコピーする
+   
+4csvForUpdate.csv
+  更新用としてデータ修正後、
+  3csvForUpdateEdited.csvに改名する
+  *invoiceOwnerAccountIdをNULLにして
+  Haris顧客IDかZuoranIDを入れてもらう
+
+
+KMJ sandBox:
+URL　：https://apisandbox.zuora.com/apps
+ID　　：kimura-tomohiro@mki.co.jp.sd
+PASS：Mki12345
+https://rest.apisandbox.zuora.com/v1/accounts
+
+update.chargeUpdateDetails.triggerEvent' v
+alue should be one of: UCE, USA, UCA, USD\"\n  } ]\n}"
+
+<UCE>ContractEffective</option>
+<USA>ServiceActivation</option>
+<UCA>CustomerAcceptance</option>
+<USD>SpecificDate</option>
+
+public ZuoraService
+(string path, string username, string password)　
+{System.Net.ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+// 省略
+}
+ 

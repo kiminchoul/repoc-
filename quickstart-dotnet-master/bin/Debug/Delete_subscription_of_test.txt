@@ -1,0 +1,24 @@
+Åúto delete subscription of test
+
+post SELECT subscription ID
+https://rest.apisandbox.zuora.com/v1/action/query
+
+{
+  "queryString": "select id from subscription  where accountId = '2c92c0f95ba15a5d015bad2576324817'"
+}
+
+
+{"records":[{"Id":"2c92c0fa5ccf1a9f015cd3473ce1205b"},{"Id":"2c92c0fa5ccf1a9f015cd34777792072"},{"Id":"2c92c0fa5ccf1a9f015cd347b7b82089"},{"Id":"2c92c0fa5ccf1a9f015cd347ccd320a2"},{"Id":"2c92c0fa5ccf1a9f015cd347dab320b8"},{"Id":"2c92c0fa5ccf1a9f015cd347efff20ce"},{"Id":"2c92c0fa5ccf1a9f015cd347f72520e4"},{"Id":"2c92c0fa5ccf1a9f015cd348110220fc"},{"Id":"2c92c0fa5ccf1a9f015cd3481fb92112"},{"Id":"2c92c0fa5ccf1a9f015cd3482e9d212b"},{"Id":"2c92c0fa5ccf1a9f015cd34866592142"},{"Id":"2c92c0fa5ccf1a9f015cd348c99b2158"},{"Id":"2c92c0fa5ccf1a9f015cd348ed15216e"},{"Id":"2c92c0fa5ccf1a9f015cd34904d4219b"},{"Id":"2c92c0fa5ccf1a9f015cd3492e8821b2"},{"Id":"2c92c0fa5ccf1a9f015cd3496da021cc"},{"Id":"2c92c0fa5ccf1a9f015cd34976c821e2"},{"Id":"2c92c0fa5ccf1a9f015cd3497f8921f8"},{"Id":"2c92c0fa5ccf1a9f015cd34998c62210"},{"Id":"2c92c0fa5ccf1a9f015cd349dd342229"},{"Id":"2c92c0fa5ccf1a9f015cd34a15492240"},{"Id":"2c92c0fa5ccf1a9f015cd34a1dd02256"},{"Id":"2c92c0fa5ccf1a9f015cd34a26ae226c"},{"Id":"2c92c0fa5ccf1a9f015cd34a37aa2282"},{"Id":"2c92c0fa5ccf1a9f015cd34a3fe52298"},{"Id":"2c92c0fa5ccf1ae2015cd347279d2a6f"},{"Id":"2c92c0fa5ccf1ae2015cd34735282a85"},{"Id":"2c92c0fa5ccf1ae2015cd34744ea2a9b"},{"Id":"2c92c0fa5ccf1ae2015cd347689a2ab2"},{"Id":"2c92c0fa5ccf1ae2015cd3476fe22ac8"},{"Id":"2c92c0fa5ccf1ae2015cd3479ad72afa"},{"Id":"2c92c0fa5ccf1ae2015cd347a8b32b10"},{"Id":"2c92c0fa5ccf1ae2015cd347d3a52b26"},{"Id":"2c92c0fa5ccf1ae2015cd347e8ee2b3f"},{"Id":"2c92c0fa5ccf1ae2015cd34817cf2b55"},{"Id":"2c92c0fa5ccf1ae2015cd348364c2b6b"},{"Id":"2c92c0fa5ccf1ae2015cd34855252b81"},{"Id":"2c92c0fa5ccf1ae2015cd3485d682b97"},{"Id":"2c92c0fa5ccf1ae2015cd34886342bb0"},{"Id":"2c92c0fa5ccf1ae2015cd3489d962bc6"},{"Id":"2c92c0fa5ccf1ae2015cd348b0ec2bdd"},{"Id":"2c92c0fa5ccf1ae2015cd348b96c2bf3"},{"Id":"2c92c0fa5ccf1ae2015cd348e1a12c0c"},{"Id":"2c92c0fa5ccf1ae2015cd34924f62c65"},{"Id":"2c92c0fa5ccf1ae2015cd34940b42c7b"},{"Id":"2c92c0fa5ccf1ae2015cd3494a972c91"},{"Id":"2c92c0fa5ccf1ae2015cd3495c722ca7"},{"Id":"2c92c0fa5ccf1ae2015cd349bb0a2cc2"},{"Id":"2c92c0fa5ccf1ae2015cd349cc712cd9"},{"Id":"2c92c0fa5ccf1ae2015cd349f3a02cf1"},{"Id":"2c92c0fa5ccf1ae2015cd34a2f182d09"},{"Id":"2c92c0fb5ccf2618015cd3477e7c3f63"},{"Id":"2c92c0fb5ccf2618015cd347a1d33f79"},{"Id":"2c92c0fb5ccf2618015cd347afea3f8f"},{"Id":"2c92c0fb5ccf2618015cd347c5fd3fa6"},{"Id":"2c92c0fb5ccf2618015cd347e21b3fbc"},{"Id":"2c92c0fb5ccf2618015cd34808f93fd4"},{"Id":"2c92c0fb5ccf2618015cd3484d2b3feb"},{"Id":"2c92c0fb5ccf2618015cd3487e274003"},{"Id":"2c92c0fb5ccf2618015cd3488e084019"},{"Id":"2c92c0fb5ccf2618015cd348a58a4030"},{"Id":"2c92c0fb5ccf2618015cd348c1344046"},{"Id":"2c92c0fb5ccf2618015cd348d9f7405e"},{"Id":"2c92c0fb5ccf2618015cd348f4964074"},{"Id":"2c92c0fb5ccf2618015cd348fc3d409e"},{"Id":"2c92c0fb5ccf2618015cd3490f9040fd"},{"Id":"2c92c0fb5ccf2618015cd3491b074113"},{"Id":"2c92c0fb5ccf2618015cd34937654129"},{"Id":"2c92c0fb5ccf2618015cd34953dd413f"},{"Id":"2c92c0fb5ccf2618015cd349a10e4156"},{"Id":"2c92c0fb5ccf2618015cd349d4c6416d"},{"Id":"2c92c0fb5ccf2618015cd349e5f54183"},{"Id":"2c92c0fb5ccf2618015cd34a0ce8419f"},{"Id":"2c92c0fb5ccf261b015cd3474c1b376a"},{"Id":"2c92c0fb5ccf261b015cd34752c43780"},{"Id":"2c92c0fb5ccf261b015cd34759fd3796"},{"Id":"2c92c0fb5ccf261b015cd347610637ac"},{"Id":"2c92c0fb5ccf261b015cd3478bc337c3"},{"Id":"2c92c0fb5ccf261b015cd347936337da"},{"Id":"2c92c0fb5ccf261b015cd347bec537f0"},{"Id":"2c92c0fb5ccf261b015cd347fe07380c"},{"Id":"2c92c0fb5ccf261b015cd34827123825"},{"Id":"2c92c0fb5ccf261b015cd3483e28383f"},{"Id":"2c92c0fb5ccf261b015cd34845883855"},{"Id":"2c92c0fb5ccf261b015cd3486d8d386b"},{"Id":"2c92c0fb5ccf261b015cd34874d73881"},{"Id":"2c92c0fb5ccf261b015cd348961a38a7"},{"Id":"2c92c0fb5ccf261b015cd348d1c538bf"},{"Id":"2c92c0fb5ccf261b015cd34964aa395c"},{"Id":"2c92c0fb5ccf261b015cd34988cd3972"},{"Id":"2c92c0fb5ccf261b015cd34991363988"},{"Id":"2c92c0fb5ccf261b015cd349a9d9399e"},{"Id":"2c92c0fb5ccf261b015cd349b27339b4"},{"Id":"2c92c0fb5ccf261b015cd349c3ca39cb"},{"Id":"2c92c0fb5ccf261b015cd349fc1739e1"},{"Id":"2c92c0fb5ccf261b015cd34a047a39f7"},{"Id":"2c92c0fb5ccf261b015cd34a490d3a11"},{"Id":"2c92c0fb5ccf261b015cd34a519b3a27"},{"Id":"2c92c0fb5ccf261b015cd34a59c43a3d"},{"Id":"2c92c0fb5ccf261b015cd34a622b3a53"}],"size":100,"done":true}
+
+post DELETE subscription record
+Åö1âÒÇ…50åèÇ∏Ç¬deleteÇ∑ÇÈÅB
+https://rest.apisandbox.zuora.com/v1/action/delete
+
+{
+  "ids": [
+    
+  ],
+  "type": "subscription"
+}
+
+

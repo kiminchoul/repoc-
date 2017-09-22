@@ -1,0 +1,87 @@
+{
+  "subscribes": [
+    {
+      "Account": {
+        "AccountNumber": "AN_1476935174239",
+      },
+      "SubscriptionData": {
+        "RatePlanData": [
+          {
+            "RatePlan": {
+              "ProductRatePlanId": "2c93808457d787030157e0324735512b"
+            },
+            "RatePlanChargeData": [
+              {
+                "RatePlanCharge": {
+                  "ProductRatePlanChargeId": "2c93808457d787030157e03247c2512d"
+                }
+              }
+            ]
+          }
+        ],
+        "Subscription": {
+          "AutoRenew": false,
+          "ContractAcceptanceDate": "2016-10-20",
+          "ContractEffectiveDate": "2016-10-20",
+          "InitialTerm": 12,
+          "Name": "S_1476935174239",
+          "Notes": "this is notes",
+          "RenewalTerm": 12,
+          "ServiceActivationDate": "2016-10-20",
+          "TermStartDate": "2016-10-20",
+          "TermType": "TERMED"
+        }
+      }
+    }
+  ]
+
+
+
+{
+ "subscribes": [
+              {
+                "Account": {
+                            "Id": "2c92c0f85d59652c015d59c6256b5a0b"
+                },
+              "SubscribeOptions": {
+                            "GenerateInvoice": false,
+                            "ProcessPayments": false
+              },
+                "SubscriptionData": {
+                            "RatePlanData": [
+                              {
+                                          "RatePlan": {
+                                            "ProductRatePlanId": "2c92c0f85d5964dc015d59d35ccf1672"
+                                          },
+                                          "RatePlanChargeData": [
+                                                        {
+                                                           "RatePlanCharge": {
+                                                               "ProductRatePlanChargeId": "2c92c0f95d59763e015d59d4b99c651d"
+                                                                      }
+                                                        }
+                                          ]
+                              }
+                            ],
+                            "Subscription": {
+                              "AutoRenew": false,
+                              "InitialTerm": 12,
+                              "InitialTermPeriodType": "Month",
+                              "Notes": "REST API Pending Test yamasaki",
+                              "RenewalSetting": "RENEW_WITH_SPECIFIC_TERM",
+                              "RenewalTerm": 12,
+                              "RenewalTermPeriodType": "Month",
+                              "TermType": "TERMED",
+                              "ContractEffectiveDate": "2017-07-01"
+                            }
+                }
+              }
+  ]
+}
+
+"Account": {
+                            "Id": "2c92c0f85d59652c015d59c6256b5a0b"
+                },
+
+"AccountId": "2c92c0f85d59652c015d59c6256b5a0b",
+"InvoiceOwnerId": "2c92c0f85d59652c015d59c69f825b8d",
+}

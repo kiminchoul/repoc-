@@ -1,0 +1,437 @@
+﻿処理開始▶▶▶▶▶2017/08/10 10:23:21
+2017/08/10 10:23:21
+▼ 1件目
+true,2c92c0f95dc69849015dc9a1dd2a2974,2c92c0f95dc69849015dc99b4729096e,A00009820,ikoBill01,1000026169,A00009820,ikoBill01,A-S00009570,TERMED,false,2017-01-01,,,2017-01-01,2017-01-01,2018-01-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Pending Activation,JA01438838,,,,1438838,,0,,,1,,000500,0,0,2c92c0f95dc69849015dc9a1dd532978,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f85d5964da015d63c606b0513c,UX142F2 医療行政ニュース,UX142F2,false,0000,LGCY04,00000,0,0,2c92c0f95dc69849015dc9a1dd5e2979,2c92c0f95dc69849015dc9a1dd5e2979,2c92c0f85d5964da015d63c606bf513e,C-00006315,医療行政ニュース,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:21
+▼ 2件目
+true,2c92c0f85dc69071015dc9a1e572795e,2c92c0f95dc69849015dc99b4729096e,A00009820,ikoBill01,1000026169,A00009820,ikoBill01,A-S00009571,TERMED,false,2017-01-01,,,2017-01-01,2017-01-01,2018-01-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Pending Activation,JA01438838,,,,1438838,,0,,,1,,000500,0,0,2c92c0f85dc69071015dc9a1e5917962,2c92c0f95d4e8c14015d549437fd70f0,品目【課金】,SKU-00000008,2c92c0f85d5964da015d64a191732ea5,UX142F2 UNITEA胸部骨減弱処理（BS）,UX142F2,true,0000,UX14AAL,00000,0,0,2c92c0f85dc69071015dc9a1e59a7963,2c92c0f85dc69071015dc9a1e59a7963,2c92c0f85d5964da015d64a1917e2ea7,C-00006316,UNITEA胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY5000/License,NoChange,,JPY,5000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:21
+▼ 3件目
+true,2c92c0f95dc69849015dc9a1ed802989,2c92c0f95dc69849015dc99b4729096e,A00009820,ikoBill01,1000026169,A00009820,ikoBill01,A-S00009572,TERMED,false,2017-01-01,,,2017-01-01,2017-01-01,2018-01-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Pending Activation,JA01438838,,,,1438838,,0,,,1,,000500,0,0,2c92c0f95dc69849015dc9a1ed9c298d,2c92c0f95d4e8c14015d549437fd70f0,品目【課金】,SKU-00000008,2c92c0f85d59652c015d64b5c1cc5fde,UX142F2 UNITEA胸部骨経時差分処理（TS）,UX142F2,true,0000,UX14AAK,00000,0,0,2c92c0f95dc69849015dc9a1edb9298e,2c92c0f95dc69849015dc9a1edb9298e,2c92c0f85d59652c015d64b5c1d95fe0,C-00006317,UNITEA胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY4000/License,NoChange,,JPY,4000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:21
+▼ 4件目
+true,2c92c0f95dc69849015dc9a1f5c92994,2c92c0f95dc69849015dc99b4729096e,A00009820,ikoBill01,1000026169,A00009820,ikoBill01,A-S00009573,TERMED,false,2017-01-01,,,2017-01-01,2017-01-01,2018-01-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Pending Activation,JA01438838,,,,1438838,,0,,,1,,000500,0,0,2c92c0f95dc69849015dc9a1f5de2998,2c92c0f95d4e8c14015d549437fd70f0,品目【課金】,SKU-00000008,2c92c0f85d59652c015d64d1686103b7,UX142F2 EX胸部骨減弱処理（BS）,UX142F2,true,0000,UX14AAN,00000,0,0,2c92c0f95dc69849015dc9a1f5e82999,2c92c0f95dc69849015dc9a1f5e82999,2c92c0f85d59652c015d64d1686e03b9,C-00006318,EX胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY12000/License,NoChange,,JPY,12000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:21
+▼ 5件目
+true,2c92c0f95dc6984d015dc9a1fde70b1e,2c92c0f95dc69849015dc99b4729096e,A00009820,ikoBill01,1000026169,A00009820,ikoBill01,A-S00009574,TERMED,false,2017-01-01,,,2017-01-01,2017-01-01,2018-01-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Pending Activation,JA01438838,,,,1438838,,0,,,1,,000500,0,0,2c92c0f95dc6984d015dc9a1fdfd0b22,2c92c0f95d4e8c1c015d5573d9cf6e23,品目【連携】,SKU-00000013,2c92c0f95d59763b015d5deaecd00280,UX142F2 連携BOX　Lite,UX142F2,false,0000,A578,00000,0,0,2c92c0f95dc6984d015dc9a1fe060b23,2c92c0f95dc6984d015dc9a1fe060b23,2c92c0f95d59763b015d5deaecd90282,C-00006319,連携BOX　Lite,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:21
+▼ 6件目
+true,2c92c0f85dc6901a015dc9a205eb1d81,2c92c0f95dc69849015dc99b4729096e,A00009820,ikoBill01,1000026169,A00009820,ikoBill01,A-S00009575,TERMED,false,2017-01-01,,,2017-01-01,2017-01-01,2018-01-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Pending Activation,JA01438838,,,,1438838,,0,,,1,,000500,0,0,2c92c0f85dc6901a015dc9a206011d85,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f95d59763e015d5fd09ea85b56,UX142F2 ウェブサイト開設サポート,UX142F2,false,0000,LGCY03,00000,0,0,2c92c0f85dc6901a015dc9a2060b1d86,2c92c0f85dc6901a015dc9a2060b1d86,2c92c0f95d59763e015d5fd09eb25b5a,C-00006320,ウェブサイト開設サポート,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:21
+▼ 7件目
+true,2c92c0f85dc69071015dc9a20dee7997,2c92c0f95dc69849015dc99b4729096e,A00009820,ikoBill01,1000026169,A00009820,ikoBill01,A-S00009576,TERMED,false,2017-01-01,2017-01-01,2017-01-01,2017-01-01,2017-01-01,2018-01-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Active,JA01438838,,,,1438838,,0,,,1,,000500,0,0,2c92c0f85dc69071015dc9a20e12799b,2c92c0f95d4e8c14015d58a9b4037dfc,品目【セキュア】,SKU-00000018,2c92c0f95d59763e015d645326a15d60,UX142F2 ウイルス対策サービス,UX142F2,false,0000,UXA40T7,00000,0,0,2c92c0f85dc69071015dc9a20e1c799c,2c92c0f85dc69071015dc9a20e1c799c,2c92c0f95d59763e015d645326ac5d62,C-00006321,ウイルス対策サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-01-01,2018-01-01,,,false,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f85dc69018015dc9bd243c3812","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f85dc69018015dc9bd2423380e"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5dc69511015dc9bd26792e33
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:23
+▼ 8件目
+true,2c92c0f95dc6984b015dc9a216937cfd,2c92c0f95dc69849015dc99b4729096e,A00009820,ikoBill01,1000026169,A00009820,ikoBill01,A-S00009577,TERMED,false,2017-01-01,,,2017-01-01,2017-01-01,2018-01-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Pending Activation,JA01438838,,,,1438838,,0,,,1,,000500,0,0,2c92c0f95dc6984b015dc9a216aa7d03,2c92c0f95d4e8c14015d549437fd70f0,品目【課金】,SKU-00000008,2c92c0f95d59763e015d6482db803c5a,UX142F2 CR骨密度測定サービス,UX142F2,true,0000,UX14163,00000,0,0,2c92c0f95dc6984b015dc9a216b47d04,2c92c0f95dc6984b015dc9a216b47d04,2c92c0f95d59763e015d6482db8e3c5c,C-00006322,CR骨密度測定サービス,Usage,PerUnit,回,1,JPY780/回,NoChange,,JPY,780,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:23
+▼ 9件目
+true,2c92c0f95dc6984d015dc9a21e950b93,2c92c0f95dc69849015dc99b4729096e,A00009820,ikoBill01,1000026169,A00009820,ikoBill01,A-S00009578,TERMED,false,2017-01-01,2017-01-01,2017-01-01,2017-01-01,2017-01-01,2018-01-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Active,JA01438838,,,,1438838,,0,,,1,,000500,0,0,2c92c0f95dc6984d015dc9a21ead0b97,2c92c0f85d5964dc015d63c2beae47d1,ベース,SKU-00000027,2c92c0f95d59764d015d63c9d9f73d84,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),,false,0000,UX142F2,00000,0,0,2c92c0f95dc6984d015dc9a21eb70b98,2c92c0f95dc6984d015dc9a21eb70b98,2c92c0f95d59764d015d63c9da023d86,C-00006323,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Annual,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-01-01,2018-01-01,,,false,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f95dc69849015dc9bd28d77f37","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f95dc69849015dc9bd28bf7f33"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5dc6950d015dc9bd2a8a308a
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:24
+▼ 10件目
+true,2c92c0f85dc6901a015dc9a22de31de7,2c92c0f95dc69849015dc99b4729096e,A00009820,ikoBill01,1000026169,A00009820,ikoBill01,A-S00009579,TERMED,false,2017-01-01,,,2017-01-01,2017-01-01,2018-01-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Pending Activation,JA01438838,,,,1438838,,0,,,1,,000500,0,0,2c92c0f85dc6901a015dc9a22dfa1deb,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f95d59764d015d6417a9ad4aab,UX142F2 遠隔読影支援サービス,UX142F2,false,0000,READINGIMAGE,00000,0,0,2c92c0f85dc6901a015dc9a22e021dec,2c92c0f85dc6901a015dc9a22e021dec,2c92c0f95d59764d015d6417a9b94aad,C-00006324,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:24
+▼ 11件目
+true,2c92c0f85dc6901a015dc9a23dce1e0e,2c92c0f95dc69849015dc99b4729096e,A00009820,ikoBill01,1000026169,A00009820,ikoBill01,A-S00009580,TERMED,false,2017-01-01,2017-01-01,2017-01-01,2017-01-01,2017-01-01,2018-01-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Active,JA01438838,,,,1438838,,0,,,1,,000500,0,0,2c92c0f85dc6901a015dc9a23de51e19,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f95d59764d015d64337372255e,UX142F2 スマートアップデートサービス,UX142F2,false,0000,RVUP-UNITEA,00000,0,0,2c92c0f85dc6901a015dc9a23def1e1e,2c92c0f85dc6901a015dc9a23def1e1e,2c92c0f95d59764d015d643373852560,C-00006325,スマートアップデートサービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-01-01,2018-01-01,,,false,,ContractEffective,Subscription_End,,,,0,0,0,0,親に内包,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f85dc6901a015dc9bd2d216d39","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f85dc6901a015dc9bd2d096d35"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5dc69511015dc9bd2ed92e45
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:25
+▼ 12件目
+true,2c92c0f85dc69018015dc9a251be64f3,2c92c0f95dc69849015dc99b4729096e,A00009820,ikoBill01,1000026169,A00009820,ikoBill01,A-S00009581,TERMED,false,2017-01-01,,,2017-01-01,2017-01-01,2018-01-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Pending Activation,JA01438838,,,,1438838,,0,,,1,,000500,0,0,2c92c0f85dc69018015dc9a251d764f7,2c92c0f95d4e8c14015d549437fd70f0,品目【課金】,SKU-00000008,2c92c0f95d59764d015d64c6f7be27f4,UX142F2 EX胸部骨経時差分処理（TS）,UX142F2,true,0000,UX14AAM,00000,0,0,2c92c0f85dc69018015dc9a251e264f8,2c92c0f85dc69018015dc9a251e264f8,2c92c0f95d59764d015d64c6f7ca27f6,C-00006326,EX胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY10000/License,NoChange,,JPY,10000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:25
+▼ 13件目
+true,2c92c0f85dc69018015dc9a25be16504,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009582,TERMED,false,2017-03-29,2017-03-29,2017-03-29,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Active,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f85dc69018015dc9a25bfb6508,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f85d5964da015d643b22a72742,UX144H5 スマートアップデートサービス,UX144H5,false,0000,RVUP-UNITEA,00000,0,0,2c92c0f85dc69018015dc9a25c046509,2c92c0f85dc69018015dc9a25c046509,2c92c0f85d5964da015d643b22b22744,C-00006327,スマートアップデートサービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-03-29,2022-03-29,,,false,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f85dc69018015dc9bd310b381f","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f85dc69018015dc9bd30f4381b"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5dc69511015dc9bd32e52e56
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:26
+▼ 14件目
+true,2c92c0f95dc6984b015dc9a2688f7e94,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009583,TERMED,false,2017-03-29,,,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f95dc6984b015dc9a268a47e98,2c92c0f95d4e8c1c015d5573d9cf6e23,品目【連携】,SKU-00000013,2c92c0f85d5964dc015d5def6de1346d,UX144H5 連携BOX　Lite,UX144H5,false,0000,A578,00000,0,0,2c92c0f95dc6984b015dc9a268ac7e99,2c92c0f95dc6984b015dc9a268ac7e99,2c92c0f85d5964dc015d5def6dee346f,C-00006328,連携BOX　Lite,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:26
+▼ 15件目
+true,2c92c0f85dc6901a015dc9a271951f5c,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009584,TERMED,false,2017-03-29,,,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f85dc6901a015dc9a271ac1f60,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f85d5964dc015d641f4c85301c,UX144H5 遠隔読影支援サービス,UX144H5,false,0000,READINGIMAGE,00000,0,0,2c92c0f85dc6901a015dc9a271b61f61,2c92c0f85dc6901a015dc9a271b61f61,2c92c0f85d5964dc015d641f4c90301e,C-00006329,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:26
+▼ 16件目
+true,2c92c0f95dc6984d015dc9a27a960cd8,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009585,TERMED,false,2017-03-29,,,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f95dc6984d015dc9a27aae0cdc,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f85d59652c015d5fd2a3c334be,UX144H5 ウェブサイト開設サポート,UX144H5,false,0000,LGCY03,00000,0,0,2c92c0f95dc6984d015dc9a27ab80cdd,2c92c0f95dc6984d015dc9a27ab80cdd,2c92c0f85d59652c015d5fd2a3cf34c0,C-00006330,ウェブサイト開設サポート,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:26
+▼ 17件目
+true,2c92c0f85dc69018015dc9a283b865e1,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009586,TERMED,false,2017-03-29,2017-03-29,2017-03-29,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Active,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f85dc69018015dc9a283ce65e5,2c92c0f95d4e8c14015d58a9b4037dfc,品目【セキュア】,SKU-00000018,2c92c0f85d59652c015d646eb82e60b6,UX144H5 セキュアインターネット,UX144H5,false,0000,UXA40T8,00000,0,0,2c92c0f85dc69018015dc9a283d765e6,2c92c0f85dc69018015dc9a283d765e6,2c92c0f85d59652c015d646eb83d60b8,C-00006331,セキュアインターネット,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-03-29,2022-03-29,,,false,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f85dc69018015dc9bd35963835","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f85dc69018015dc9bd357f382c"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5dc68f0e015dc9bd37843ff8
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:27
+▼ 18件目
+true,2c92c0f95dc6984d015dc9a291980cf4,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009587,TERMED,false,2017-03-29,,,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f95dc6984d015dc9a291b00cf8,2c92c0f95d4e8c14015d549437fd70f0,品目【課金】,SKU-00000008,2c92c0f85d59652c015d64a2c18141db,UX144H5 UNITEA胸部骨減弱処理（BS）,UX144H5,true,0000,UX14AAL,00000,0,0,2c92c0f95dc6984d015dc9a291b90cf9,2c92c0f95dc6984d015dc9a291b90cf9,2c92c0f85d59652c015d64a2c18c41dd,C-00006332,UNITEA胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY5000/License,NoChange,,JPY,5000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:27
+▼ 19件目
+true,2c92c0f95dc6984d015dc9a29bdf0d14,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009588,TERMED,false,2017-03-29,,,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f95dc6984d015dc9a29bf50d18,2c92c0f95d4e8c14015d549437fd70f0,品目【課金】,SKU-00000008,2c92c0f85d59652c015d64b8ab1d61b4,UX144H5 UNITEA胸部骨経時差分処理（TS）,UX144H5,true,0000,UX14AAK,00000,0,0,2c92c0f95dc6984d015dc9a29bfd0d19,2c92c0f95dc6984d015dc9a29bfd0d19,2c92c0f85d59652c015d64b8ab2a61b6,C-00006333,UNITEA胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY4000/License,NoChange,,JPY,4000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:27
+▼ 20件目
+true,2c92c0f85dc6901a015dc9a2a48320d6,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009589,TERMED,false,2017-03-29,,,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f85dc6901a015dc9a2a49920dc,2c92c0f95d4e8c14015d549437fd70f0,品目【課金】,SKU-00000008,2c92c0f95d59763b015d6484f4fd4101,UX144H5 CR骨密度測定サービス,UX144H5,true,0000,UX14163,00000,0,0,2c92c0f85dc6901a015dc9a2a4a420de,2c92c0f85dc6901a015dc9a2a4a420de,2c92c0f95d59763b015d6484f5094103,C-00006334,CR骨密度測定サービス,Usage,PerUnit,回,1,JPY780/回,NoChange,,JPY,780,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:27
+▼ 21件目
+true,2c92c0f95dc6984d015dc9a2ad140d66,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009590,TERMED,false,2017-03-29,,,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f95dc6984d015dc9a2ad2d0d6a,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f95d59763e015d63c8cc15187b,UX144H5 医療行政ニュース,UX144H5,false,0000,LGCY04,00000,0,0,2c92c0f95dc6984d015dc9a2ad370d6b,2c92c0f95dc6984d015dc9a2ad370d6b,2c92c0f95d59763e015d63c8cc20187d,C-00006335,医療行政ニュース,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:27
+▼ 22件目
+true,2c92c0f95dc6984b015dc9a2b6147fb0,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009591,TERMED,false,2017-03-29,2017-03-29,2017-03-29,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Active,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f95dc6984b015dc9a2b62d7fb4,2c92c0f95d4e8c14015d58a9b4037dfc,品目【セキュア】,SKU-00000018,2c92c0f95d59763e015d645ddea403ca,UX144H5 ウイルス対策サービス,UX144H5,false,0000,UXA40T7,00000,0,0,2c92c0f95dc6984b015dc9a2b6397fb5,2c92c0f95dc6984b015dc9a2b6397fb5,2c92c0f95d59763e015d645ddeaf03cc,C-00006336,ウイルス対策サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-03-29,2022-03-29,,,false,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f85dc69071015dc9bd39cd4d88","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f85dc69071015dc9bd39b34d84"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5dc68ecf015dc9bd3b763410
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:28
+▼ 23件目
+true,2c92c0f85dc69018015dc9a2bf0d66c9,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009592,TERMED,false,2017-03-29,2017-03-29,2017-03-29,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Active,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f85dc69018015dc9a2bf2566ce,2c92c0f85d59652c015d64af57f0553f,品目【DBA】,SKU-00000045,2c92c0f95d59763e015d64dc75505fd1,UX144H5 DATABANK　UNITEA　Bプラン（月度超過課金）,UX144H5,true,0000,UX14053,00000,0,0,2c92c0f85dc69018015dc9a2bf2e66cf,2c92c0f85dc69018015dc9a2bf2e66cf,2c92c0f95d59763e015d64dc755f5fd3,C-00006337,DATABANK　UNITEA　Bプラン（月度超過課金）,Usage,Tiered,MB,1,0 to 1024 MB: JPY0 flat fee;  1025 to 2048 MB: JPY10/MB,NoChange,,JPY,,0,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,2017-03-29,2022-03-29,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,,0,0,1,0,1024,0,FlatFee,0,2,1025,2048,10,PerUnit,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f85dc69071015dc9bd3dcd4d95","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f85dc69071015dc9bd3db24d91"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5dc68f0e015dc9bd4008400d
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:29
+▼ 24件目
+true,2c92c0f95dc69849015dc9a2c7e22daa,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009593,TERMED,false,2017-03-29,2017-03-29,2017-03-29,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Active,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f95dc69849015dc9a2c7f72dae,2c92c0f85d4e95ae015d588897b80008,品目【保守】,SKU-00000016,2c92c0f95d59763e015d64e37c377097,UX144H5 部品保証　通常,UX144H5,false,0000,PARTS,00000,0,0,2c92c0f95dc69849015dc9a2c8032daf,2c92c0f95dc69849015dc9a2c8032daf,2c92c0f95d59763e015d64e37c427099,C-00006338,部品保証　通常,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-03-29,2022-03-29,,,false,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f85dc69071015dc9bd424e4da3","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f85dc69071015dc9bd42324d9f"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5dc6950d015dc9bd4406309e
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:30
+▼ 25件目
+true,2c92c0f95dc69849015dc9a2d1342de9,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009594,TERMED,false,2017-03-29,,,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f95dc69849015dc9a2d1592ded,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f95d59764d015d5fe11c29386a,UX144H5 プリントサービス,UX144H5,false,0000,PRINT01,00000,0,0,2c92c0f95dc69849015dc9a2d1652dee,2c92c0f95dc69849015dc9a2d1652dee,2c92c0f95d59764d015d5fe11c35386c,C-00006339,プリントサービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:30
+▼ 26件目
+true,2c92c0f95dc6984b015dc9a2da360005,2c92c0f95dc69849015dc99c0a070c56,A00009821,ikoBill02,1000026169,A00009823,ikoBill22,A-S00009595,TERMED,false,2017-03-29,2017-03-29,2017-03-29,2017-03-29,2017-03-29,2022-03-29,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Active,JA01514885,,,,1514885,,0,,,2,,000300,0,0,2c92c0f95dc6984b015dc9a2da52000b,2c92c0f95d59763b015d63ff8d673b9e,お任せ【CR更新用】,SKU-00000032,2c92c0f95d59764d015d64039c444bb7,infomity CR お任せ Bﾌﾟﾗﾝ更新用 (6年目以降) 定額料金,,false,0000,UX144H5,00000,0,0,2c92c0f95dc6984b015dc9a2da5d000f,2c92c0f95dc6984b015dc9a2da5d000f,2c92c0f95d59764d015d64039c4d4bb9,C-00006340,infomity CR お任せ Bﾌﾟﾗﾝ更新用 (6年目以降) 定額料金,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-03-29,2022-03-29,,,false,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f95dc69849015dc9bd465a7f48","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f95dc69849015dc9bd46447f44"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5dc6950d015dc9bd481330af
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:31
+▼ 27件目
+true,2c92c0f95dc6984b015dc9a6468f0a2b,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009596,TERMED,false,2016-08-01,,,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f95dc6984b015dc9a646a70a2f,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f85d5964da015d5fe348bf1bea,UX141F5 プリントサービス,UX141F5,false,0000,PRINT01,00000,0,0,2c92c0f95dc6984b015dc9a646b20a30,2c92c0f95dc6984b015dc9a646b20a30,2c92c0f85d5964da015d5fe348c91bec,C-00006341,プリントサービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:31
+▼ 28件目
+true,2c92c0f95dc6984d015dc9a64f2e1de4,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009597,TERMED,false,2016-08-01,,,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f95dc6984d015dc9a64f431de8,2c92c0f95d4e8c14015d549437fd70f0,品目【課金】,SKU-00000008,2c92c0f85d5964da015d64a31c9e31c8,UX141F5 UNITEA胸部骨減弱処理（BS）,UX141F5,true,0000,UX14AAL,00000,0,0,2c92c0f95dc6984d015dc9a64f4d1de9,2c92c0f95dc6984d015dc9a64f4d1de9,2c92c0f85d5964da015d64a31ca931ca,C-00006342,UNITEA胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY5000/License,NoChange,,JPY,5000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:31
+▼ 29件目
+true,2c92c0f95dc6984b015dc9a658860aa5,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009598,TERMED,false,2016-08-01,,,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f95dc6984b015dc9a6589d0aab,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f85d5964dc015d63d49a026203,UX141F5 医療行政ニュース,UX141F5,false,0000,LGCY04,00000,0,0,2c92c0f95dc6984b015dc9a658a70aac,2c92c0f95dc6984b015dc9a658a70aac,2c92c0f85d5964dc015d63d49a0d6205,C-00006343,医療行政ニュース,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:31
+▼ 30件目
+true,2c92c0f95dc6984d015dc9a661e31dfe,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009599,TERMED,false,2016-08-01,,,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f95dc6984d015dc9a661fc1e02,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f85d5964dc015d641e65f028ad,UX141F5 遠隔読影支援サービス,UX141F5,false,0000,READINGIMAGE,00000,0,0,2c92c0f95dc6984d015dc9a662061e03,2c92c0f95dc6984d015dc9a662061e03,2c92c0f85d5964dc015d641e660328af,C-00006344,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:31
+▼ 31件目
+true,2c92c0f85dc69071015dc9a66a180b49,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009600,TERMED,false,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Active,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f85dc69071015dc9a66a2d0b4d,2c92c0f85d4e95ae015d588897b80008,品目【保守】,SKU-00000016,2c92c0f85d59652c015d650352fc2b39,UX141F5 部品保証　通常」のコピー,UX141F5,false,0000,PARTS,00000,0,0,2c92c0f85dc69071015dc9a66a360b4e,2c92c0f85dc69071015dc9a66a360b4e,2c92c0f85d59652c015d650353072b3b,C-00006345,部品保証　通常,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2016-08-01,2021-08-01,,,false,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f85dc6901a015dc9bd4a726d6b","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f85dc6901a015dc9bd4a5b6d67"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5dc68f0e015dc9bd4c4b401f
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:32
+▼ 32件目
+true,2c92c0f85dc69071015dc9a671f70b69,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009601,TERMED,false,2016-08-01,,,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f85dc69071015dc9a6720e0b6d,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f95d59763b015d5fd4ee4974f3,UX141F5 ウェブサイト開設サポート,UX141F5,false,0000,LGCY03,00000,0,0,2c92c0f85dc69071015dc9a672180b6e,2c92c0f85dc69071015dc9a672180b6e,2c92c0f95d59763b015d5fd4ee5674f5,C-00006346,ウェブサイト開設サポート,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:32
+▼ 33件目
+true,2c92c0f85dc69071015dc9a67b1c0b88,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009602,TERMED,false,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Active,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f85dc69071015dc9a67b360b8c,2c92c0f95d4e8c14015d58a9b4037dfc,品目【セキュア】,SKU-00000018,2c92c0f95d59763b015d645d742a731a,UX141F5 ウイルス対策サービス,UX141F5,false,0000,UXA40T7,00000,0,0,2c92c0f85dc69071015dc9a67b400b8d,2c92c0f85dc69071015dc9a67b400b8d,2c92c0f95d59763b015d645d7435731c,C-00006347,ウイルス対策サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2016-08-01,2021-08-01,,,false,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f85dc69018015dc9bd4e993aa2","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f85dc69018015dc9bd4e823a9e"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5dc68ecf015dc9bd505b3422
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:33
+▼ 34件目
+true,2c92c0f85dc69018015dc9a683e87a87,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009603,TERMED,false,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Active,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f85dc69018015dc9a683fd7a8b,2c92c0f85d4e95ae015d588897b80008,品目【保守】,SKU-00000016,2c92c0f95d59763b015d64e313600511,UX141F5 部品保証　通常,UX141F5,false,0000,PARTS,00000,0,0,2c92c0f85dc69018015dc9a684067a8c,2c92c0f85dc69018015dc9a684067a8c,2c92c0f95d59763b015d64e3136a0513,C-00006348,部品保証　通常,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2016-08-01,2021-08-01,,,false,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f85dc69071015dc9bd52ac4db3","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f85dc69071015dc9bd528f4daf"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5dc69511015dc9bd54752e68
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:34
+▼ 35件目
+true,2c92c0f85dc69071015dc9a68c870c0d,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009604,TERMED,false,2016-08-01,,,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f85dc69071015dc9a68c9e0c11,2c92c0f95d4e8c1c015d5573d9cf6e23,品目【連携】,SKU-00000013,2c92c0f95d59763e015d5def151f3fe3,UX141F5 連携BOX　Lite,UX141F5,false,0000,A578,00000,0,0,2c92c0f85dc69071015dc9a68ca80c12,2c92c0f85dc69071015dc9a68ca80c12,2c92c0f95d59763e015d5def152a3fe6,C-00006349,連携BOX　Lite,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:34
+▼ 36件目
+true,2c92c0f85dc69018015dc9a694b77a9f,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009605,TERMED,false,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Active,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f85dc69018015dc9a694ce7aa3,2c92c0f85d5964da015d63f121123c2c,お任せ【CR】,SKU-00000031,2c92c0f95d59763e015d63f8df572b78,infomity CRお任せﾌﾟﾗﾝ(Sﾌﾟﾗﾝ)定額料金,,false,0000,UX141F5,00000,0,0,2c92c0f85dc69018015dc9a694d87aa4,2c92c0f85dc69018015dc9a694d87aa4,2c92c0f95d59763e015d63f8df612b7a,C-00006350,infomity CRお任せｵﾝｻｲﾄﾊﾟｯｸ(Sﾌﾟﾗﾝ)定額料金,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2016-08-01,2021-08-01,,,false,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f95dc6984b015dc9bd56c65065","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f95dc6984b015dc9bd56ab5061"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5dc6950d015dc9bd588130c1
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:35
+▼ 37件目
+true,2c92c0f85dc69071015dc9a69d840c4f,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009606,TERMED,false,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Active,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f85dc69071015dc9a69d990c53,2c92c0f95d4e8c14015d58a9b4037dfc,品目【セキュア】,SKU-00000018,2c92c0f95d59763e015d646e519a1ef9,UX141F5 セキュアインターネット,UX141F5,false,0000,UXA40T8,00000,0,0,2c92c0f85dc69071015dc9a69da20c54,2c92c0f85dc69071015dc9a69da20c54,2c92c0f95d59763e015d646e51a71efb,C-00006351,セキュアインターネット,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2016-08-01,2021-08-01,,,false,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f95dc6984b015dc9bd5ac05089","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f95dc6984b015dc9bd5aa55080"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5dc6950d015dc9bd5c6130d2
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:36
+▼ 38件目
+true,2c92c0f85dc69018015dc9a6a6987ad5,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009607,TERMED,false,2016-08-01,,,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f85dc69018015dc9a6a6ae7ad9,2c92c0f95d4e8c14015d549437fd70f0,品目【課金】,SKU-00000008,2c92c0f95d59763e015d64b823751462,UX141F5 UNITEA胸部骨経時差分処理（TS）,UX141F5,true,0000,UX14AAK,00000,0,0,2c92c0f85dc69018015dc9a6a6b87ada,2c92c0f85dc69018015dc9a6a6b87ada,2c92c0f95d59763e015d64b823811464,C-00006352,UNITEA胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY4000/License,NoChange,,JPY,4000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,
+Statusが「Active」ではないため更新処理できません。
+2017/08/10 10:23:36
+▼ 39件目
+true,2c92c0f85dc69018015dc9a6af8e7b04,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009608,TERMED,false,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Active,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f85dc69018015dc9a6afa47b08,2c92c0f85d59652c015d64af57f0553f,品目【DBA】,SKU-00000045,2c92c0f95d59763e015d64e903f704bd,UX141F5 DATABANK　UNITEA　Cプラン,UX141F5,true,0000,UX14053,00000,0,0,2c92c0f85dc69018015dc9a6afad7b09,2c92c0f85dc69018015dc9a6afad7b09,2c92c0f95d59763e015d64e9040304bf,C-00006353,DATABANK　UNITEA　Cプラン,Usage,Tiered,MB,1,0 MB or more: JPY0 flat fee,NoChange,,JPY,,0,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,2016-08-01,2021-08-01,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,,0,0,1,0,,0,FlatFee,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f95dc69849015dc9bd5e9a7f57","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f95dc69849015dc9bd5e817f53"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5dc6950d015dc9bd606630e4
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:37
+▼ 40件目
+true,2c92c0f85dc6901a015dc9a6b8bc3366,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009609,TERMED,false,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Active,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f85dc6901a015dc9a6b8d6336a,2c92c0f95d4e8c14015d588b69494e75,品目【共通】,SKU-00000017,2c92c0f95d59764d015d643a1df45afa,UX141F5 スマートアップデートサービス,UX141F5,false,0000,RVUP-UNITEA,00000,0,0,2c92c0f85dc6901a015dc9a6b8e0336c,2c92c0f85dc6901a015dc9a6b8e0336c,2c92c0f95d59764d015d643a1e005afc,C-00006354,スマートアップデートサービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2016-08-01,2021-08-01,,,false,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,
+resultUpdateInvoiceID {"results":[{"SubscriptionId":"2c92c0f95dc6984d015dc9bd62ab57ae","TotalDeltaTcv":0,"AmendmentIds":["2c92c0f95dc6984d015dc9bd629257aa"],"TotalDeltaMrr":0,"Success":true}]}
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5dc68ecf015dc9bd648c3433
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/10 10:23:38
+▼ 41件目
+true,2c92c0f85dc69018015dc9a6c7c07b56,2c92c0f85dc69018015dc99c9f5e47f5,A00009822,ikoBill03,1000026169,A00009824,ikoBill33,A-S00009610,TERMED,false,2016-08-01,,,2016-08-01,2016-08-01,2021-08-01,60,Month,60,Month,false,RENEW_WITH_SPECIFIC_TERM,60,Month,0,0,,Pending Activation,JA01342549,,,,1342549,,0,,,2,,002100,0,0,2c92c0f85dc69018015dc9a6c7dc7b5a,2c92c0f95d4e8c14015d549437fd70f0,品目【課金】,SKU-00000008,2c92c0f95d59764d015d6487b1cf41f8,UX141F5 CR骨密度測定サービス,UX141F5,true,0000,UX14163,00000,0,0,2c92c0f85dc69018015dc9a6c7e77b5b,2c92c0f85dc69018015dc9a6c7e77b5b,2c92c0f95d59764d015d6487b1db41fa,C-00006355,CR骨密度測定サービス,Usage,PerUnit,回,1,JPY780/回,NoChange,,JPY,780,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,false,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,
+Statusが「Active」ではないため更新処理できません。

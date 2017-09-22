@@ -1,0 +1,130 @@
+*2017/08/01
+SubscriptionEndDate
+2018-02-02
+TermEndDate
+Name
+A-S00009086
+subscription
+rest
+[{"Errors":[{"Code":"INVALID_VALUE","Message":"Field not updateable: SubscriptionEndDate"}],"Success":false}]
+soap
+ <ns1:Message>Field not updateable: SubscriptionEndDate</ns1:Message>
+
+ContractEffectiveDate
+ServiceActivationDate
+ContractAcceptanceDate
+
+Name A-S00009089 Id 2c92c0f85d7d5425015d9650f4ba122e --active
+Name A-S00009088 Id 2c92c0f95d7d612e015d9650ec894276 --pending
+InitialTerm  "Can not update the initialTerm if the subscription status is not draft."
+CurrentTerm  "Field not updateable: CurrentTerm"
+oyaHin003
+
+*2017/08/02
+
+KMIBS-25 移行ツール改修
+１．S販単価：０
+２．明細CSVの数量が２以上はDBAなので子品目の数量に設定する。
+　（KM様にratePlanChargeを「単位当たり課金」に変更してもらう）
+３．サブスクリプションのステータスの更新
+　（action/update）
+4.請求先変更
+
+oyaHin004
+HARISIKO22
+ikoTest1  2c92c0f85d59652c015d59c6256b5a0b HARISIKO11
+ikoTest2  2c92c0f85d59652c015d59c69f825b8d HARISIKO22
+active  A-S00009093  2c92c0f95d7d614d015da0b401882761 -> 2c92c0f95d7d612e015da13e18607881
+pending A-S00009096  2c92c0f85d7d53d3015da141def218c9
+
+*****Amend
+oost 
+https://rest.apisandbox.zuora.com/v1/action/amend
+
+
+{
+  "requests": [
+    {
+      "AmendOptions": {
+        "GenerateInvoice": false,
+        "InvoiceProcessingOptions": {},
+        "ProcessPayments": false
+      },
+
+      "Amendments": [
+        {        
+          "ContractEffectiveDate": "2017-07-01",
+          "DestinationInvoiceOwnerId": "2c92c0f85d59652c015d59c69f825b8d",
+          "Name": "AM7j4i2rsxb9",
+          "SubscriptionId": "2c92c0f95d7d614d015da0b401882761",          
+          "Type": "OwnerTransfer"
+        }
+      ]
+    }
+  ]
+}
+
+*****action update from pending to active
+https://rest.apisandbox.zuora.com/v1/action/update
+post 
+ServiceActivationDate
+ContractAcceptanceDate
+{
+  "objects": [
+    {
+      "Id": "2c93808457d787030157e0321fdf4fab",
+      "ServiceActivationDate": "2017-01-01",
+      "ContractAcceptanceDate": "2017-01-01"
+    }
+  ],
+  "type": "Subscription"
+}
+
+真浦クリニック,1000026169
+
+
+8/15
+ikoTestEndDate
+draft : A-S00009715  2c92c0f85dc69071015de49f24f53b33
+soap : <ns1:Message>Field not updateable: TermEndDate</ns1:Message>
+<obj:Id>2c92c0f85dc69071015de49f24f53b33</obj:Id>
+<obj:TermEndDate>2017-09-01</obj:TermEndDate>
+<obj:ContractEffectiveDate>2017-01-01</obj:ContractEffectiveDate>
+<obj:ServiceActivationDate>2017-01-01</obj:ServiceActivationDate>
+<obj:ContractAcceptanceDate>2017-01-01</obj:ContractAcceptanceDate>
+<obj:Notes>2017-09-01</obj:Notes>
+rest:
+post  https://rest.apisandbox.zuora.com/v1/action/update   "Field not updateable: TermEndDate"
+{
+  "objects": [
+    {
+      "Id": "2c92c0f85dc69071015de49f24f53b33",
+      "ContractEffectiveDate": "2017-01-01",      "ServiceActivationDate": "2017-01-01",
+      "ContractAcceptanceDate": "2017-01-01",      "TermEndDate": "2017-09-01"
+    }
+  ],
+  "type": "Subscription"
+}
+・Update subscription
+put /v1/subscriptions/{subscription-key}  "無効なパラメータ： 「TermEndDate」"
+{
+"update": [
+{
+  "contractEffectiveDate": "2017-01-01",
+  "serviceActivationDate": "2017-01-01",
+  "customerAcceptanceDate": "2017-01-01",
+  "TermEndDate": "2017-09-02"
+  }
+  ]
+}
+・CRUD: Update Subscription
+PUT /v1/object/subscription/{2c92c0f85dc69071015de49f24f53b33}  "Field not updateable: TermEndDate"
+{
+  "Id": "2c92c0f85dc69071015de49f24f53b33",
+  "Name": "A-S00009715",
+  "Notes": "this is notes_new", 
+  "contractEffectiveDate": "2017-01-01",
+  "serviceActivationDate": "2017-01-01",
+  "customerAcceptanceDate": "2017-01-01",
+  "TermEndDate": "2017-09-02"
+}

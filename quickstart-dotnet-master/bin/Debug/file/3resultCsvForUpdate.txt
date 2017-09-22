@@ -1,0 +1,1392 @@
+﻿処理開始▶▶▶▶▶2017/08/31 9:50:41
+2017/08/31 9:50:41
+▼ 1件目
+true,2c92c0f85e1d50d8015e3256f7883864,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011521,TERMED,false,2017-09-01,2017-09-01,2017-09-01,2017-09-01,2017-09-01,2018-09-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Active,,,,,,,,,,,,0,,0,,,,,,,0,0,2c92c0f85e1d50d8015e3256f7a6386a,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d5964dc015d59d35ccf1672,ikoTestDataPlan,,,,,,,0,0,2c92c0f85e1d50d8015e3256f7b8386d,2c92c0f85e1d50d8015e3256f7b8386d,2c92c0f95d59763e015d59d4b99c651d,C-00008149,ikoTestDataCharge,Usage,Tiered,GB,1,1 to 100 GB: JPY1000 flat fee;  101 to 200 GB: JPY2000/GB,NoChange,,JPY,,0,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,2017-09-01,2018-09-01,,,false,,ContractEffective,Subscription_End,,,,,,,,,0,0,0,0,1,1,100,1000,FlatFee,0,2,101,200,2000,PerUnit,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 
+  Success: False
+  TaxAmount: 
+  TotalDeltaMrr: 
+  TotalDeltaTcv: 
+}
+
+処理開始▶▶▶▶▶2017/08/31 10:04:46
+2017/08/31 10:04:46
+▼ 1件目
+true,2c92c0f85e1d50d8015e3256f7883864,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011521,TERMED,false,2017-09-01,2017-09-01,2017-09-01,2017-09-01,2017-09-01,2018-09-01,12,Month,12,Month,true,RENEW_WITH_SPECIFIC_TERM,12,Month,0,0,,Active,,,,,,,,,,,,0,,0,,,,,,,0,0,2c92c0f85e1d50d8015e3256f7a6386a,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d5964dc015d59d35ccf1672,ikoTestDataPlan,,,,,,,0,0,2c92c0f85e1d50d8015e3256f7b8386d,2c92c0f85e1d50d8015e3256f7b8386d,2c92c0f95d59763e015d59d4b99c651d,C-00008149,ikoTestDataCharge,Usage,Tiered,GB,1,1 to 100 GB: JPY1000 flat fee;  101 to 200 GB: JPY2000/GB,NoChange,,JPY,,0,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,2017-09-01,2018-09-01,,,false,,ContractEffective,Subscription_End,,,,,,,,,0,0,0,0,1,1,100,1000,FlatFee,0,2,101,200,2000,PerUnit,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e35d1adbd7a02
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+処理開始▶▶▶▶▶2017/08/31 11:15:37
+2017/08/31 11:15:37
+▼ 1件目
+true,2c92c0f95e1d5c9c015e360a51292446,A00000020,ikoTest1,A00000020,ikoTest1,A-S00011537,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-08-15,2017-08-15,2018-08-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,8888,110670,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5c9c015e360a513f244a,2c92c0f85d5964dc015d59ca573e7784,ikoTestOya,SKU-00000024,2c92c0f85d5964dc015d59cb0ccf78f3,ikoTestRateOya,,true,0000,oyaHin001,false,00000,0,0,2c92c0f95e1d5c9c015e360a514a244b,2c92c0f95e1d5c9c015e360a514a244b,2c92c0f95d59764d015d59cc36fa4841,C-00008175,ikoTestChargeOya,Recurring,FlatFee,,1,JPY8888,NoChange,,JPY,8888,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-08-15,,,false,,ContractEffective,Subscription_End,,,,8888,8888,110669.935481864,110669.935481864,,0,0,0,0,
+pendingToActive : class ProxyActionupdateResponse {
+  Result: 
+}
+
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime ではありませんでした。
+2017/08/31 11:15:44
+▼ 2件目
+true,2c92c0f85e2d19af015e360a71f23295,A00000020,ikoTest1,A00000020,ikoTest1,A-S00011538,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-08-15,2017-08-15,2018-08-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f85e2d19af015e360a7209329a,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d5964dc015d59d35ccf1672,ikoTestDataPlan,oyaHin001,true,0000,koData001,false,00000,0,0,2c92c0f85e2d19af015e360a7228329b,2c92c0f85e2d19af015e360a7228329b,2c92c0f95d59763e015d59d4b99c651d,C-00008176,ikoTestDataCharge,Usage,Tiered,GB,1,1 to 100 GB: JPY1000 flat fee;  101 to 200 GB: JPY2000/GB,NoChange,,JPY,,0,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,2017-08-01,2018-08-15,,,false,,ContractEffective,Subscription_End,,,,,,,,,0,0,0,0,1,1,100,1000,FlatFee,0,2,101,200,2000,PerUnit,0,
+pendingToActive : class ProxyActionupdateResponse {
+  Result: 
+}
+
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime ではありませんでした。
+2017/08/31 11:15:47
+▼ 3件目
+true,2c92c0f95e1d5c9f015e360a869b0a41,A00000020,ikoTest1,A00000020,ikoTest1,A-S00011539,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-08-15,2017-08-15,2018-08-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5c9f015e360a86b20a45,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d7d53d3015d87ad7cdb3a2f,課金モデル修正検証,oyaHin001,false,0000,kakinChangeTest,false,00000,0,0,2c92c0f95e1d5c9f015e360a86bc0a46,2c92c0f95e1d5c9f015e360a86bc0a46,2c92c0f85d7d53d3015d87ae37dd3ee2,C-00008177,課金モデル修正検証プラン,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-08-15,,,false,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,
+pendingToActive : class ProxyActionupdateResponse {
+  Result: 
+}
+
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime ではありませんでした。
+2017/08/31 11:15:49
+▼ 4件目
+true,2c92c0f95e1d5ca3015e360a96215a51,A00000020,ikoTest1,A00000020,ikoTest1,A-S00011540,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-08-15,2017-08-15,2018-08-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,2000,24903,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5ca3015e360a96385a55,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59763e015d59d180e55636,ikoTestVirusPlan,oyaHin001,true,0000,koVirus001,false,00000,0,0,2c92c0f95e1d5ca3015e360a96425a56,2c92c0f95e1d5ca3015e360a96425a56,2c92c0f85d5964dc015d59d244b31306,C-00008178,ikoTestVirusCharge,Recurring,FlatFee,,1,JPY2000,NoChange,,JPY,2000,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-08-15,,,false,,ContractEffective,Subscription_End,,,,2000,2000,24903.225806,24903.225806,,0,0,0,0,
+pendingToActive : class ProxyActionupdateResponse {
+  Result: 
+}
+
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime ではありませんでした。
+2017/08/31 11:15:50
+▼ 5件目
+true,2c92c0f95e1d5ca3015e360aa2ac5a5d,A00000020,ikoTest1,A00000020,ikoTest1,A-S00011541,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-08-15,2017-08-15,2018-08-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,1000,12452,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5ca3015e360aa2c15a61,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59764d015d59cf775c52c3,ikoTestKoPlanMsg,oyaHin001,true,0000,koMsg001,true,00000,0,0,2c92c0f95e1d5ca3015e360aa2ca5a62,2c92c0f95e1d5ca3015e360aa2ca5a62,2c92c0f95d59763b015d59d04f2d4afc,C-00008179,koMsgCharge,Recurring,FlatFee,,1,JPY1000,NoChange,,JPY,1000,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-08-15,,,false,,ContractEffective,Subscription_End,,,,1000,1000,12451.612903,12451.612903,,0,0,0,0,
+pendingToActive : class ProxyActionupdateResponse {
+  Result: 
+}
+
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime ではありませんでした。
+処理開始▶▶▶▶▶2017/08/31 11:17:24
+2017/08/31 11:17:24
+▼ 1件目
+true,2c92c0f95e1d5c9c015e360a51292446,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011537,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-08-15,2017-08-15,2018-08-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,8888,110670,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5c9c015e360a513f244a,2c92c0f85d5964dc015d59ca573e7784,ikoTestOya,SKU-00000024,2c92c0f85d5964dc015d59cb0ccf78f3,ikoTestRateOya,,true,0000,oyaHin001,false,00000,0,0,2c92c0f95e1d5c9c015e360a514a244b,2c92c0f95e1d5c9c015e360a514a244b,2c92c0f95d59764d015d59cc36fa4841,C-00008175,ikoTestChargeOya,Recurring,FlatFee,,1,JPY8888,NoChange,,JPY,8888,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-08-15,,,false,,ContractEffective,Subscription_End,,,,8888,8888,110669.935481864,110669.935481864,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 
+  Success: False
+  TaxAmount: 
+  TotalDeltaMrr: 
+  TotalDeltaTcv: 
+}
+
+2017/08/31 11:17:29
+▼ 2件目
+true,2c92c0f85e2d19af015e360a71f23295,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011538,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-08-15,2017-08-15,2018-08-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f85e2d19af015e360a7209329a,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d5964dc015d59d35ccf1672,ikoTestDataPlan,oyaHin001,true,0000,koData001,false,00000,0,0,2c92c0f85e2d19af015e360a7228329b,2c92c0f85e2d19af015e360a7228329b,2c92c0f95d59763e015d59d4b99c651d,C-00008176,ikoTestDataCharge,Usage,Tiered,GB,1,1 to 100 GB: JPY1000 flat fee;  101 to 200 GB: JPY2000/GB,NoChange,,JPY,,0,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,2017-08-01,2018-08-15,,,false,,ContractEffective,Subscription_End,,,,,,,,,0,0,0,0,1,1,100,1000,FlatFee,0,2,101,200,2000,PerUnit,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 
+  Success: False
+  TaxAmount: 
+  TotalDeltaMrr: 
+  TotalDeltaTcv: 
+}
+
+2017/08/31 11:17:30
+▼ 3件目
+true,2c92c0f95e1d5c9f015e360a869b0a41,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011539,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-08-15,2017-08-15,2018-08-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5c9f015e360a86b20a45,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d7d53d3015d87ad7cdb3a2f,課金モデル修正検証,oyaHin001,false,0000,kakinChangeTest,false,00000,0,0,2c92c0f95e1d5c9f015e360a86bc0a46,2c92c0f95e1d5c9f015e360a86bc0a46,2c92c0f85d7d53d3015d87ae37dd3ee2,C-00008177,課金モデル修正検証プラン,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-08-15,,,false,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 
+  Success: False
+  TaxAmount: 
+  TotalDeltaMrr: 
+  TotalDeltaTcv: 
+}
+
+2017/08/31 11:17:30
+▼ 4件目
+true,2c92c0f95e1d5ca3015e360a96215a51,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011540,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-08-15,2017-08-15,2018-08-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,2000,24903,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5ca3015e360a96385a55,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59763e015d59d180e55636,ikoTestVirusPlan,oyaHin001,true,0000,koVirus001,false,00000,0,0,2c92c0f95e1d5ca3015e360a96425a56,2c92c0f95e1d5ca3015e360a96425a56,2c92c0f85d5964dc015d59d244b31306,C-00008178,ikoTestVirusCharge,Recurring,FlatFee,,1,JPY2000,NoChange,,JPY,2000,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-08-15,,,false,,ContractEffective,Subscription_End,,,,2000,2000,24903.225806,24903.225806,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 
+  Success: False
+  TaxAmount: 
+  TotalDeltaMrr: 
+  TotalDeltaTcv: 
+}
+
+2017/08/31 11:17:31
+▼ 5件目
+true,2c92c0f95e1d5ca3015e360aa2ac5a5d,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011541,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-08-15,2017-08-15,2018-08-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,1000,12452,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5ca3015e360aa2c15a61,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59764d015d59cf775c52c3,ikoTestKoPlanMsg,oyaHin001,true,0000,koMsg001,true,00000,0,0,2c92c0f95e1d5ca3015e360aa2ca5a62,2c92c0f95e1d5ca3015e360aa2ca5a62,2c92c0f95d59763b015d59d04f2d4afc,C-00008179,koMsgCharge,Recurring,FlatFee,,1,JPY1000,NoChange,,JPY,1000,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-08-15,,,false,,ContractEffective,Subscription_End,,,,1000,1000,12451.612903,12451.612903,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 
+  Success: False
+  TaxAmount: 
+  TotalDeltaMrr: 
+  TotalDeltaTcv: 
+}
+
+処理開始▶▶▶▶▶2017/08/31 13:23:02
+2017/08/31 13:23:02
+▼ 1件目
+true,2c92c0f95e1d5ca3015e367b21e65fa2,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011542,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,8888,101782,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5ca3015e367b21fb5fa6,2c92c0f85d5964dc015d59ca573e7784,ikoTestOya,SKU-00000024,2c92c0f85d5964dc015d59cb0ccf78f3,ikoTestRateOya,,true,0000,oyaHin001,false,00000,0,0,2c92c0f95e1d5ca3015e367b22045fa7,2c92c0f95e1d5ca3015e367b22045fa7,2c92c0f95d59764d015d59cc36fa4841,C-00008180,ikoTestChargeOya,Recurring,FlatFee,,1,JPY8888,NoChange,,JPY,8888,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,8888,8888,101781.935481864,101781.935481864,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e2d1999015e36873b4e3578
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: -8888.000000000
+  TotalDeltaTcv: -101781.935481864
+}
+
+2017/08/31 13:23:10
+▼ 2件目
+true,2c92c0f85e1d50df015e367b2ae26a63,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011543,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f85e1d50df015e367b2af76a68,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d5964dc015d59d35ccf1672,ikoTestDataPlan,oyaHin001,true,0000,koData001,false,00000,0,0,2c92c0f85e1d50df015e367b2b016a69,2c92c0f85e1d50df015e367b2b016a69,2c92c0f95d59763e015d59d4b99c651d,C-00008181,ikoTestDataCharge,Usage,Tiered,GB,1,1 to 100 GB: JPY1000 flat fee;  101 to 200 GB: JPY2000/GB,NoChange,,JPY,,0,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,,,,,,0,0,0,0,1,1,100,1000,FlatFee,0,2,101,200,2000,PerUnit,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e3687523e1f17
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:23:11
+▼ 3件目
+true,2c92c0f95e1d5c9f015e367b33e218e8,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011544,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5c9f015e367b33f718ed,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d7d53d3015d87ad7cdb3a2f,課金モデル修正検証,oyaHin001,false,0000,kakinChangeTest,false,00000,0,0,2c92c0f95e1d5c9f015e367b340018ef,2c92c0f95e1d5c9f015e367b340018ef,2c92c0f85d7d53d3015d87ae37dd3ee2,C-00008182,課金モデル修正検証プラン,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e368755ed1f29
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:23:12
+▼ 4件目
+true,2c92c0f85e2d19af015e367b3d0228c4,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011545,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f85e2d19af015e367b3d1c28c8,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59763e015d59d180e55636,ikoTestVirusPlan,oyaHin001,false,0000,koVirus001,true,00000,0,0,2c92c0f85e2d19af015e367b3d2628c9,2c92c0f85e2d19af015e367b3d2628c9,2c92c0f85d5964dc015d59d244b31306,C-00008183,ikoTestVirusCharge,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e36875bfc1f3b
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:23:14
+▼ 5件目
+true,2c92c0f95e1d5ca3015e367b46125ffa,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011546,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,1000,11452,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5ca3015e367b462a5ffe,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59764d015d59cf775c52c3,ikoTestKoPlanMsg,oyaHin001,true,0000,koMsg001,true,00000,0,0,2c92c0f95e1d5ca3015e367b46355fff,2c92c0f95e1d5ca3015e367b46355fff,2c92c0f95d59763b015d59d04f2d4afc,C-00008184,koMsgCharge,Recurring,FlatFee,,1,JPY1000,NoChange,,JPY,1000,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,1000,1000,11451.612903,11451.612903,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e2d1999015e36875dad358d
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: -1000.000000000
+  TotalDeltaTcv: -11451.612903000
+}
+
+処理開始▶▶▶▶▶2017/08/31 13:35:58
+2017/08/31 13:35:58
+▼ 1件目
+true,2c92c0f95e1d5ca3015e367b21e65fa2,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011542,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,8888,101782,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5ca3015e367b21fb5fa6,2c92c0f85d5964dc015d59ca573e7784,ikoTestOya,SKU-00000024,2c92c0f85d5964dc015d59cb0ccf78f3,ikoTestRateOya,,true,0000,oyaHin001,false,00000,0,0,2c92c0f95e1d5ca3015e367b22045fa7,2c92c0f95e1d5ca3015e367b22045fa7,2c92c0f95d59764d015d59cc36fa4841,C-00008180,ikoTestChargeOya,Recurring,FlatFee,,1,JPY8888,NoChange,,JPY,8888,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,8888,8888,101781.935481864,101781.935481864,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5e1d5b50015e369308cd239b
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 8888.000000000
+  TotalDeltaTcv: 101781.935481864
+}
+
+2017/08/31 13:35:59
+▼ 2件目
+true,2c92c0f85e1d50df015e367b2ae26a63,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011543,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f85e1d50df015e367b2af76a68,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d5964dc015d59d35ccf1672,ikoTestDataPlan,oyaHin001,true,0000,koData001,false,00000,0,0,2c92c0f85e1d50df015e367b2b016a69,2c92c0f85e1d50df015e367b2b016a69,2c92c0f95d59763e015d59d4b99c651d,C-00008181,ikoTestDataCharge,Usage,Tiered,GB,1,1 to 100 GB: JPY1000 flat fee;  101 to 200 GB: JPY2000/GB,NoChange,,JPY,,0,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,,,,,,0,0,0,0,1,1,100,1000,FlatFee,0,2,101,200,2000,PerUnit,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e2d1999015e36930b10383c
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:36:00
+▼ 3件目
+true,2c92c0f95e1d5c9f015e367b33e218e8,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011544,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5c9f015e367b33f718ed,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d7d53d3015d87ad7cdb3a2f,課金モデル修正検証,oyaHin001,false,0000,kakinChangeTest,false,00000,0,0,2c92c0f95e1d5c9f015e367b340018ef,2c92c0f95e1d5c9f015e367b340018ef,2c92c0f85d7d53d3015d87ae37dd3ee2,C-00008182,課金モデル修正検証プラン,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5e1d5b51015e36930d104b73
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:36:00
+▼ 4件目
+true,2c92c0f85e2d19af015e367b3d0228c4,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011545,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f85e2d19af015e367b3d1c28c8,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59763e015d59d180e55636,ikoTestVirusPlan,oyaHin001,false,0000,koVirus001,true,00000,0,0,2c92c0f85e2d19af015e367b3d2628c9,2c92c0f85e2d19af015e367b3d2628c9,2c92c0f85d5964dc015d59d244b31306,C-00008183,ikoTestVirusCharge,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e2d1999015e36930eb43852
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:36:00
+▼ 5件目
+true,2c92c0f95e1d5ca3015e367b46125ffa,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011546,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,1000,11452,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5ca3015e367b462a5ffe,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59764d015d59cf775c52c3,ikoTestKoPlanMsg,oyaHin001,true,0000,koMsg001,true,00000,0,0,2c92c0f95e1d5ca3015e367b46355fff,2c92c0f95e1d5ca3015e367b46355fff,2c92c0f95d59763b015d59d04f2d4afc,C-00008184,koMsgCharge,Recurring,FlatFee,,1,JPY1000,NoChange,,JPY,1000,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,1000,1000,11451.612903,11451.612903,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e3693106a2273
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+処理開始▶▶▶▶▶2017/08/31 13:42:28
+2017/08/31 13:42:28
+▼ 1件目
+true,2c92c0f95e1d5ca3015e367b21e65fa2,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011542,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,8888,101782,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5ca3015e367b21fb5fa6,2c92c0f85d5964dc015d59ca573e7784,ikoTestOya,SKU-00000024,2c92c0f85d5964dc015d59cb0ccf78f3,ikoTestRateOya,,true,0000,oyaHin001,false,00000,0,0,2c92c0f95e1d5ca3015e367b22045fa7,2c92c0f95e1d5ca3015e367b22045fa7,2c92c0f95d59764d015d59cc36fa4841,C-00008180,ikoTestChargeOya,Recurring,FlatFee,,1,JPY8888,NoChange,,JPY,8888,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,8888,8888,101781.935481864,101781.935481864,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5e1d5b51015e3698fabd4c4a
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:42:29
+▼ 2件目
+true,2c92c0f85e1d50df015e367b2ae26a63,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011543,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f85e1d50df015e367b2af76a68,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d5964dc015d59d35ccf1672,ikoTestDataPlan,oyaHin001,true,0000,koData001,false,00000,0,0,2c92c0f85e1d50df015e367b2b016a69,2c92c0f85e1d50df015e367b2b016a69,2c92c0f95d59763e015d59d4b99c651d,C-00008181,ikoTestDataCharge,Usage,Tiered,GB,1,1 to 100 GB: JPY1000 flat fee;  101 to 200 GB: JPY2000/GB,NoChange,,JPY,,0,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,,,,,,0,0,0,0,1,1,100,1000,FlatFee,0,2,101,200,2000,PerUnit,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5e1d5b50015e3698fcac2466
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:42:29
+▼ 3件目
+true,2c92c0f95e1d5c9f015e367b33e218e8,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011544,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5c9f015e367b33f718ed,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d7d53d3015d87ad7cdb3a2f,課金モデル修正検証,oyaHin001,false,0000,kakinChangeTest,false,00000,0,0,2c92c0f95e1d5c9f015e367b340018ef,2c92c0f95e1d5c9f015e367b340018ef,2c92c0f85d7d53d3015d87ae37dd3ee2,C-00008182,課金モデル修正検証プラン,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e3698fe6f234a
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:42:30
+▼ 4件目
+true,2c92c0f85e2d19af015e367b3d0228c4,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011545,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f85e2d19af015e367b3d1c28c8,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59763e015d59d180e55636,ikoTestVirusPlan,oyaHin001,false,0000,koVirus001,true,00000,0,0,2c92c0f85e2d19af015e367b3d2628c9,2c92c0f85e2d19af015e367b3d2628c9,2c92c0f85d5964dc015d59d244b31306,C-00008183,ikoTestVirusCharge,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e3699012a235b
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:42:30
+▼ 5件目
+true,2c92c0f95e1d5ca3015e367b46125ffa,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011546,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,1000,11452,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5ca3015e367b462a5ffe,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59764d015d59cf775c52c3,ikoTestKoPlanMsg,oyaHin001,true,0000,koMsg001,true,00000,0,0,2c92c0f95e1d5ca3015e367b46355fff,2c92c0f95e1d5ca3015e367b46355fff,2c92c0f95d59763b015d59d04f2d4afc,C-00008184,koMsgCharge,Recurring,FlatFee,,1,JPY1000,NoChange,,JPY,1000,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,1000,1000,11451.612903,11451.612903,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5e1d5b50015e369902c52481
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+処理開始▶▶▶▶▶2017/08/31 13:46:56
+2017/08/31 13:46:56
+▼ 1件目
+true,2c92c0f95e1d5c9c015e3696fca56bdc,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011547,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,8888,101782,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5c9c015e3696fcbb6be0,2c92c0f85d5964dc015d59ca573e7784,ikoTestOya,SKU-00000024,2c92c0f85d5964dc015d59cb0ccf78f3,ikoTestRateOya,,true,0000,oyaHin001,false,00000,0,0,2c92c0f95e1d5c9c015e3696fcc56be1,2c92c0f95e1d5c9c015e3696fcc56be1,2c92c0f95d59764d015d59cc36fa4841,C-00008185,ikoTestChargeOya,Recurring,FlatFee,,1,JPY8888,NoChange,,JPY,8888,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,8888,8888,101781.935481864,101781.935481864,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e2d1999015e369d147f39ff
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:46:57
+▼ 2件目
+true,2c92c0f95e1d5c9f015e36971324537c,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011548,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5c9f015e3697133c5381,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d5964dc015d59d35ccf1672,ikoTestDataPlan,oyaHin001,true,0000,koData001,false,00000,0,0,2c92c0f95e1d5c9f015e369713455382,2c92c0f95e1d5c9f015e369713455382,2c92c0f95d59763e015d59d4b99c651d,C-00008186,ikoTestDataCharge,Usage,Tiered,GB,1,1 to 100 GB: JPY1000 flat fee;  101 to 200 GB: JPY2000/GB,NoChange,,JPY,,0,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,,,,,,0,0,0,0,1,1,100,1000,FlatFee,0,2,101,200,2000,PerUnit,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5e1d5b50015e369d167824f3
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:46:58
+▼ 3件目
+true,2c92c0f95e1d5c9f015e369721685398,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011549,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5c9f015e3697217f539c,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d7d53d3015d87ad7cdb3a2f,課金モデル修正検証,oyaHin001,false,0000,kakinChangeTest,false,00000,0,0,2c92c0f95e1d5c9f015e3697218a539d,2c92c0f95e1d5c9f015e3697218a539d,2c92c0f85d7d53d3015d87ae37dd3ee2,C-00008187,課金モデル修正検証プラン,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5e1d5b50015e369d18142506
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:46:59
+▼ 4件目
+true,2c92c0f85e2d19af015e369732a66c96,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011550,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f85e2d19af015e369732c16c9a,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59763e015d59d180e55636,ikoTestVirusPlan,oyaHin001,false,0000,koVirus001,true,00000,0,0,2c92c0f85e2d19af015e369732ca6c9b,2c92c0f85e2d19af015e369732ca6c9b,2c92c0f85d5964dc015d59d244b31306,C-00008188,ikoTestVirusCharge,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e2d1999015e369d1b703a11
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 13:46:59
+▼ 5件目
+true,2c92c0f85e2d19af015e369745276ca9,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011551,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-07-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,1000,11452,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f85e2d19af015e3697453f6cad,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59764d015d59cf775c52c3,ikoTestKoPlanMsg,oyaHin001,true,0000,koMsg001,true,00000,0,0,2c92c0f85e2d19af015e369745486cae,2c92c0f85e2d19af015e369745486cae,2c92c0f95d59763b015d59d04f2d4afc,C-00008189,koMsgCharge,Recurring,FlatFee,,1,JPY1000,NoChange,,JPY,1000,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,1000,1000,11451.612903,11451.612903,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5e1d5b51015e369d1d114ccc
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: -1000.000000000
+  TotalDeltaTcv: -11451.612903000
+}
+
+処理開始▶▶▶▶▶2017/08/31 14:38:37
+2017/08/31 14:38:37
+▼ 1件目
+true,2c92c0f95e1d5c9c015e3696fca56bdc,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011547,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-08-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,8888,101782,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5c9c015e3696fcbb6be0,2c92c0f85d5964dc015d59ca573e7784,ikoTestOya,SKU-00000024,2c92c0f85d5964dc015d59cb0ccf78f3,ikoTestRateOya,,true,0000,oyaHin001,false,00000,0,0,2c92c0f95e1d5c9c015e3696fcc56be1,2c92c0f95e1d5c9c015e3696fcc56be1,2c92c0f95d59764d015d59cc36fa4841,C-00008185,ikoTestChargeOya,Recurring,FlatFee,,1,JPY8888,NoChange,,JPY,8888,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,8888,8888,101781.935481864,101781.935481864,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e36cc641c2da1
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 8888.000000000
+}
+
+2017/08/31 14:38:38
+▼ 2件目
+true,2c92c0f95e1d5c9f015e36971324537c,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011548,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-08-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5c9f015e3697133c5381,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d5964dc015d59d35ccf1672,ikoTestDataPlan,oyaHin001,true,0000,koData001,false,00000,0,0,2c92c0f95e1d5c9f015e369713455382,2c92c0f95e1d5c9f015e369713455382,2c92c0f95d59763e015d59d4b99c651d,C-00008186,ikoTestDataCharge,Usage,Tiered,GB,1,1 to 100 GB: JPY1000 flat fee;  101 to 200 GB: JPY2000/GB,NoChange,,JPY,,0,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,,,,,,0,0,0,0,1,1,100,1000,FlatFee,0,2,101,200,2000,PerUnit,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e2d1999015e36cc667642cb
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 14:38:38
+▼ 3件目
+true,2c92c0f95e1d5c9f015e369721685398,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011549,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-08-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f95e1d5c9f015e3697217f539c,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d7d53d3015d87ad7cdb3a2f,課金モデル修正検証,oyaHin001,false,0000,kakinChangeTest,false,00000,0,0,2c92c0f95e1d5c9f015e3697218a539d,2c92c0f95e1d5c9f015e3697218a539d,2c92c0f85d7d53d3015d87ae37dd3ee2,C-00008187,課金モデル修正検証プラン,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e36cc685b2dc0
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 14:38:39
+▼ 4件目
+true,2c92c0f85e2d19af015e369732a66c96,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011550,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-08-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f85e2d19af015e369732c16c9a,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59763e015d59d180e55636,ikoTestVirusPlan,oyaHin001,false,0000,koVirus001,true,00000,0,0,2c92c0f85e2d19af015e369732ca6c9b,2c92c0f85e2d19af015e369732ca6c9b,2c92c0f85d5964dc015d59d244b31306,C-00008188,ikoTestVirusCharge,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e36cc6a522ddf
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 14:38:39
+▼ 5件目
+true,2c92c0f85e2d19af015e369745276ca9,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011551,TERMED,false,2017-08-01,2017-08-01,2017-08-01,2017-07-15,2017-08-15,2018-07-15,12,Month,12,Month,false,RENEW_WITH_SPECIFIC_TERM,24,Month,1000,11452,,Active,,,1234,,,,,,15,ERPno,,0,,0,Mesai,2017-08-01,,1,,16,0,0,2c92c0f85e2d19af015e3697453f6cad,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59764d015d59cf775c52c3,ikoTestKoPlanMsg,oyaHin001,true,0000,koMsg001,true,00000,0,0,2c92c0f85e2d19af015e369745486cae,2c92c0f85e2d19af015e369745486cae,2c92c0f95d59763b015d59d04f2d4afc,C-00008189,koMsgCharge,Recurring,FlatFee,,1,JPY1000,NoChange,,JPY,1000,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017-08-01,2018-07-15,,,false,,ContractEffective,Subscription_End,,,,1000,1000,11451.612903,11451.612903,,0,0,0,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e2d1999015e36cc6c6e42ee
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+処理開始▶▶▶▶▶2017/08/31 15:19:12
+2017/08/31 15:19:12
+▼ 1件目
+TRUE,2c92c0f95e1d5c9c015e36e63c895725,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011560,TERMED,FALSE,2017/8/1,2017/8/1,2017/8/1,2017/8/15,2017/8/15,2018/8/15,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,24,Month,8888,110670,,Active,2017/8/31,,1234,,,,2017/8/31,2017/8/31,15,ERPno,,0,2017/8/31,0,Mesai,2017/8/1,,1,,16,0,0,2c92c0f95e1d5c9c015e36e63ca25729,2c92c0f85d5964dc015d59ca573e7784,ikoTestOya,SKU-00000024,2c92c0f85d5964dc015d59cb0ccf78f3,ikoTestRateOya,,TRUE,0,oyaHin001,FALSE,0,0,0,2c92c0f95e1d5c9c015e36e63cae572a,2c92c0f95e1d5c9c015e36e63cae572a,2c92c0f95d59764d015d59cc36fa4841,C-00008198,ikoTestChargeOya,Recurring,FlatFee,,1,JPY8888,NoChange,,JPY,8888,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017/8/1,2018/8/15,,,FALSE,,ContractEffective,Subscription_End,,,,8888,8888,110669.9355,110669.9355,,0,0,0,0,,,,,,,,,,,,,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e36f218dd42c2
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 15:19:49
+▼ 2件目
+TRUE,2c92c0f85e2d19af015e36e6461a691b,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011561,TERMED,FALSE,2017/8/1,2017/8/1,2017/8/1,2017/8/15,2017/8/15,2018/8/15,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,2017/8/31,,1234,,,,2017/8/31,2017/8/31,15,ERPno,,0,2017/8/31,0,Mesai,2017/8/1,,1,,16,0,0,2c92c0f85e2d19af015e36e6462e6920,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d5964dc015d59d35ccf1672,ikoTestDataPlan,oyaHin001,TRUE,0,koData001,FALSE,0,0,0,2c92c0f85e2d19af015e36e646376921,2c92c0f85e2d19af015e36e646376921,2c92c0f95d59763e015d59d4b99c651d,C-00008199,ikoTestDataCharge,Usage,Tiered,GB,1,1 to 100 GB: JPY1000 flat fee;  101 to 200 GB: JPY2000/GB,NoChange,,JPY,,0,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,2017/8/1,2018/8/15,,,FALSE,,ContractEffective,Subscription_End,,,,,,,,,0,0,0,0,1,1,100,1000,FlatFee,0,2,101,200,2000,PerUnit,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e36f237ed42d8
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 15:19:57
+▼ 3件目
+TRUE,2c92c0f85e1d50d8015e36e64eb7475d,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011562,TERMED,FALSE,2017/8/1,2017/8/1,2017/8/1,2017/8/15,2017/8/15,2018/8/15,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,2017/8/31,,1234,,,,2017/8/31,2017/8/31,15,ERPno,,0,2017/8/31,0,Mesai,2017/8/1,,1,,16,0,0,2c92c0f85e1d50d8015e36e64ece4761,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d7d53d3015d87ad7cdb3a2f,課金モデル修正検証,oyaHin001,FALSE,0,kakinChangeTest,FALSE,0,0,0,2c92c0f85e1d50d8015e36e64ed64762,2c92c0f85e1d50d8015e36e64ed64762,2c92c0f85d7d53d3015d87ae37dd3ee2,C-00008200,課金モデル修正検証プラン,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017/8/1,2018/8/15,,,FALSE,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,,,,,,,,,,,,,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5e1d5b50015e36f2647c418d
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 15:20:08
+▼ 4件目
+TRUE,2c92c0f85e1d50df015e36e6583b24ba,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011563,TERMED,FALSE,2017/8/1,2017/8/1,2017/8/1,2017/8/15,2017/8/15,2018/8/15,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,2017/8/31,,1234,,,,2017/8/31,2017/8/31,15,ERPno,,0,2017/8/31,0,Mesai,2017/8/1,,1,,16,0,0,2c92c0f85e1d50df015e36e6585524be,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59763e015d59d180e55636,ikoTestVirusPlan,oyaHin001,FALSE,0,koVirus001,TRUE,0,0,0,2c92c0f85e1d50df015e36e6585e24bf,2c92c0f85e1d50df015e36e6585e24bf,2c92c0f85d5964dc015d59d244b31306,C-00008201,ikoTestVirusCharge,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017/8/1,2018/8/15,,,FALSE,,ContractEffective,Subscription_End,,,,0,0,0,0,,0,0,0,0,,,,,,,,,,,,,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e36f28b5d4311
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 15:20:18
+▼ 5件目
+TRUE,2c92c0f95e1d5ca3015e36e661810542,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011564,TERMED,FALSE,2017/8/1,2017/8/1,2017/8/1,2017/8/15,2017/8/15,2018/8/15,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,24,Month,1000,12452,,Active,2017/8/31,,1234,,,,2017/8/31,2017/8/31,15,ERPno,,0,2017/8/31,0,Mesai,2017/8/1,,1,,16,0,0,2c92c0f95e1d5ca3015e36e661970546,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59764d015d59cf775c52c3,ikoTestKoPlanMsg,oyaHin001,TRUE,0,koMsg001,TRUE,0,0,0,2c92c0f95e1d5ca3015e36e661a00547,2c92c0f95e1d5ca3015e36e661a00547,2c92c0f95d59763b015d59d04f2d4afc,C-00008202,koMsgCharge,Recurring,FlatFee,,1,JPY1000,NoChange,,JPY,1000,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017/8/1,2018/8/15,,,FALSE,,ContractEffective,Subscription_End,,,,1000,1000,12451.6129,12451.6129,,0,0,0,0,,,,,,,,,,,,,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5e1d5b50015e36f2b69f41bd
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: -1000.000000000
+  TotalDeltaTcv: -12451.612903000
+}
+
+処理開始▶▶▶▶▶2017/08/31 16:18:10
+2017/08/31 16:18:10
+▼ 1件目
+TRUE,2c92c0f95e1d5c9c015e36e63c895725,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011560,TERMED,FALSE,2017/8/1,2017/8/1,2017/8/1,2017/8/15,2017/8/15,2018/8/15,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,24,Month,8888,110670,,Active,2017/8/31,,1234,,,,2017/8/31,2017/8/31,15,ERPno,,0,2017/8/31,0,Mesai,2017/8/1,,1,,16,0,0,2c92c0f95e1d5c9c015e36e63ca25729,2c92c0f85d5964dc015d59ca573e7784,ikoTestOya,SKU-00000024,2c92c0f85d5964dc015d59cb0ccf78f3,ikoTestRateOya,,TRUE,0,oyaHin001,FALSE,0,0,0,2c92c0f95e1d5c9c015e36e63cae572a,2c92c0f95e1d5c9c015e36e63cae572a,2c92c0f95d59764d015d59cc36fa4841,C-00008198,ikoTestChargeOya,Recurring,FlatFee,,1,JPY8888,NoChange,,JPY,8888,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017/8/1,2018/8/15,,,FALSE,,ContractEffective,Subscription_End,,,,8888,8888,110669.9355,110669.9355,,upt,up,ept,0,,,,,,,,,,,,,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5e1d5b51015e372912ef7a5e
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 16:19:52
+▼ 2件目
+TRUE,2c92c0f85e2d19af015e36e6461a691b,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011561,TERMED,FALSE,2017/8/1,2017/8/1,2017/8/1,2017/8/15,2017/8/15,2018/8/15,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,2017/8/31,,1234,,,,2017/8/31,2017/8/31,15,ERPno,,0,2017/8/31,0,Mesai,2017/8/1,,1,,16,0,0,2c92c0f85e2d19af015e36e6462e6920,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d5964dc015d59d35ccf1672,ikoTestDataPlan,oyaHin001,TRUE,0,koData001,FALSE,0,0,0,2c92c0f85e2d19af015e36e646376921,2c92c0f85e2d19af015e36e646376921,2c92c0f95d59763e015d59d4b99c651d,C-00008199,ikoTestDataCharge,Usage,Tiered,GB,1,1 to 100 GB: JPY1000 flat fee;  101 to 200 GB: JPY2000/GB,NoChange,,JPY,,0,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,2017/8/1,2018/8/15,,,FALSE,,ContractEffective,Subscription_End,,,,,,,,,upt,up,ept,0,1,1,100,1000,FlatFee,0,2,101,200,2000,PerUnit,0,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 
+  Success: False
+  TaxAmount: 
+  TotalDeltaMrr: 
+  TotalDeltaTcv: 
+}
+
+2017/08/31 16:19:53
+▼ 3件目
+TRUE,2c92c0f85e1d50d8015e36e64eb7475d,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011562,TERMED,FALSE,2017/8/1,2017/8/1,2017/8/1,2017/8/15,2017/8/15,2018/8/15,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,2017/8/31,,1234,,,,2017/8/31,2017/8/31,15,ERPno,,0,2017/8/31,0,Mesai,2017/8/1,,1,,16,0,0,2c92c0f85e1d50d8015e36e64ece4761,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f85d7d53d3015d87ad7cdb3a2f,課金モデル修正検証,oyaHin001,FALSE,0,kakinChangeTest,FALSE,0,0,0,2c92c0f85e1d50d8015e36e64ed64762,2c92c0f85e1d50d8015e36e64ed64762,2c92c0f85d7d53d3015d87ae37dd3ee2,C-00008200,課金モデル修正検証プラン,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017/8/1,2018/8/15,,,FALSE,,ContractEffective,Subscription_End,,,,0,0,0,0,,upt,up,ept,0,,,,,,,,,,,,,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5e1d5b50015e37291aea57af
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 16:19:54
+▼ 4件目
+TRUE,2c92c0f85e1d50df015e36e6583b24ba,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011563,TERMED,FALSE,2017/8/1,2017/8/1,2017/8/1,2017/8/15,2017/8/15,2018/8/15,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,24,Month,0,0,,Active,2017/8/31,,1234,,,,2017/8/31,2017/8/31,15,ERPno,,0,2017/8/31,0,Mesai,2017/8/1,,1,,16,0,0,2c92c0f85e1d50df015e36e6585524be,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59763e015d59d180e55636,ikoTestVirusPlan,oyaHin001,FALSE,0,koVirus001,TRUE,0,0,0,2c92c0f85e1d50df015e36e6585e24bf,2c92c0f85e1d50df015e36e6585e24bf,2c92c0f85d5964dc015d59d244b31306,C-00008201,ikoTestVirusCharge,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017/8/1,2018/8/15,,,FALSE,,ContractEffective,Subscription_End,,,,0,0,0,0,,upt,up,ept,0,,,,,,,,,,,,,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fb5e1d5b51015e37291e6d7a72
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+2017/08/31 16:19:55
+▼ 5件目
+TRUE,2c92c0f95e1d5ca3015e36e661810542,,A00000020,ikoTest1,,A00000020,ikoTest1,A-S00011564,TERMED,FALSE,2017/8/1,2017/8/1,2017/8/1,2017/8/15,2017/8/15,2018/8/15,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,24,Month,1000,12452,,Active,2017/8/31,,1234,,,,2017/8/31,2017/8/31,15,ERPno,,0,2017/8/31,0,Mesai,2017/8/1,,1,,16,0,0,2c92c0f95e1d5ca3015e36e661970546,2c92c0f85d5964dc015d59cde309054f,ikoTestKo,SKU-00000025,2c92c0f95d59764d015d59cf775c52c3,ikoTestKoPlanMsg,oyaHin001,TRUE,0,koMsg001,TRUE,0,0,0,2c92c0f95e1d5ca3015e36e661a00547,2c92c0f95e1d5ca3015e36e661a00547,2c92c0f95d59763b015d59d04f2d4afc,C-00008202,koMsgCharge,Recurring,FlatFee,,1,JPY1000,NoChange,,JPY,1000,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2017/8/1,2018/8/15,,,FALSE,,ContractEffective,Subscription_End,,,,1000,1000,12451.6129,12451.6129,,upt,up,ept,0,,,,,,,,,,,,,
+updateSubscrWithCsv(csvColumn) class PUTSubscriptionResponseType {
+  Amount: 
+  AmountWithoutTax: 
+  ChargeMetrics: 
+  InvoiceId: 
+  InvoiceItems: 
+  InvoiceTargetDate: 
+  PaidAmount: 
+  PaymentId: 
+  PreviewChargeMetricsResponse: 
+  SubscriptionId: 2c92c0fa5e1d50a5015e3729216959f3
+  Success: True
+  TaxAmount: 
+  TotalDeltaMrr: 0E-9
+  TotalDeltaTcv: 0E-9
+}
+
+処理開始▶▶▶▶▶2017/08/31 17:41:24
+2017/08/31 17:41:24
+▼ 1件目
+TRUE,2c92c0f85df42d7e015e0521536c6473,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102925,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e052153836479,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc69018015ddfe5897e113d,UX14413 EX胸部骨減弱処理（BS）,UX14413,TRUE,0,UX14AAN,0,0,0,2c92c0f85df42d7e015e0521538c647b,2c92c0f85df42d7e015e0521538c647b,2c92c0f85dc69018015ddfe5898a113f,C-00102859,EX胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY12000/License,NoChange,,JPY,12000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/08/31 17:41:24
+▼ 2件目
+TRUE,2c92c0f85df42d7e015e05215d6764bc,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102926,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e05215d7d64c0,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc69018015de01485ad5bc5,UX14413 CR骨密度測定サービス,UX14413,TRUE,0,UX14163,0,0,0,2c92c0f85df42d7e015e05215d8764c1,2c92c0f85df42d7e015e05215d8764c1,2c92c0f85dc69018015de01485bd5bc7,C-00102860,CR骨密度測定サービス,Usage,PerUnit,回,1,JPY780/回,NoChange,,JPY,780,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/08/31 17:41:24
+▼ 3件目
+TRUE,2c92c0f95df436f2015e0521724f5a98,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102927,TERMED,FALSE,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f95df436f2015e052172715a9c,2c92c0f95dc69849015ddf2a1df17fdb,ベース,SKU-00000012,2c92c0f85dc6901a015ddf2ae70f53c3,infomityﾍﾞｰｽﾊﾟｯｸ(4年契約),,FALSE,0,UX14413,0,0,0,2c92c0f95df436f2015e0521727c5a9d,2c92c0f95df436f2015e0521727c5a9d,2c92c0f95dc6984d015ddf2c595e72a5,C-00102861,infomityﾍﾞｰｽﾊﾟｯｸ(4年契約),Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Annual,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2018/4/1,2022/4/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/08/31 17:41:26
+▼ 4件目
+TRUE,2c92c0f95df43700015e052187823076,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102928,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f95df43700015e0521879a307a,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc6901a015ddfc49462723f,UX14413 UNITEA胸部骨減弱処理（BS）,UX14413,TRUE,0,UX14AAL,0,0,0,2c92c0f95df43700015e052187a3307b,2c92c0f95df43700015e052187a3307b,2c92c0f85dc6901a015ddfc4946c7241,C-00102862,UNITEA胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY5000/License,NoChange,,JPY,5000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/08/31 17:41:26
+▼ 5件目
+TRUE,2c92c0f85df42dcd015e05218bbc1880,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102929,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42dcd015e05218bd61887,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69018015dda1e79b63a98,UX142F2 遠隔読影支援サービス,UX142F2,FALSE,0,READINGIMAGE,0,0,0,2c92c0f85df42dcd015e05218be81888,2c92c0f85df42dcd015e05218be81888,2c92c0f85dc69018015dda1e79c43a9c,C-00102863,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/08/31 17:41:26
+▼ 6件目
+TRUE,2c92c0f85df42dcd015e0521916018a1,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102930,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42dcd015e0521917518a5,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69071015dda1f1f7617d4,UX14413 遠隔読影支援サービス,UX14413,FALSE,0,READINGIMAGE,0,0,0,2c92c0f85df42dcd015e0521917d18a6,2c92c0f85df42dcd015e0521917d18a6,2c92c0f85dc69071015dda1f1f8517d8,C-00102864,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/08/31 17:41:26
+▼ 7件目
+TRUE,2c92c0f85df42dcd015e052193ac18ac,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102931,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42dcd015e052193c018b0,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc6901a015dcb1cbe1a014e,UX142F2 ウェブサイト開設サポート,UX142F2,FALSE,0,LGCY03,0,0,0,2c92c0f85df42dcd015e052193c918b1,2c92c0f85df42dcd015e052193c918b1,2c92c0f85dc6901a015dcb1cbe220150,C-00102865,ウェブサイト開設サポート,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/08/31 17:41:26
+▼ 8件目
+TRUE,2c92c0f85df42d7e015e05219b186552,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102932,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e05219b2e6556,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc69849015dda048e497d4b,UX14413 医療行政ニュース,UX14413,FALSE,0,LGCY04,0,0,0,2c92c0f85df42d7e015e05219b376処理開始▶▶▶▶▶2017/08/31 17:41:34
+2017/08/31 17:41:34
+▼ 1件目
+TRUE,2c92c0f85df42d7e015e0521536c6473,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102925,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e052153836479,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc69018015ddfe5897e113d,UX14413 EX胸部骨減弱処理（BS）,UX14413,TRUE,0,UX14AAN,0,0,0,2c92c0f85df42d7e015e0521538c647b,2c92c0f85df42d7e015e0521538c647b,2c92c0f85dc69018015ddfe5898a113f,C-00102859,EX胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY12000/License,NoChange,,JPY,12000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/08/31 17:41:34
+▼ 2件目
+TRUE,2c92c0f85df42d7e015e05215d6764bc,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102926,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e05215d7d64c0,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc69018015de01485ad5bc5,UX14413 CR骨密度測定サービス,UX14413,TRUE,0,UX14163,0,0,0,2c92c0f85df42d7e015e05215d8764c1,2c92c0f85df42d7e015e05215d8764c1,2c92c0f85dc69018015de01485bd5bc7,C-00102860,CR骨密度測定サービス,Usage,PerUnit,回,1,JPY780/回,NoChange,,JPY,780,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/08/31 17:41:34
+▼ 3件目
+TRUE,2c92c0f95df436f2015e0521724f5a98,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102927,TERMED,FALSE,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f95df436f2015e052172715a9c,2c92c0f95dc69849015ddf2a1df17fdb,ベース,SKU-00000012,2c92c0f85dc6901a015ddf2ae70f53c3,infomityﾍﾞｰｽﾊﾟｯｸ(4年契約),,FALSE,0,UX14413,0,0,0,2c92c0f95df436f2015e0521727c5a9d,2c92c0f95df436f2015e0521727c5a9d,2c92c0f95dc6984d015ddf2c595e72a5,C-00102861,infomityﾍﾞｰｽﾊﾟｯｸ(4年契約),Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Annual,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2018/4/1,2022/4/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/08/31 17:41:35
+▼ 4件目
+TRUE,2c92c0f95df43700015e052187823076,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102928,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f95df43700015e0521879a307a,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc6901a015ddfc49462723f,UX14413 UNITEA胸部骨減弱処理（BS）,UX14413,TRUE,0,UX14AAL,0,0,0,2c92c0f95df43700015e052187a3307b,2c92c0f95df43700015e052187a3307b,2c92c0f85dc6901a015ddfc4946c7241,C-00102862,UNITEA胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY5000/License,NoChange,,JPY,5000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/08/31 17:41:35
+▼ 5件目
+TRUE,2c92c0f85df42dcd015e05218bbc1880,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102929,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42dcd015e05218bd61887,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69018015dda1e79b63a98,UX142F2 遠隔読影支援サービス,UX142F2,FALSE,0,READINGIMAGE,0,0,0,2c92c0f85df42dcd015e05218be81888,2c92c0f85df42dcd015e05218be81888,2c92c0f85dc69018015dda1e79c43a9c,C-00102863,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/08/31 17:41:35
+▼ 6件目
+TRUE,2c92c0f85df42dcd015e0521916018a1,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102930,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42dcd015e0521917518a5,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69071015dda1f1f7617d4,UX14413 遠隔読影支援サービス,UX14413,FALSE,0,READINGIMAGE,0,0,0,2c92c0f85df42dcd015e0521917d18a6,2c92c0f85df42dcd015e0521917d18a6,2c92c0f85dc69071015dda1f1f8517d8,C-00102864,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/08/31 17:41:35
+▼ 7件目
+TRUE,2c92c0f85df42dcd015e052193ac18ac,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102931,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42dcd015e052193c018b0,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc6901a015dcb1cbe1a014e,UX142F2 ウェブサイト開設サポート,UX142F2,FALSE,0,LGCY03,0,0,0,2c92c0f85df42dcd015e052193c918b1,2c92c0f85df42dcd015e052193c918b1,2c92c0f85dc6901a015dcb1cbe220150,C-00102865,ウェブサイト開設サポート,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/08/31 17:41:35
+▼ 8件目
+TRUE,2c92c0f85df42d7e015e05219b186552,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102932,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e05219b2e6556,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc69849015dda048e497d4b,UX14413 医療行政ニュース,UX14413,FALSE,0,LGCY04,0,0,0,2c92c0f85df42d7e015e05219b376処理開始▶▶▶▶▶2017/09/08 15:39:59
+2017/09/08 15:39:59
+▼ 1件目
+TRUE,2c92c0f85df42d7e015e0521536c6473,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102925,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e052153836479,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc69018015ddfe5897e113d,UX14413 EX胸部骨減弱処理（BS）,UX14413,TRUE,0,UX14AAN,0,0,0,2c92c0f85df42d7e015e0521538c647b,2c92c0f85df42d7e015e0521538c647b,2c92c0f85dc69018015ddfe5898a113f,C-00102859,EX胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY12000/License,NoChange,,JPY,12000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:39:59
+▼ 2件目
+TRUE,2c92c0f85df42d7e015e05215d6764bc,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102926,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e05215d7d64c0,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc69018015de01485ad5bc5,UX14413 CR骨密度測定サービス,UX14413,TRUE,0,UX14163,0,0,0,2c92c0f85df42d7e015e05215d8764c1,2c92c0f85df42d7e015e05215d8764c1,2c92c0f85dc69018015de01485bd5bc7,C-00102860,CR骨密度測定サービス,Usage,PerUnit,回,1,JPY780/回,NoChange,,JPY,780,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:39:59
+▼ 3件目
+TRUE,2c92c0f95df436f2015e0521724f5a98,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102927,TERMED,FALSE,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f95df436f2015e052172715a9c,2c92c0f95dc69849015ddf2a1df17fdb,ベース,SKU-00000012,2c92c0f85dc6901a015ddf2ae70f53c3,infomityﾍﾞｰｽﾊﾟｯｸ(4年契約),,FALSE,0,UX14413,0,0,0,2c92c0f95df436f2015e0521727c5a9d,2c92c0f95df436f2015e0521727c5a9d,2c92c0f95dc6984d015ddf2c595e72a5,C-00102861,infomityﾍﾞｰｽﾊﾟｯｸ(4年契約),Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Annual,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2018/4/1,2022/4/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:01
+▼ 4件目
+TRUE,2c92c0f95df43700015e052187823076,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102928,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f95df43700015e0521879a307a,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc6901a015ddfc49462723f,UX14413 UNITEA胸部骨減弱処理（BS）,UX14413,TRUE,0,UX14AAL,0,0,0,2c92c0f95df43700015e052187a3307b,2c92c0f95df43700015e052187a3307b,2c92c0f85dc6901a015ddfc4946c7241,C-00102862,UNITEA胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY5000/License,NoChange,,JPY,5000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:01
+▼ 5件目
+TRUE,2c92c0f85df42dcd015e05218bbc1880,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102929,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42dcd015e05218bd61887,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69018015dda1e79b63a98,UX142F2 遠隔読影支援サービス,UX142F2,FALSE,0,READINGIMAGE,0,0,0,2c92c0f85df42dcd015e05218be81888,2c92c0f85df42dcd015e05218be81888,2c92c0f85dc69018015dda1e79c43a9c,C-00102863,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:01
+▼ 6件目
+TRUE,2c92c0f85df42dcd015e0521916018a1,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102930,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42dcd015e0521917518a5,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69071015dda1f1f7617d4,UX14413 遠隔読影支援サービス,UX14413,FALSE,0,READINGIMAGE,0,0,0,2c92c0f85df42dcd015e0521917d18a6,2c92c0f85df42dcd015e0521917d18a6,2c92c0f85dc69071015dda1f1f8517d8,C-00102864,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:01
+▼ 7件目
+TRUE,2c92c0f85df42dcd015e052193ac18ac,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102931,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42dcd015e052193c018b0,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc6901a015dcb1cbe1a014e,UX142F2 ウェブサイト開設サポート,UX142F2,FALSE,0,LGCY03,0,0,0,2c92c0f85df42dcd015e052193c918b1,2c92c0f85df42dcd015e052193c918b1,2c92c0f85dc6901a015dcb1cbe220150,C-00102865,ウェブサイト開設サポート,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:01
+▼ 8件目
+TRUE,2c92c0f85df42d7e015e05219b186552,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102932,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e05219b2e6556,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc69849015dda048e497d4b,UX14413 医療行政ニュース,UX14413,FALSE,0,LGCY04,0,0,0,2c92c0f85df42d7e015e05219b376557,2c92c0f85df42d7e015e05219b376557,2c92c0f95dc69849015dda048e567d4d,C-00102866,医療行政ニュース,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:01
+▼ 9件目
+TRUE,2c92c0f95df436f2015e05219bf15ac4,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102933,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df436f2015e05219c0b5ac8,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc6901a015ddfee542319e9,UX142F2 UNITEA胸部骨経時差分処理（TS）,UX142F2,TRUE,0,UX14AAK,0,0,0,2c92c0f95df436f2015e05219c145ac9,2c92c0f95df436f2015e05219c145ac9,2c92c0f85dc6901a015ddfee543019eb,C-00102867,UNITEA胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY4000/License,NoChange,,JPY,4000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:01
+▼ 10件目
+TRUE,2c92c0f95df436f2015e0521a4e45add,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102934,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df436f2015e0521a4f95ae1,2c92c0f95dc6984d015dcaa055df7bd0,品目【連携】,SKU-00000002,2c92c0f85dc69071015dcac8c8bc30de,UX142F2 連携BOX　Lite,UX142F2,FALSE,0,A578,0,0,0,2c92c0f95df436f2015e0521a5035ae2,2c92c0f95df436f2015e0521a5035ae2,2c92c0f85dc69071015dcac8c8c730e0,C-00102868,連携BOX　Lite,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:01
+▼ 11件目
+TRUE,2c92c0f85df42d87015e0521a51764d3,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102935,TERMED,FALSE,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d87015e0521a52d64d7,2c92c0f85dc69071015dcb7a750d0aaa,品目【セキュア】,SKU-00000004,2c92c0f95dc69849015dda2a14454c09,UX14413 ウイルス対策サービス,UX14413,FALSE,0,UXA40T7,0,0,0,2c92c0f85df42d87015e0521a53564d8,2c92c0f85df42d87015e0521a53564d8,2c92c0f95dc69849015dda2a14524c0b,C-00102869,ウイルス対策サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2018/4/1,2022/4/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:02
+▼ 12件目
+TRUE,2c92c0f85df42dcd015e0521adda18ee,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102936,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42dcd015e0521adee18f2,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69071015dda0410f16f98,UX142F2 医療行政ニュース,UX142F2,FALSE,0,LGCY04,0,0,0,2c92c0f85df42dcd015e0521adf618f3,2c92c0f85df42dcd015e0521adf618f3,2c92c0f85dc69071015dda0410ff6f9b,C-00102870,医療行政ニュース,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:02
+▼ 13件目
+TRUE,2c92c0f95df436f2015e0521af485ae9,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102937,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f95df436f2015e0521af5e5aed,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc69849015ddfeef3905915,UX14413 UNITEA胸部骨経時差分処理（TS）,UX14413,TRUE,0,UX14AAK,0,0,0,2c92c0f95df436f2015e0521af685aee,2c92c0f95df436f2015e0521af685aee,2c92c0f95dc69849015ddfeef39e5917,C-00102871,UNITEA胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY4000/License,NoChange,,JPY,4000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:02
+▼ 14件目
+TRUE,2c92c0f95df436f2015e0521b6245af4,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102938,TERMED,FALSE,2019/2/1,2019/2/1,2019/2/1,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df436f2015e0521b63b5af8,2c92c0f95dc69849015ddf2a1df17fdb,ベース,SKU-00000012,2c92c0f95dc69849015ddf2e64190ef0,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),,FALSE,0,UX142F2,0,0,0,2c92c0f95df436f2015e0521b6455af9,2c92c0f95df436f2015e0521b6455af9,2c92c0f95dc69849015ddf2e64240ef2,C-00102872,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Annual,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2019/2/1,2020/2/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:02
+▼ 15件目
+TRUE,2c92c0f85df42dcd015e0521b96f18fd,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102939,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42dcd015e0521b9881901,2c92c0f95dc6984d015dcaa055df7bd0,品目【連携】,SKU-00000002,2c92c0f95dc6984b015dcaca7f4c65c1,UX14413 連携BOX　Lite,UX14413,FALSE,0,A578,0,0,0,2c92c0f85df42dcd015e0521b9911902,2c92c0f85df42dcd015e0521b9911902,2c92c0f95dc6984b015dcaca7f5665c3,C-00102873,連携BOX　Lite,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:02
+▼ 16件目
+TRUE,2c92c0f85df42d87015e0521bf5664e6,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102940,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42d87015e0521bf6d64ea,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984b015ddff977997bab,UX142F2 EX胸部骨経時差分処理（TS）,UX142F2,TRUE,0,UX14AAM,0,0,0,2c92c0f85df42d87015e0521bf7764eb,2c92c0f85df42d87015e0521bf7764eb,2c92c0f95dc6984b015ddff977aa7bad,C-00102874,EX胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY10000/License,NoChange,,JPY,10000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:02
+▼ 17件目
+TRUE,2c92c0f95df71c21015e0521c337640e,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102941,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f95df71c21015e0521c3506412,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc6984d015dcb052d3900f5,UX14413 ウェブサイト開設サポート,UX14413,FALSE,0,LGCY03,0,0,0,2c92c0f95df71c21015e0521c3596413,2c92c0f95df71c21015e0521c3596413,2c92c0f95dc6984d015dcb052d4200f7,C-00102875,ウェブサイト開設サポート,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:02
+▼ 18件目
+TRUE,2c92c0f95df71c21015e0521c7476416,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102942,TERMED,FALSE,2019/2/1,2019/2/1,2019/2/1,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df71c21015e0521c75f641a,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc6984d015dcb83f47e41e5,UX142F2 スマートアップデートサービス,UX142F2,FALSE,0,RVUP-UNITEA,0,0,0,2c92c0f95df71c21015e0521c76a641b,2c92c0f95df71c21015e0521c76a641b,2c92c0f95dc6984d015dcb83f48a41e7,C-00102876,スマートアップデートサービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2019/2/1,2020/2/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:03
+▼ 19件目
+TRUE,2c92c0f85df42d7e015e0521cc8865aa,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102943,TERMED,FALSE,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e0521cc9f65ae,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc6984d015dcb8385703ff1,UX14413 スマートアップデートサービス,UX14413,FALSE,0,RVUP-UNITEA,0,0,0,2c92c0f85df42d7e015e0521cca965af,2c92c0f85df42d7e015e0521cca965af,2c92c0f95dc6984d015dcb83857b3ff3,C-00102877,スマートアップデートサービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2018/4/1,2022/4/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:04
+▼ 20件目
+TRUE,2c92c0f95df43700015e0521cff230d3,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102944,TERMED,FALSE,2019/2/1,2019/2/1,2019/2/1,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df43700015e0521d00930d7,2c92c0f85dc69071015dcb7a750d0aaa,品目【セキュア】,SKU-00000004,2c92c0f95dc6984d015dda279e4b2508,UX142F2 ウイルス対策サービス,UX142F2,FALSE,0,UXA40T7,0,0,0,2c92c0f95df43700015e0521d01330d8,2c92c0f95df43700015e0521d01330d8,2c92c0f95dc6984d015dda279e57250a,C-00102878,ウイルス対策サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2019/2/1,2020/2/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:06
+▼ 21件目
+TRUE,2c92c0f85df42d87015e0521d5c0650f,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102945,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d87015e0521d5d86513,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984d015ddffa2c7a68bb,UX14413 EX胸部骨経時差分処理（TS）,UX14413,TRUE,0,UX14AAM,0,0,0,2c92c0f85df42d87015e0521d5e16514,2c92c0f85df42d87015e0521d5e16514,2c92c0f95dc6984d015ddffa2c8768bd,C-00102879,EX胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY10000/License,NoChange,,JPY,10000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:06
+▼ 22件目
+TRUE,2c92c0f95df436f2015e0521d83c5b40,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102946,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df436f2015e0521d8525b44,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984d015ddfc3eb0f3dd4,UX142F2 UNITEA胸部骨減弱処理（BS）,UX142F2,TRUE,0,UX14AAL,0,0,0,2c92c0f95df436f2015e0521d85c5b45,2c92c0f95df436f2015e0521d85c5b45,2c92c0f95dc6984d015ddfc3eb193dd6,C-00102880,UNITEA胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY5000/License,NoChange,,JPY,5000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:06
+▼ 23件目
+TRUE,2c92c0f95df43700015e0521e07e30f0,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102947,TERMED,FALSE,2019/3/1,,,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f95df43700015e0521e09330f4,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69018015dda1e79b63a98,UX142F2 遠隔読影支援サービス,UX142F2,FALSE,0,READINGIMAGE,0,0,0,2c92c0f95df43700015e0521e09c30f5,2c92c0f95df43700015e0521e09c30f5,2c92c0f85dc69018015dda1e79c43a9c,C-00102881,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:06
+▼ 24件目
+TRUE,2c92c0f85df42d7e015e0521e0b665ca,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102948,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42d7e015e0521e0cc65ce,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984d015ddfe4d8fb2910,UX142F2 EX胸部骨減弱処理（BS）,UX142F2,TRUE,0,UX14AAN,0,0,0,2c92c0f85df42d7e015e0521e0f565d4,2c92c0f85df42d7e015e0521e0f565d4,2c92c0f95dc6984d015ddfe4d9122912,C-00102882,EX胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY12000/License,NoChange,,JPY,12000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:06
+▼ 25件目
+TRUE,2c92c0f95df43700015e0521e90e3101,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102949,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df43700015e0521e9273105,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984d015de013fe416293,UX142F2 CR骨密度測定サービス,UX142F2,TRUE,0,UX14163,0,0,0,2c92c0f95df43700015e0521e9303106,2c92c0f95df43700015e0521e9303106,2c92c0f95dc6984d015de013fe4d6295,C-00102883,CR骨密度測定サービス,Usage,PerUnit,回,1,JPY780/回,NoChange,,JPY,780,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:06
+▼ 26件目
+TRUE,2c92c0f95df436f2015e0521eaa95b69,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102950,TERMED,FALSE,2018/1/1,,,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f95df436f2015e0521eabf5b6d,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc69018015ddfe5897e113d,UX14413 EX胸部骨減弱処理（BS）,UX14413,TRUE,0,UX14AAN,0,0,0,2c92c0f95df436f2015e0521eac95b6e,2c92c0f95df436f2015e0521eac95b6e,2c92c0f85dc69018015ddfe5898a113f,C-00102884,EX胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY12000/License,NoChange,,JPY,12000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:06
+▼ 27件目
+TRUE,2c92c0f95df71c21015e0521eddc6467,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102951,TERMED,FALSE,2019/3/1,,,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f95df71c21015e0521edf4646b,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc6901a015dcb1cbe1a014e,UX142F2 ウェブサイト開設サポート,UX142F2,FALSE,0,LGCY03,0,0,0,2c92c0f95df71c21015e0521ee01646c,2c92c0f95df71c21015e0521ee01646c,2c92c0f85dc6901a015dcb1cbe220150,C-00102885,ウェブサイト開設サポート,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:06
+▼ 28件目
+TRUE,2c92c0f85df42dcd015e0521f2991954,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102952,TERMED,FALSE,2020/2/1,,,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f85df42dcd015e0521f2b01958,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69018015dda1e79b63a98,UX142F2 遠隔読影支援サービス,UX142F2,FALSE,0,READINGIMAGE,0,0,0,2c92c0f85df42dcd015e0521f2b91959,2c92c0f85df42dcd015e0521f2b91959,2c92c0f85dc69018015dda1e79c43a9c,C-00102886,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:06
+▼ 29件目
+TRUE,2c92c0f85df42d87015e0521f437652b,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102953,TERMED,FALSE,2018/1/1,,,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f85df42d87015e0521f450652f,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc69018015de01485ad5bc5,UX14413 CR骨密度測定サービス,UX14413,TRUE,0,UX14163,0,0,0,2c92c0f85df42d87015e0521f45b6530,2c92c0f85df42d87015e0521f45b6530,2c92c0f85dc69018015de01485bd5bc7,C-00102887,CR骨密度測定サービス,Usage,PerUnit,回,1,JPY780/回,NoChange,,JPY,780,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:06
+▼ 30件目
+TRUE,2c92c0f85df42d87015e0521f6f36534,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102954,TERMED,FALSE,2019/3/1,,,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f85df42d87015e0521f7076538,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc6901a015ddfee542319e9,UX142F2 UNITEA胸部骨経時差分処理（TS）,UX142F2,TRUE,0,UX14AAK,0,0,0,2c92c0f85df42d87015e0521f7116539,2c92c0f85df42d87015e0521f7116539,2c92c0f85dc6901a015ddfee543019eb,C-00102888,UNITEA胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY4000/License,NoChange,,JPY,4000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:06
+▼ 31件目
+TRUE,2c92c0f85df42d87015e052206e3653d,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102955,TERMED,FALSE,2020/2/1,,,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f85df42d87015e052206fb6541,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc6901a015dcb1cbe1a014e,UX142F2 ウェブサイト開設サポート,UX142F2,FALSE,0,LGCY03,0,0,0,2c92c0f85df42d87015e052207046542,2c92c0f85df42d87015e052207046542,2c92c0f85dc6901a015dcb1cbe220150,C-00102889,ウェブサイト開設サポート,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:06
+▼ 32件目
+TRUE,2c92c0f95df436f2015e052214e25bbe,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102956,TERMED,FALSE,2018/1/1,2018/1/1,2018/1/1,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f95df436f2015e052214f95bc2,2c92c0f95dc69849015ddf2a1df17fdb,ベース,SKU-00000012,2c92c0f85dc6901a015ddf2ae70f53c3,infomityﾍﾞｰｽﾊﾟｯｸ(4年契約),,FALSE,0,UX14413,0,0,0,2c92c0f95df436f2015e052215015bc3,2c92c0f95df436f2015e052215015bc3,2c92c0f95dc6984d015ddf2c595e72a5,C-00102890,infomityﾍﾞｰｽﾊﾟｯｸ(4年契約),Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Annual,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2018/1/1,2022/1/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:07
+▼ 33件目
+TRUE,2c92c0f95df43700015e05222cd73178,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102957,TERMED,FALSE,2020/2/1,,,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f95df43700015e05222cef317c,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc6901a015ddfee542319e9,UX142F2 UNITEA胸部骨経時差分処理（TS）,UX142F2,TRUE,0,UX14AAK,0,0,0,2c92c0f95df43700015e05222cf9317d,2c92c0f95df43700015e05222cf9317d,2c92c0f85dc6901a015ddfee543019eb,C-00102891,UNITEA胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY4000/License,NoChange,,JPY,4000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:07
+▼ 34件目
+TRUE,2c92c0f85df42d7e015e05222ce26635,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102958,TERMED,FALSE,2019/3/1,,,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f85df42d7e015e05222cfa6639,2c92c0f95dc6984d015dcaa055df7bd0,品目【連携】,SKU-00000002,2c92c0f85dc69071015dcac8c8bc30de,UX142F2 連携BOX　Lite,UX142F2,FALSE,0,A578,0,0,0,2c92c0f85df42d7e015e05222d04663a,2c92c0f85df42d7e015e05222d04663a,2c92c0f85dc69071015dcac8c8c730e0,C-00102892,連携BOX　Lite,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:07
+▼ 35件目
+TRUE,2c92c0f85df42d87015e05223e95658e,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102959,TERMED,FALSE,2019/3/1,,,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f85df42d87015e05223ea96592,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69071015dda0410f16f98,UX142F2 医療行政ニュース,UX142F2,FALSE,0,LGCY04,0,0,0,2c92c0f85df42d87015e05223eb36593,2c92c0f85df42d87015e05223eb36593,2c92c0f85dc69071015dda0410ff6f9b,C-00102893,医療行政ニュース,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:07
+▼ 36件目
+TRUE,2c92c0f95df436f2015e05223ee75bfd,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102960,TERMED,FALSE,2018/1/1,,,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f95df436f2015e05223f045c01,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc6901a015ddfc49462723f,UX14413 UNITEA胸部骨減弱処理（BS）,UX14413,TRUE,0,UX14AAL,0,0,0,2c92c0f95df436f2015e05223f0f5c02,2c92c0f95df436f2015e05223f0f5c02,2c92c0f85dc6901a015ddfc4946c7241,C-00102894,UNITEA胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY5000/License,NoChange,,JPY,5000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:07
+▼ 37件目
+TRUE,2c92c0f95df71c21015e05223ff764ca,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102961,TERMED,FALSE,2020/2/1,,,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f95df71c21015e0522400e64ce,2c92c0f95dc6984d015dcaa055df7bd0,品目【連携】,SKU-00000002,2c92c0f85dc69071015dcac8c8bc30de,UX142F2 連携BOX　Lite,UX142F2,FALSE,0,A578,0,0,0,2c92c0f95df71c21015e0522401764cf,2c92c0f95df71c21015e0522401764cf,2c92c0f85dc69071015dcac8c8c730e0,C-00102895,連携BOX　Lite,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:07
+▼ 38件目
+TRUE,2c92c0f95df43700015e0522476031e5,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102962,TERMED,FALSE,2019/3/1,2019/3/1,2019/3/1,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f95df43700015e0522477731e9,2c92c0f95dc69849015ddf2a1df17fdb,ベース,SKU-00000012,2c92c0f95dc69849015ddf2e64190ef0,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),,FALSE,0,UX142F2,0,0,0,2c92c0f95df43700015e0522478031ea,2c92c0f95df43700015e0522478031ea,2c92c0f95dc69849015ddf2e64240ef2,C-00102896,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Annual,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2019/3/1,2020/3/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:08
+▼ 39件目
+TRUE,2c92c0f85df42d87015e052247d26607,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102963,TERMED,FALSE,2020/2/1,,,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f85df42d87015e052247ef660b,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69071015dda0410f16f98,UX142F2 医療行政ニュース,UX142F2,FALSE,0,LGCY04,0,0,0,2c92c0f85df42d87015e052247f8660c,2c92c0f85df42d87015e052247f8660c,2c92c0f85dc69071015dda0410ff6f9b,C-00102897,医療行政ニュース,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:08
+▼ 40件目
+TRUE,2c92c0f95df43700015e052248c431ee,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102964,TERMED,FALSE,2018/1/1,,,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f95df43700015e052248dd31f2,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69071015dda1f1f7617d4,UX14413 遠隔読影支援サービス,UX14413,FALSE,0,READINGIMAGE,0,0,0,2c92c0f95df43700015e052248eb31f6,2c92c0f95df43700015e052248eb31f6,2c92c0f85dc69071015dda1f1f8517d8,C-00102898,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:08
+▼ 41件目
+TRUE,2c92c0f95df436f2015e052250395c31,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102965,TERMED,FALSE,2020/2/1,2020/2/1,2020/2/1,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f95df436f2015e052250535c37,2c92c0f95dc69849015ddf2a1df17fdb,ベース,SKU-00000012,2c92c0f95dc69849015ddf2e64190ef0,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),,FALSE,0,UX142F2,0,0,0,2c92c0f95df436f2015e052250635c38,2c92c0f95df436f2015e052250635c38,2c92c0f95dc69849015ddf2e64240ef2,C-00102899,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Annual,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2020/2/1,2021/2/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:08
+▼ 42件目
+TRUE,2c92c0f95df436f2015e052250685c3b,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102966,TERMED,FALSE,2019/3/1,,,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f95df436f2015e052250805c45,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984b015ddff977997bab,UX142F2 EX胸部骨経時差分処理（TS）,UX142F2,TRUE,0,UX14AAM,0,0,0,2c92c0f95df436f2015e052250895c46,2c92c0f95df436f2015e052250895c46,2c92c0f95dc6984b015ddff977aa7bad,C-00102900,EX胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY10000/License,NoChange,,JPY,10000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:08
+▼ 43件目
+TRUE,2c92c0f85df42d7e015e052252236683,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102967,TERMED,FALSE,2018/1/1,,,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f85df42d7e015e0522523b6687,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc69849015dda048e497d4b,UX14413 医療行政ニュース,UX14413,FALSE,0,LGCY04,0,0,0,2c92c0f85df42d7e015e052252436688,2c92c0f85df42d7e015e052252436688,2c92c0f95dc69849015dda048e567d4d,C-00102901,医療行政ニュース,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:08
+▼ 44件目
+TRUE,2c92c0f95df436f2015e052258a25c49,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102968,TERMED,FALSE,2020/2/1,,,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f95df436f2015e052258ba5c4d,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984b015ddff977997bab,UX142F2 EX胸部骨経時差分処理（TS）,UX142F2,TRUE,0,UX14AAM,0,0,0,2c92c0f95df436f2015e052258cb5c4e,2c92c0f95df436f2015e052258cb5c4e,2c92c0f95dc6984b015ddff977aa7bad,C-00102902,EX胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY10000/License,NoChange,,JPY,10000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:08
+▼ 45件目
+TRUE,2c92c0f85df42dcd015e05225a081a75,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102969,TERMED,FALSE,2019/3/1,2019/3/1,2019/3/1,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f85df42dcd015e05225a1d1a79,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc6984d015dcb83f47e41e5,UX142F2 スマートアップデートサービス,UX142F2,FALSE,0,RVUP-UNITEA,0,0,0,2c92c0f85df42dcd015e05225a271a7a,2c92c0f85df42dcd015e05225a271a7a,2c92c0f95dc6984d015dcb83f48a41e7,C-00102903,スマートアップデートサービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2019/3/1,2020/3/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:09
+▼ 46件目
+TRUE,2c92c0f95df71c21015e05225b8164fb,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102970,TERME処理開始▶▶▶▶▶2017/09/08 15:40:32
+2017/09/08 15:40:40
+▼ 1件目
+TRUE,2c92c0f85df42d7e015e0521536c6473,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102925,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e052153836479,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc69018015ddfe5897e113d,UX14413 EX胸部骨減弱処理（BS）,UX14413,TRUE,0,UX14AAN,0,0,0,2c92c0f85df42d7e015e0521538c647b,2c92c0f85df42d7e015e0521538c647b,2c92c0f85dc69018015ddfe5898a113f,C-00102859,EX胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY12000/License,NoChange,,JPY,12000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:40
+▼ 2件目
+TRUE,2c92c0f85df42d7e015e05215d6764bc,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102926,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e05215d7d64c0,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc69018015de01485ad5bc5,UX14413 CR骨密度測定サービス,UX14413,TRUE,0,UX14163,0,0,0,2c92c0f85df42d7e015e05215d8764c1,2c92c0f85df42d7e015e05215d8764c1,2c92c0f85dc69018015de01485bd5bc7,C-00102860,CR骨密度測定サービス,Usage,PerUnit,回,1,JPY780/回,NoChange,,JPY,780,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:40
+▼ 3件目
+TRUE,2c92c0f95df436f2015e0521724f5a98,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102927,TERMED,FALSE,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f95df436f2015e052172715a9c,2c92c0f95dc69849015ddf2a1df17fdb,ベース,SKU-00000012,2c92c0f85dc6901a015ddf2ae70f53c3,infomityﾍﾞｰｽﾊﾟｯｸ(4年契約),,FALSE,0,UX14413,0,0,0,2c92c0f95df436f2015e0521727c5a9d,2c92c0f95df436f2015e0521727c5a9d,2c92c0f95dc6984d015ddf2c595e72a5,C-00102861,infomityﾍﾞｰｽﾊﾟｯｸ(4年契約),Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Annual,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2018/4/1,2022/4/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:43
+▼ 4件目
+TRUE,2c92c0f95df43700015e052187823076,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102928,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f95df43700015e0521879a307a,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc6901a015ddfc49462723f,UX14413 UNITEA胸部骨減弱処理（BS）,UX14413,TRUE,0,UX14AAL,0,0,0,2c92c0f95df43700015e052187a3307b,2c92c0f95df43700015e052187a3307b,2c92c0f85dc6901a015ddfc4946c7241,C-00102862,UNITEA胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY5000/License,NoChange,,JPY,5000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:43
+▼ 5件目
+TRUE,2c92c0f85df42dcd015e05218bbc1880,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102929,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42dcd015e05218bd61887,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69018015dda1e79b63a98,UX142F2 遠隔読影支援サービス,UX142F2,FALSE,0,READINGIMAGE,0,0,0,2c92c0f85df42dcd015e05218be81888,2c92c0f85df42dcd015e05218be81888,2c92c0f85dc69018015dda1e79c43a9c,C-00102863,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:43
+▼ 6件目
+TRUE,2c92c0f85df42dcd015e0521916018a1,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102930,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42dcd015e0521917518a5,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69071015dda1f1f7617d4,UX14413 遠隔読影支援サービス,UX14413,FALSE,0,READINGIMAGE,0,0,0,2c92c0f85df42dcd015e0521917d18a6,2c92c0f85df42dcd015e0521917d18a6,2c92c0f85dc69071015dda1f1f8517d8,C-00102864,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:43
+▼ 7件目
+TRUE,2c92c0f85df42dcd015e052193ac18ac,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102931,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42dcd015e052193c018b0,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc6901a015dcb1cbe1a014e,UX142F2 ウェブサイト開設サポート,UX142F2,FALSE,0,LGCY03,0,0,0,2c92c0f85df42dcd015e052193c918b1,2c92c0f85df42dcd015e052193c918b1,2c92c0f85dc6901a015dcb1cbe220150,C-00102865,ウェブサイト開設サポート,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:43
+▼ 8件目
+TRUE,2c92c0f85df42d7e015e05219b186552,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102932,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e05219b2e6556,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc69849015dda048e497d4b,UX14413 医療行政ニュース,UX14413,FALSE,0,LGCY04,0,0,0,2c92c0f85df42d7e015e05219b376557,2c92c0f85df42d7e015e05219b376557,2c92c0f95dc69849015dda048e567d4d,C-00102866,医療行政ニュース,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:43
+▼ 9件目
+TRUE,2c92c0f95df436f2015e05219bf15ac4,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102933,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df436f2015e05219c0b5ac8,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc6901a015ddfee542319e9,UX142F2 UNITEA胸部骨経時差分処理（TS）,UX142F2,TRUE,0,UX14AAK,0,0,0,2c92c0f95df436f2015e05219c145ac9,2c92c0f95df436f2015e05219c145ac9,2c92c0f85dc6901a015ddfee543019eb,C-00102867,UNITEA胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY4000/License,NoChange,,JPY,4000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:43
+▼ 10件目
+TRUE,2c92c0f95df436f2015e0521a4e45add,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102934,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df436f2015e0521a4f95ae1,2c92c0f95dc6984d015dcaa055df7bd0,品目【連携】,SKU-00000002,2c92c0f85dc69071015dcac8c8bc30de,UX142F2 連携BOX　Lite,UX142F2,FALSE,0,A578,0,0,0,2c92c0f95df436f2015e0521a5035ae2,2c92c0f95df436f2015e0521a5035ae2,2c92c0f85dc69071015dcac8c8c730e0,C-00102868,連携BOX　Lite,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:43
+▼ 11件目
+TRUE,2c92c0f85df42d87015e0521a51764d3,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102935,TERMED,FALSE,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d87015e0521a52d64d7,2c92c0f85dc69071015dcb7a750d0aaa,品目【セキュア】,SKU-00000004,2c92c0f95dc69849015dda2a14454c09,UX14413 ウイルス対策サービス,UX14413,FALSE,0,UXA40T7,0,0,0,2c92c0f85df42d87015e0521a53564d8,2c92c0f85df42d87015e0521a53564d8,2c92c0f95dc69849015dda2a14524c0b,C-00102869,ウイルス対策サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2018/4/1,2022/4/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:45
+▼ 12件目
+TRUE,2c92c0f85df42dcd015e0521adda18ee,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102936,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42dcd015e0521adee18f2,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69071015dda0410f16f98,UX142F2 医療行政ニュース,UX142F2,FALSE,0,LGCY04,0,0,0,2c92c0f85df42dcd015e0521adf618f3,2c92c0f85df42dcd015e0521adf618f3,2c92c0f85dc69071015dda0410ff6f9b,C-00102870,医療行政ニュース,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:45
+▼ 13件目
+TRUE,2c92c0f95df436f2015e0521af485ae9,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102937,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f95df436f2015e0521af5e5aed,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc69849015ddfeef3905915,UX14413 UNITEA胸部骨経時差分処理（TS）,UX14413,TRUE,0,UX14AAK,0,0,0,2c92c0f95df436f2015e0521af685aee,2c92c0f95df436f2015e0521af685aee,2c92c0f95dc69849015ddfeef39e5917,C-00102871,UNITEA胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY4000/License,NoChange,,JPY,4000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:45
+▼ 14件目
+TRUE,2c92c0f95df436f2015e0521b6245af4,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102938,TERMED,FALSE,2019/2/1,2019/2/1,2019/2/1,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df436f2015e0521b63b5af8,2c92c0f95dc69849015ddf2a1df17fdb,ベース,SKU-00000012,2c92c0f95dc69849015ddf2e64190ef0,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),,FALSE,0,UX142F2,0,0,0,2c92c0f95df436f2015e0521b6455af9,2c92c0f95df436f2015e0521b6455af9,2c92c0f95dc69849015ddf2e64240ef2,C-00102872,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Annual,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2019/2/1,2020/2/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:45
+▼ 15件目
+TRUE,2c92c0f85df42dcd015e0521b96f18fd,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102939,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42dcd015e0521b9881901,2c92c0f95dc6984d015dcaa055df7bd0,品目【連携】,SKU-00000002,2c92c0f95dc6984b015dcaca7f4c65c1,UX14413 連携BOX　Lite,UX14413,FALSE,0,A578,0,0,0,2c92c0f85df42dcd015e0521b9911902,2c92c0f85df42dcd015e0521b9911902,2c92c0f95dc6984b015dcaca7f5665c3,C-00102873,連携BOX　Lite,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:45
+▼ 16件目
+TRUE,2c92c0f85df42d87015e0521bf5664e6,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102940,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42d87015e0521bf6d64ea,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984b015ddff977997bab,UX142F2 EX胸部骨経時差分処理（TS）,UX142F2,TRUE,0,UX14AAM,0,0,0,2c92c0f85df42d87015e0521bf7764eb,2c92c0f85df42d87015e0521bf7764eb,2c92c0f95dc6984b015ddff977aa7bad,C-00102874,EX胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY10000/License,NoChange,,JPY,10000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:45
+▼ 17件目
+TRUE,2c92c0f95df71c21015e0521c337640e,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102941,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f95df71c21015e0521c3506412,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc6984d015dcb052d3900f5,UX14413 ウェブサイト開設サポート,UX14413,FALSE,0,LGCY03,0,0,0,2c92c0f95df71c21015e0521c3596413,2c92c0f95df71c21015e0521c3596413,2c92c0f95dc6984d015dcb052d4200f7,C-00102875,ウェブサイト開設サポート,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:45
+▼ 18件目
+TRUE,2c92c0f95df71c21015e0521c7476416,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102942,TERMED,FALSE,2019/2/1,2019/2/1,2019/2/1,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df71c21015e0521c75f641a,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc6984d015dcb83f47e41e5,UX142F2 スマートアップデートサービス,UX142F2,FALSE,0,RVUP-UNITEA,0,0,0,2c92c0f95df71c21015e0521c76a641b,2c92c0f95df71c21015e0521c76a641b,2c92c0f95dc6984d015dcb83f48a41e7,C-00102876,スマートアップデートサービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2019/2/1,2020/2/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:46
+▼ 19件目
+TRUE,2c92c0f85df42d7e015e0521cc8865aa,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102943,TERMED,FALSE,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d7e015e0521cc9f65ae,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc6984d015dcb8385703ff1,UX14413 スマートアップデートサービス,UX14413,FALSE,0,RVUP-UNITEA,0,0,0,2c92c0f85df42d7e015e0521cca965af,2c92c0f85df42d7e015e0521cca965af,2c92c0f95dc6984d015dcb83857b3ff3,C-00102877,スマートアップデートサービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2018/4/1,2022/4/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:46
+▼ 20件目
+TRUE,2c92c0f95df43700015e0521cff230d3,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102944,TERMED,FALSE,2019/2/1,2019/2/1,2019/2/1,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df43700015e0521d00930d7,2c92c0f85dc69071015dcb7a750d0aaa,品目【セキュア】,SKU-00000004,2c92c0f95dc6984d015dda279e4b2508,UX142F2 ウイルス対策サービス,UX142F2,FALSE,0,UXA40T7,0,0,0,2c92c0f95df43700015e0521d01330d8,2c92c0f95df43700015e0521d01330d8,2c92c0f95dc6984d015dda279e57250a,C-00102878,ウイルス対策サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2019/2/1,2020/2/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:47
+▼ 21件目
+TRUE,2c92c0f85df42d87015e0521d5c0650f,2c92c0f95dc6984b015dc9cffc8b06b1,A00017729,石原消化器内科クリニック,2c92c0f85dc69071015dc9cca10678c4,A00017642,株式会社　アスティス,A-S00102945,TERMED,FALSE,2018/4/1,,,2018/4/1,2018/4/1,2022/4/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01493969,,,,1493969,,0,2018/4/1,,1,,400,0,0,2c92c0f85df42d87015e0521d5d86513,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984d015ddffa2c7a68bb,UX14413 EX胸部骨経時差分処理（TS）,UX14413,TRUE,0,UX14AAM,0,0,0,2c92c0f85df42d87015e0521d5e16514,2c92c0f85df42d87015e0521d5e16514,2c92c0f95dc6984d015ddffa2c8768bd,C-00102879,EX胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY10000/License,NoChange,,JPY,10000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 22件目
+TRUE,2c92c0f95df436f2015e0521d83c5b40,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102946,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df436f2015e0521d8525b44,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984d015ddfc3eb0f3dd4,UX142F2 UNITEA胸部骨減弱処理（BS）,UX142F2,TRUE,0,UX14AAL,0,0,0,2c92c0f95df436f2015e0521d85c5b45,2c92c0f95df436f2015e0521d85c5b45,2c92c0f95dc6984d015ddfc3eb193dd6,C-00102880,UNITEA胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY5000/License,NoChange,,JPY,5000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 23件目
+TRUE,2c92c0f95df43700015e0521e07e30f0,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102947,TERMED,FALSE,2019/3/1,,,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f95df43700015e0521e09330f4,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69018015dda1e79b63a98,UX142F2 遠隔読影支援サービス,UX142F2,FALSE,0,READINGIMAGE,0,0,0,2c92c0f95df43700015e0521e09c30f5,2c92c0f95df43700015e0521e09c30f5,2c92c0f85dc69018015dda1e79c43a9c,C-00102881,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 24件目
+TRUE,2c92c0f85df42d7e015e0521e0b665ca,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102948,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f85df42d7e015e0521e0cc65ce,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984d015ddfe4d8fb2910,UX142F2 EX胸部骨減弱処理（BS）,UX142F2,TRUE,0,UX14AAN,0,0,0,2c92c0f85df42d7e015e0521e0f565d4,2c92c0f85df42d7e015e0521e0f565d4,2c92c0f95dc6984d015ddfe4d9122912,C-00102882,EX胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY12000/License,NoChange,,JPY,12000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 25件目
+TRUE,2c92c0f95df43700015e0521e90e3101,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102949,TERMED,FALSE,2019/2/1,,,2019/2/1,2019/2/1,2020/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2019/2/1,,1,,700,0,0,2c92c0f95df43700015e0521e9273105,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984d015de013fe416293,UX142F2 CR骨密度測定サービス,UX142F2,TRUE,0,UX14163,0,0,0,2c92c0f95df43700015e0521e9303106,2c92c0f95df43700015e0521e9303106,2c92c0f95dc6984d015de013fe4d6295,C-00102883,CR骨密度測定サービス,Usage,PerUnit,回,1,JPY780/回,NoChange,,JPY,780,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 26件目
+TRUE,2c92c0f95df436f2015e0521eaa95b69,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102950,TERMED,FALSE,2018/1/1,,,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f95df436f2015e0521eabf5b6d,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc69018015ddfe5897e113d,UX14413 EX胸部骨減弱処理（BS）,UX14413,TRUE,0,UX14AAN,0,0,0,2c92c0f95df436f2015e0521eac95b6e,2c92c0f95df436f2015e0521eac95b6e,2c92c0f85dc69018015ddfe5898a113f,C-00102884,EX胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY12000/License,NoChange,,JPY,12000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 27件目
+TRUE,2c92c0f95df71c21015e0521eddc6467,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102951,TERMED,FALSE,2019/3/1,,,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f95df71c21015e0521edf4646b,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc6901a015dcb1cbe1a014e,UX142F2 ウェブサイト開設サポート,UX142F2,FALSE,0,LGCY03,0,0,0,2c92c0f95df71c21015e0521ee01646c,2c92c0f95df71c21015e0521ee01646c,2c92c0f85dc6901a015dcb1cbe220150,C-00102885,ウェブサイト開設サポート,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 28件目
+TRUE,2c92c0f85df42dcd015e0521f2991954,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102952,TERMED,FALSE,2020/2/1,,,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f85df42dcd015e0521f2b01958,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69018015dda1e79b63a98,UX142F2 遠隔読影支援サービス,UX142F2,FALSE,0,READINGIMAGE,0,0,0,2c92c0f85df42dcd015e0521f2b91959,2c92c0f85df42dcd015e0521f2b91959,2c92c0f85dc69018015dda1e79c43a9c,C-00102886,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 29件目
+TRUE,2c92c0f85df42d87015e0521f437652b,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102953,TERMED,FALSE,2018/1/1,,,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f85df42d87015e0521f450652f,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc69018015de01485ad5bc5,UX14413 CR骨密度測定サービス,UX14413,TRUE,0,UX14163,0,0,0,2c92c0f85df42d87015e0521f45b6530,2c92c0f85df42d87015e0521f45b6530,2c92c0f85dc69018015de01485bd5bc7,C-00102887,CR骨密度測定サービス,Usage,PerUnit,回,1,JPY780/回,NoChange,,JPY,780,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 30件目
+TRUE,2c92c0f85df42d87015e0521f6f36534,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102954,TERMED,FALSE,2019/3/1,,,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f85df42d87015e0521f7076538,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc6901a015ddfee542319e9,UX142F2 UNITEA胸部骨経時差分処理（TS）,UX142F2,TRUE,0,UX14AAK,0,0,0,2c92c0f85df42d87015e0521f7116539,2c92c0f85df42d87015e0521f7116539,2c92c0f85dc6901a015ddfee543019eb,C-00102888,UNITEA胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY4000/License,NoChange,,JPY,4000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 31件目
+TRUE,2c92c0f85df42d87015e052206e3653d,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102955,TERMED,FALSE,2020/2/1,,,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f85df42d87015e052206fb6541,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc6901a015dcb1cbe1a014e,UX142F2 ウェブサイト開設サポート,UX142F2,FALSE,0,LGCY03,0,0,0,2c92c0f85df42d87015e052207046542,2c92c0f85df42d87015e052207046542,2c92c0f85dc6901a015dcb1cbe220150,C-00102889,ウェブサイト開設サポート,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 32件目
+TRUE,2c92c0f95df436f2015e052214e25bbe,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102956,TERMED,FALSE,2018/1/1,2018/1/1,2018/1/1,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f95df436f2015e052214f95bc2,2c92c0f95dc69849015ddf2a1df17fdb,ベース,SKU-00000012,2c92c0f85dc6901a015ddf2ae70f53c3,infomityﾍﾞｰｽﾊﾟｯｸ(4年契約),,FALSE,0,UX14413,0,0,0,2c92c0f95df436f2015e052215015bc3,2c92c0f95df436f2015e052215015bc3,2c92c0f95dc6984d015ddf2c595e72a5,C-00102890,infomityﾍﾞｰｽﾊﾟｯｸ(4年契約),Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Annual,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2018/1/1,2022/1/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:47
+▼ 33件目
+TRUE,2c92c0f95df43700015e05222cd73178,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102957,TERMED,FALSE,2020/2/1,,,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f95df43700015e05222cef317c,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc6901a015ddfee542319e9,UX142F2 UNITEA胸部骨経時差分処理（TS）,UX142F2,TRUE,0,UX14AAK,0,0,0,2c92c0f95df43700015e05222cf9317d,2c92c0f95df43700015e05222cf9317d,2c92c0f85dc6901a015ddfee543019eb,C-00102891,UNITEA胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY4000/License,NoChange,,JPY,4000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 34件目
+TRUE,2c92c0f85df42d7e015e05222ce26635,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102958,TERMED,FALSE,2019/3/1,,,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f85df42d7e015e05222cfa6639,2c92c0f95dc6984d015dcaa055df7bd0,品目【連携】,SKU-00000002,2c92c0f85dc69071015dcac8c8bc30de,UX142F2 連携BOX　Lite,UX142F2,FALSE,0,A578,0,0,0,2c92c0f85df42d7e015e05222d04663a,2c92c0f85df42d7e015e05222d04663a,2c92c0f85dc69071015dcac8c8c730e0,C-00102892,連携BOX　Lite,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 35件目
+TRUE,2c92c0f85df42d87015e05223e95658e,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102959,TERMED,FALSE,2019/3/1,,,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f85df42d87015e05223ea96592,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69071015dda0410f16f98,UX142F2 医療行政ニュース,UX142F2,FALSE,0,LGCY04,0,0,0,2c92c0f85df42d87015e05223eb36593,2c92c0f85df42d87015e05223eb36593,2c92c0f85dc69071015dda0410ff6f9b,C-00102893,医療行政ニュース,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 36件目
+TRUE,2c92c0f95df436f2015e05223ee75bfd,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102960,TERMED,FALSE,2018/1/1,,,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f95df436f2015e05223f045c01,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f85dc6901a015ddfc49462723f,UX14413 UNITEA胸部骨減弱処理（BS）,UX14413,TRUE,0,UX14AAL,0,0,0,2c92c0f95df436f2015e05223f0f5c02,2c92c0f95df436f2015e05223f0f5c02,2c92c0f85dc6901a015ddfc4946c7241,C-00102894,UNITEA胸部骨減弱処理（BS）,Usage,PerUnit,License,1,JPY5000/License,NoChange,,JPY,5000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 37件目
+TRUE,2c92c0f95df71c21015e05223ff764ca,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102961,TERMED,FALSE,2020/2/1,,,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f95df71c21015e0522400e64ce,2c92c0f95dc6984d015dcaa055df7bd0,品目【連携】,SKU-00000002,2c92c0f85dc69071015dcac8c8bc30de,UX142F2 連携BOX　Lite,UX142F2,FALSE,0,A578,0,0,0,2c92c0f95df71c21015e0522401764cf,2c92c0f95df71c21015e0522401764cf,2c92c0f85dc69071015dcac8c8c730e0,C-00102895,連携BOX　Lite,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:47
+▼ 38件目
+TRUE,2c92c0f95df43700015e0522476031e5,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102962,TERMED,FALSE,2019/3/1,2019/3/1,2019/3/1,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f95df43700015e0522477731e9,2c92c0f95dc69849015ddf2a1df17fdb,ベース,SKU-00000012,2c92c0f95dc69849015ddf2e64190ef0,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),,FALSE,0,UX142F2,0,0,0,2c92c0f95df43700015e0522478031ea,2c92c0f95df43700015e0522478031ea,2c92c0f95dc69849015ddf2e64240ef2,C-00102896,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Annual,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2019/3/1,2020/3/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:48
+▼ 39件目
+TRUE,2c92c0f85df42d87015e052247d26607,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102963,TERMED,FALSE,2020/2/1,,,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f85df42d87015e052247ef660b,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69071015dda0410f16f98,UX142F2 医療行政ニュース,UX142F2,FALSE,0,LGCY04,0,0,0,2c92c0f85df42d87015e052247f8660c,2c92c0f85df42d87015e052247f8660c,2c92c0f85dc69071015dda0410ff6f9b,C-00102897,医療行政ニュース,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:48
+▼ 40件目
+TRUE,2c92c0f95df43700015e052248c431ee,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102964,TERMED,FALSE,2018/1/1,,,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f95df43700015e052248dd31f2,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f85dc69071015dda1f1f7617d4,UX14413 遠隔読影支援サービス,UX14413,FALSE,0,READINGIMAGE,0,0,0,2c92c0f95df43700015e052248eb31f6,2c92c0f95df43700015e052248eb31f6,2c92c0f85dc69071015dda1f1f8517d8,C-00102898,遠隔読影支援サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,別途課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:48
+▼ 41件目
+TRUE,2c92c0f95df436f2015e052250395c31,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102965,TERMED,FALSE,2020/2/1,2020/2/1,2020/2/1,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f95df436f2015e052250535c37,2c92c0f95dc69849015ddf2a1df17fdb,ベース,SKU-00000012,2c92c0f95dc69849015ddf2e64190ef0,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),,FALSE,0,UX142F2,0,0,0,2c92c0f95df436f2015e052250635c38,2c92c0f95df436f2015e052250635c38,2c92c0f95dc69849015ddf2e64240ef2,C-00102899,infomityﾍﾞｰｽﾊﾟｯｸ(2年目以降),Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Annual,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2020/2/1,2021/2/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:48
+▼ 42件目
+TRUE,2c92c0f95df436f2015e052250685c3b,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102966,TERMED,FALSE,2019/3/1,,,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f95df436f2015e052250805c45,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984b015ddff977997bab,UX142F2 EX胸部骨経時差分処理（TS）,UX142F2,TRUE,0,UX14AAM,0,0,0,2c92c0f95df436f2015e052250895c46,2c92c0f95df436f2015e052250895c46,2c92c0f95dc6984b015ddff977aa7bad,C-00102900,EX胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY10000/License,NoChange,,JPY,10000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:48
+▼ 43件目
+TRUE,2c92c0f85df42d7e015e052252236683,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102967,TERMED,FALSE,2018/1/1,,,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f85df42d7e015e0522523b6687,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc69849015dda048e497d4b,UX14413 医療行政ニュース,UX14413,FALSE,0,LGCY04,0,0,0,2c92c0f85df42d7e015e052252436688,2c92c0f85df42d7e015e052252436688,2c92c0f95dc69849015dda048e567d4d,C-00102901,医療行政ニュース,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,親に内包,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:48
+▼ 44件目
+TRUE,2c92c0f95df436f2015e052258a25c49,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102968,TERMED,FALSE,2020/2/1,,,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f95df436f2015e052258ba5c4d,2c92c0f95dc6984b015ddfae0d48164c,品目【課金】,SKU-00000021,2c92c0f95dc6984b015ddff977997bab,UX142F2 EX胸部骨経時差分処理（TS）,UX142F2,TRUE,0,UX14AAM,0,0,0,2c92c0f95df436f2015e052258cb5c4e,2c92c0f95df436f2015e052258cb5c4e,2c92c0f95dc6984b015ddff977aa7bad,C-00102902,EX胸部骨経時差分処理（TS）,Usage,PerUnit,License,1,JPY10000/License,NoChange,,JPY,10000,,,,,,,,,DefaultFromCustomer,,Month,,,AlignToCharge,,,,,,,EndOfBillingPeriod,1,,,,,FALSE,,CustomerAcceptance,Subscription_End,,,,,,,,従量課金,0,0,,,,,,,
+Statusが「Active」ではないため更新処理できません。
+2017/09/08 15:40:48
+▼ 45件目
+TRUE,2c92c0f85df42dcd015e05225a081a75,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102969,TERMED,FALSE,2019/3/1,2019/3/1,2019/3/1,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f85df42dcd015e05225a1d1a79,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc6984d015dcb83f47e41e5,UX142F2 スマートアップデートサービス,UX142F2,FALSE,0,RVUP-UNITEA,0,0,0,2c92c0f85df42dcd015e05225a271a7a,2c92c0f85df42dcd015e05225a271a7a,2c92c0f95dc6984d015dcb83f48a41e7,C-00102903,スマートアップデートサービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2019/3/1,2020/3/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:49
+▼ 46件目
+TRUE,2c92c0f95df71c21015e05225b8164fb,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102970,TERMED,FALSE,2018/1/1,2018/1/1,2018/1/1,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f95df71c21015e05225b9a64ff,2c92c0f85dc69071015dcb7a750d0aaa,品目【セキュア】,SKU-00000004,2c92c0f95dc69849015dda2a14454c09,UX14413 ウイルス対策サービス,UX14413,FALSE,0,UXA40T7,0,0,0,2c92c0f95df71c21015e05225ba36500,2c92c0f95df71c21015e05225ba36500,2c92c0f95dc69849015dda2a14524c0b,C-00102904,ウイルス対策サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2018/1/1,2022/1/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:49
+▼ 47件目
+TRUE,2c92c0f85df42d7e015e05226dc666b0,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,2c92c0f85dc6901a015dcb0f24fe3951,A00025613,吉田胃腸科外科,A-S00102971,TERMED,FALSE,2020/2/1,2020/2/1,2020/2/1,2020/2/1,2020/2/1,2021/2/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01455485,,,,1455485,,0,2020/2/1,,1,,800,0,0,2c92c0f85df42d7e015e05226dde66b4,2c92c0f85dc69018015dcaef3cd81211,品目【共通】,SKU-00000003,2c92c0f95dc6984d015dcb83f47e41e5,UX142F2 スマートアップデートサービス,UX142F2,FALSE,0,RVUP-UNITEA,0,0,0,2c92c0f85df42d7e015e05226de766b5,2c92c0f85df42d7e015e05226de766b5,2c92c0f95dc6984d015dcb83f48a41e7,C-00102905,スマートアップデートサービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2020/2/1,2021/2/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:50
+▼ 48件目
+TRUE,2c92c0f85df42d7e015e052270d366cc,2c92c0f95dc6984b015dd40cad8a021a,A00084299,ふくだ整形外科リウマチ科,2c92c0f95dc69849015dcc191737084c,A00039164,アルフレッサ株式会社,A-S00102972,TERMED,FALSE,2019/3/1,2019/3/1,2019/3/1,2019/3/1,2019/3/1,2020/3/1,12,Month,12,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Active,QJ01494290,,,,1494290,,0,2019/3/1,,1,,1000,0,0,2c92c0f85df42d7e015e052270ea66d0,2c92c0f85dc69071015dcb7a750d0aaa,品目【セキュア】,SKU-00000004,2c92c0f95dc6984d015dda279e4b2508,UX142F2 ウイルス対策サービス,UX142F2,FALSE,0,UXA40T7,0,0,0,2c92c0f85df42d7e015e052270f566d1,2c92c0f85df42d7e015e052270f566d1,2c92c0f95dc6984d015dda279e57250a,C-00102906,ウイルス対策サービス,Recurring,FlatFee,,1,JPY0,NoChange,,JPY,0,,,,,,,,,DefaultFromCustomer,Per_Billing_Period,Month,,IN_ARREARS,AlignToCharge,1,,,,,,,1,2019/3/1,2020/3/1,,,FALSE,,CustomerAcceptance,Subscription_End,,,,0,0,0,0,親に内包,0,0,,,,,,,
+更新用の請求先を確認してください。 
+更新用の納入先を確認してください。 
+updateSubscrWithCsv() failed with message: 文字列は有効な DateTime として認識されませんでした。インデックス 1 から始まる位置に不明な単語があります。
+2017/09/08 15:40:50
+▼ 49件目
+TRUE,2c92c0f95df436f2015e0522716e5c76,2c92c0f85dc69018015dcc6ecc263ecb,A00043544,東海病院,2c92c0f85dc69018015dc958dfb17776,A00014703,ジープラン（株）,A-S00102973,TERMED,FALSE,2018/1/1,,,2018/1/1,2018/1/1,2022/1/1,48,Month,48,Month,FALSE,RENEW_WITH_SPECIFIC_TERM,0,Month,0,0,,Pending Activation,QJ01537098,,,,1537098,,0,2018/1/1,,1,,800,0,0,2c92c0f95df436f2015e052271855c7a,2c92c0f95dc6984

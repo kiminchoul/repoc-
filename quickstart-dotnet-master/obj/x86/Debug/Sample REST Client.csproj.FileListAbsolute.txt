@@ -1,0 +1,31 @@
+C:\Users\childebrant\Documents\SampleCSharpRESTClient\CsharpDotNet2-client\quickstart-dotnet\bin\Debug\ConsoleApplication.exe.config
+C:\Users\childebrant\Documents\SampleCSharpRESTClient\CsharpDotNet2-client\quickstart-dotnet\bin\Debug\ConsoleApplication.exe
+C:\Users\childebrant\Documents\SampleCSharpRESTClient\CsharpDotNet2-client\quickstart-dotnet\bin\Debug\ConsoleApplication.pdb
+C:\Users\childebrant\Documents\SampleCSharpRESTClient\CsharpDotNet2-client\quickstart-dotnet\bin\Debug\IO.Swagger.dll
+C:\Users\childebrant\Documents\SampleCSharpRESTClient\CsharpDotNet2-client\quickstart-dotnet\bin\Debug\Newtonsoft.Json.dll
+C:\Users\childebrant\Documents\SampleCSharpRESTClient\CsharpDotNet2-client\quickstart-dotnet\bin\Debug\RestSharp.dll
+C:\Users\childebrant\Documents\SampleCSharpRESTClient\CsharpDotNet2-client\quickstart-dotnet\bin\Debug\IO.Swagger.pdb
+C:\Users\childebrant\Documents\SampleCSharpRESTClient\CsharpDotNet2-client\quickstart-dotnet\bin\Debug\Newtonsoft.Json.xml
+C:\Users\childebrant\Documents\SampleCSharpRESTClient\CsharpDotNet2-client\quickstart-dotnet\bin\Debug\RestSharp.xml
+C:\Users\childebrant\Documents\SampleCSharpRESTClient\CsharpDotNet2-client\quickstart-dotnet\obj\x86\Debug\Sample REST Client.csprojResolveAssemblyReference.cache
+C:\Users\childebrant\Documents\SampleCSharpRESTClient\CsharpDotNet2-client\quickstart-dotnet\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\childebrant\Documents\SampleCSharpRESTClient\CsharpDotNet2-client\quickstart-dotnet\obj\x86\Debug\ConsoleApplication.pdb
+C:\Users\991443\Downloads\quickstart-dotnet-master\bin\Debug\ConsoleApplication.exe.config
+C:\Users\991443\Downloads\quickstart-dotnet-master\bin\Debug\ConsoleApplication.exe
+C:\Users\991443\Downloads\quickstart-dotnet-master\bin\Debug\ConsoleApplication.pdb
+C:\Users\991443\Downloads\quickstart-dotnet-master\bin\Debug\Newtonsoft.Json.dll
+C:\Users\991443\Downloads\quickstart-dotnet-master\bin\Debug\RestSharp.dll
+C:\Users\991443\Downloads\quickstart-dotnet-master\bin\Debug\Newtonsoft.Json.xml
+C:\Users\991443\Downloads\quickstart-dotnet-master\bin\Debug\RestSharp.xml
+C:\Users\991443\Downloads\quickstart-dotnet-master\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\991443\Downloads\quickstart-dotnet-master\obj\x86\Debug\ConsoleApplication.pdb
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Debug\Newtonsoft.Json.dll
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Debug\RestSharp.dll
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Debug\Newtonsoft.Json.xml
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Debug\RestSharp.xml
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Debug\ConsoleApplication.exe.config
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Debug\ConsoleApplication.exe
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Debug\ConsoleApplication.pdb
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\obj\x86\Debug\ConsoleApplication.pdb
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\obj\x86\Debug\Sample REST Client.csprojResolveAssemblyReference.cache

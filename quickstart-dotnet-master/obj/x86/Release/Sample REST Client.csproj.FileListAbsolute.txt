@@ -1,0 +1,10 @@
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Release\ConsoleApplication.exe.config
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Release\ConsoleApplication.exe
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Release\ConsoleApplication.pdb
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Release\Newtonsoft.Json.dll
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Release\RestSharp.dll
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Release\Newtonsoft.Json.xml
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\bin\Release\RestSharp.xml
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\obj\x86\Release\ConsoleApplication.exe
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\obj\x86\Release\ConsoleApplication.pdb
+C:\Users\991443\Downloads\restC#\quickstart-dotnet-master\obj\x86\Release\Sample REST Client.csprojResolveAssemblyReference.cache

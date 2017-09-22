@@ -1,0 +1,3 @@
+quickstart-dotnet\.vs\*
+quickstart-dotnet\bin\Debug\*
+quickstart-dotnet\obj\x86\Debug\*

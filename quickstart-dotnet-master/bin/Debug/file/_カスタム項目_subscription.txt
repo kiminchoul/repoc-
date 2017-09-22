@@ -1,0 +1,38 @@
+契約終了日	Subscription	ContractEndDate__c
+
+HARIS伝票区分	Subscription	ProcessStatus__c
+受注伝票番号	Subscription	OrderNumber__c
+受注明細番号	Subscription	OrderDetailsNumber__c
+
+
+ProductRatePlan
+利用許諾要否フラグ	RequiredLicense__c	ピックリスト
+課金対象フラグ		BillingFlag__c	ピックリスト
+
+RatePlan
+NeTTS製番	NeTTSProduct__c	テキスト(4)
+NeTTS号機	NeTTSUnit__c	テキスト(5)
+
+ChargeModel:フィールド「quantity」は課金モデルがFlat Fee Pricingの課金に無効です
+
+ProductRatePlan
+プラン数量    PlanQuantity__c    テキスト(3)
+
+"{\n  \"success\" : false,\n  \"processId\" : \"00FB868C83BF7FAC\",\n  \"reasons\" : [ {\n    \"code\" : 53520620,\n    \"message\" : \"「JPY」は無効な値です。\"\n  } ]\n}"
+
+"
+"{\"records\":[{\"BillingFlag__c\":\"true\",\"Id\":\"2c92c0f85d5964dc015d59cb0ccf78f3\"}],\"size\":1,\"done\":true}"
+"{\"records\":[{\"ChargeModel\":\"Flat Fee Pricing\",\"Id\":\"2c92c0f95d59764d015d59cc36fa4841\"}],\"size\":1,\"done\":true}"
+"{\"records\":[{\"PlanQuantity__c\":\"1\",\"Id\":\"2c92c0f85d5964dc015d59cb0ccf78f3\"}],\"size\":1,\"done\":true}"
+RequiredLicense__c
+
+
+Subscription :
+ NeTTS連携フラグ          NeTTSSyncFlag__c             //カスタム項目
+ サービス開始日           ServiceStartDate__c          //カスタム項目
+ 自動更新抽出バージョン   AutoRenewVersion__c          //カスタム項目
+ 親サブスクリプション番号 ParentSubscriptionNumber__c  //カスタム項目
+  
+RatePlanCharge
+ユーザ提供価格            UserPrice__c
+
