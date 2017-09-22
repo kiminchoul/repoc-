@@ -129,9 +129,7 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
         //20170720 status-Pendingのsubscriptionを作成するため 「Action/subscribe」を使用
         //★★ READ csv file to create Subscription by Action/subscribe   
         //public ProxyActionsubscribeResponse actionSubscrWithCsv(string prodId, string[] readedCsvCol, string[] readedCsvColHeader)
-        //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-        //public string actionSubscrWithCsv(string prodId, string[] readedCsvCol, string[] readedCsvColHeader)        
-        public string actionSubscrWithCsv(string prodId, string[] readedCsvCol, string[] readedCsvColHeader,DataSet datasetRP, DataSet datasetRPC, DataSet datasetAccount)
+        public string actionSubscrWithCsv(string prodId, string[] readedCsvCol, string[] readedCsvColHeader)
         {
             try
             {
@@ -167,28 +165,16 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 RatePlan RatePlan = new RatePlan();
                 RatePlan.ProductRatePlanId = prodId;
 
-                /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 // 品目コードをratePlan objectに登録                
-                //ProxyActionqueryRequest zPrtRatePlan = new ProxyActionqueryRequest();
-                //zPrtRatePlan.QueryString = "select ProductCode__c from ProductRatePlan where id = '" + prodId + "'";
-                //string selHinmok = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlan);
+                ProxyActionqueryRequest zPrtRatePlan = new ProxyActionqueryRequest();
+                zPrtRatePlan.QueryString = "select ProductCode__c from ProductRatePlan where id = '" + prodId + "'";
+                string selHinmok = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlan);
                 //品目コードがNULLの場合、ProductRatePlanIDがRETURNされるので（親品目）
                 // ⇒ 親も品目コードセットされ、親品目コードがNULLとなることに。。。ロジックはこのまま生かす。品目コード未設定のエラー対応として
-                //if (selHinmok == prodId)
-                //    RatePlan.ProductCode__c = null;
-                //else
-                //    RatePlan.ProductCode__c = selHinmok;
-                */                                
-                string selHinmok = null;
-                foreach (DataTable table in datasetRP.Tables)
-                {
-                    DataRow[] dataRows = table.Select("[0_rateplanid] = '" + prodId + "'");
-                    selHinmok = (string)dataRows[0][2];                                                            
-                }
-                if (!string.IsNullOrEmpty(selHinmok))
+                if (selHinmok == prodId)
+                    RatePlan.ProductCode__c = null;
+                else
                     RatePlan.ProductCode__c = selHinmok;
-                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-
                 // 親品目コードをratePlan objectに登録
                 // 親 ->「取得した品目コード(selHinmok)＝CSVの親品目コード(readedCsvCol[3])」) -> 親品目コード＝NULL　
                 if (selHinmok.Equals(readedCsvCol[3]))
@@ -199,40 +185,18 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 RatePlan.NeTTSProduct__c = "0000";
                 RatePlan.NeTTSUnit__c = "00000";
 
-                /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 // 課金対象フラグ(BillingFlag__c)で、TRUE→親はS販売単価を子はマスタの値を、FALSE→ゼロを
                 zPrtRatePlan.QueryString = "select BillingFlag__c from ProductRatePlan where id = '" + prodId + "'";
                 string seledBillFlg = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlan);
                 if (!seledBillFlg.Equals(prodId))  //フラグ未設定の場合、prodIdが返ってくるので
                     RatePlan.BillingFlag__c = seledBillFlg;
-                */
-                string seledBillFlg = null;
-                foreach (DataTable table in datasetRP.Tables)
-                {
-                    DataRow[] dataRows = table.Select("[0_rateplanid] = '" + prodId + "'");
-                    seledBillFlg = (string)dataRows[0][5];
-                }
-                if (!string.IsNullOrEmpty(seledBillFlg))
-                    RatePlan.BillingFlag__c = seledBillFlg;
-                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
-                //add st KMIBS-107 ratePlanにカスタム項目の利用許諾要否フラグ追加
-                /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-                // 利用許諾要否フラグ（RequiredLicense__c）
+                //add st KMIBS-107
+                // ratePlanにカスタム項目の利用許諾要否フラグ追加
                 zPrtRatePlan.QueryString = "select RequiredLicense__c from ProductRatePlan where id = '" + prodId + "'";
                 string seledRequired = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlan);
                 if (!seledRequired.Equals(prodId))  //フラグ未設定の場合、prodIdが返ってくるので
                     RatePlan.RequiredLicense__c = seledRequired;
-                */
-                string seledRequired = null;
-                foreach (DataTable table in datasetRP.Tables)
-                {
-                    DataRow[] dataRows = table.Select("[0_rateplanid] = '" + prodId + "'");
-                    seledRequired = (string)dataRows[0][6];
-                }
-                if (!string.IsNullOrEmpty(seledRequired))
-                    RatePlan.RequiredLicense__c = seledRequired;
-                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 //add ed KMIBS-107
 
                 RatePlanData.RatePlan = RatePlan;  //2-1-1
@@ -245,24 +209,13 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 // ▼▼▼ratePlanCharge
                 //2-1-2-1 RatePlanCharge
                 //ProductRatePlanChargeID
-
-                /** //20170901 ★ratePlanChargeDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 ProxyActionqueryRequest zPrtRatePlanCharge = new ProxyActionqueryRequest();
                 zPrtRatePlanCharge.QueryString = "select id from ProductRatePlanCharge where ProductRatePlanId = '" + prodId + "'";
                 RatePlanCharge RatePlanCharge = new RatePlanCharge();
                 RatePlanCharge.ProductRatePlanChargeId = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlanCharge);
-                */
-                RatePlanCharge RatePlanCharge = new RatePlanCharge();
-                foreach (DataTable table in datasetRPC.Tables)
-                {
-                    DataRow[] dataRows = table.Select("[4_rateplanid] = '" + prodId + "'");
-                    RatePlanCharge.ProductRatePlanChargeId = (string)dataRows[0][0];
-                }
-                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
                 //課金対象フラグ(BillingFlag__c)で、TRUE→親はS販売単価を子はマスタの値を、FALSE→ゼロを                
-                //if (seledBillFlg.Equals("true") || seledBillFlg.Equals("TRUE"))                
-                if (bool.Parse(seledBillFlg).Equals(true))
+                if (seledBillFlg.Equals("true"))
                 {
                     if (selHinmok.Equals(readedCsvCol[3]))//課金対象フラグBillingFlag__c=true、親の場合はS販売単価をセット                
                         if (!string.IsNullOrEmpty(readedCsvCol[8]))
@@ -289,33 +242,14 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 // ST_ADD KMIBS-25 
                 //{"Errors":{"Code":"MISSING_REQUIRED_VALUE","Message":
                 //"A quantity is required for One-time and Recurring charge types with Per Unit, Tiered, and Volume charge models."},"Success":false}
-                /** //20170901 ★ratePlanChargeDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 ProxyActionqueryRequest zRatePlanChargeQuantity = new ProxyActionqueryRequest();
                 //chargeModel
                 zRatePlanChargeQuantity.QueryString = "select ChargeModel from ProductRatePlanCharge where ProductRatePlanId = '" + prodId + "'";
                 string chargeModel = actionCreateApi.ProxyActionPOSTquery(zRatePlanChargeQuantity);
-                */
-                string chargeModel = null;
-                foreach (DataTable table in datasetRPC.Tables)
-                {
-                    DataRow[] dataRows = table.Select("[4_rateplanid] = '" + prodId + "'");
-                    chargeModel = (string)dataRows[0][2];
-                }                
-                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
                 //chargeType
-                /** //20170901 ★ratePlanChargeDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 zRatePlanChargeQuantity.QueryString = "select ChargeType from ProductRatePlanCharge where ProductRatePlanId = '" + prodId + "'";
                 string chargeType = actionCreateApi.ProxyActionPOSTquery(zRatePlanChargeQuantity);
-                */
-                string chargeType = null;
-                foreach (DataTable table in datasetRPC.Tables)
-                {
-                    DataRow[] dataRows = table.Select("[4_rateplanid] = '" + prodId + "'");
-                    chargeType = (string)dataRows[0][3];
-                }
-                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-
                 // Per Unit PricingのみDESUNE with only type : Recurring
                 //if (selHinmok.Equals(readedCsvCol[3]))
                 //    if (chargeModel.Equals("Per Unit Pricing"))   // DBA親品目も「単位あたり」に変更された。
@@ -352,45 +286,19 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 */
                 if (readedCsvColHeader[4].Equals(readedCsvColHeader[5]))
                 {   //契約先＝請求先：１回検索
-
-                   /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                     ProxyActionqueryRequest zAccount = new ProxyActionqueryRequest();
                     zAccount.QueryString = "select id from account where HARISCostomerNumber__c = '" + readedCsvColHeader[4] + "'";
                     Subscription.AccountId = actionCreateApi.ProxyActionPOSTquery(zAccount);
                     Subscription.InvoiceOwnerId = Subscription.AccountId;
-                    */                    
-                    foreach (DataTable table in datasetAccount.Tables)
-                    {
-                        DataRow[] dataRows = table.Select("[2_HARISCostomerNumber__c] = '" + readedCsvColHeader[4] + "'");
-                        Subscription.AccountId = (string)dataRows[0][0];
-                        Subscription.InvoiceOwnerId = Subscription.AccountId;
-                    }
-                    //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 }
                 else
                 {   //契約先 <> 請求先：それぞれ検索
-                    /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                     ProxyActionqueryRequest zAccount = new ProxyActionqueryRequest();
                     zAccount.QueryString = "select id from account where HARISCostomerNumber__c = '" + readedCsvColHeader[4] + "'";
                     Subscription.AccountId = actionCreateApi.ProxyActionPOSTquery(zAccount);
-                    */
-                    foreach (DataTable table in datasetAccount.Tables)
-                    {
-                        DataRow[] dataRows = table.Select("[2_HARISCostomerNumber__c] = '" + readedCsvColHeader[4] + "'");
-                        Subscription.AccountId = (string)dataRows[0][0];                        
-                    }
-                    //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
-                    /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                     zAccount.QueryString = "select id from account where HARISCostomerNumber__c = '" + readedCsvColHeader[5] + "'";
                     Subscription.InvoiceOwnerId = actionCreateApi.ProxyActionPOSTquery(zAccount);
-                    */
-                    foreach (DataTable table in datasetAccount.Tables)
-                    {
-                        DataRow[] dataRows = table.Select("[2_HARISCostomerNumber__c] = '" + readedCsvColHeader[5] + "'");
-                        Subscription.InvoiceOwnerId = (string)dataRows[0][0];
-                    }
-                    //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 }
 
                 //　CSV Header 1_試算番号
@@ -493,23 +401,11 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 Subscribes.SubscriptionData = SubscriptionData; //2-SubscriptionData
                 SubscribesList.Add(Subscribes);
                 subscribeRequest.Subscribes = SubscribesList;
-
+                                
                 // カスタム項目：プラン数量の取得
                 // プラン数量(PlanQuantity__c)分のサブスクリプションを作成する
-                /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 zPrtRatePlan.QueryString = "select PlanQuantity__c from ProductRatePlan where id = '" + prodId + "'";                                
-                string strCount = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlan);
-                */
-                string strCount = null;
-                int countInt = 0;
-                foreach (DataTable table in datasetRP.Tables)
-                {
-                    DataRow[] dataRows = table.Select("[0_rateplanid] = '" + prodId + "'");
-                    countInt = (int)dataRows[0][4];
-                    strCount = countInt.ToString();
-                }
-                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-
+                string strCount = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlan);                
                 string localVarResponse = null;
                                 
                 //契約先がNULL
@@ -1132,7 +1028,7 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                     dateWorkStr = dateWork.ToString("yyyy-MM-dd");
                     subscription.BillingStartDate__c = dateWorkStr;
                 }
-                //add ed KMIBS-107
+                //add ed KMIBS - 107
 
                 //★■ ratePlanId,ratePlanChargeId取得                
                 //Initialize the Rate Plan container list (Must use a list as the subscription can have multiple rate plans)
@@ -2038,38 +1934,7 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 TextFieldParser parserHeader = new TextFieldParser(csvfileHeader, Encoding.GetEncoding("UTF-8"));
                 parserHeader.TextFieldType = FieldType.Delimited;
                 parserHeader.SetDelimiters(","); // 区切り文字はコンマ
-                int countCsvHeader = 0;
-
-                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-                // CSV形式のテキストファイルの内容をDataTableに直接格納            
-                string fileRP = "file\\2ratePlanDB.csv";   //CSVファイル格納場所（実行ファイル同）
-                // データベースへ接続する(今回はCSVファイルを開く)
-                OleDbConnection connectionRP = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + Path.GetDirectoryName(fileRP) + "\\; Extended Properties=\"Text;HDR=YES;FMT=Delimited\"");
-                // クエリ文字列を作る
-                // ※ファイルパスを[]でくくること！
-                OleDbCommand commandRP = new OleDbCommand("SELECT * FROM [" + Path.GetFileName(fileRP) + "]", connectionRP);
-                DataSet datasetRP = new DataSet();
-                datasetRP.Clear();    // 念のためクリア
-                // CSVファイルの内容をDataSetに入れる
-                OleDbDataAdapter adapterRP = new OleDbDataAdapter(commandRP);
-                adapterRP.Fill(datasetRP);
-
-                string fileRPC = "file\\2ratePlanChargeDB.csv";
-                OleDbConnection connectionRPC = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + Path.GetDirectoryName(fileRPC) + "\\; Extended Properties=\"Text;HDR=YES;FMT=Delimited\"");                
-                OleDbCommand commandRPC = new OleDbCommand("SELECT * FROM [" + Path.GetFileName(fileRPC) + "]", connectionRPC);
-                DataSet datasetRPC = new DataSet();
-                datasetRPC.Clear();                
-                OleDbDataAdapter adapterRPC = new OleDbDataAdapter(commandRPC);
-                adapterRPC.Fill(datasetRPC);
-
-                string fileAccount = "file\\2accountDB.csv";
-                OleDbConnection connectionAccount = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + Path.GetDirectoryName(fileAccount) + "\\; Extended Properties=\"Text;HDR=YES;FMT=Delimited\"");
-                OleDbCommand commandAccount = new OleDbCommand("SELECT * FROM [" + Path.GetFileName(fileAccount) + "]", connectionAccount);
-                DataSet datasetAccount = new DataSet();
-                datasetAccount.Clear();
-                OleDbDataAdapter adapterAccount = new OleDbDataAdapter(commandAccount);
-                adapterAccount.Fill(datasetAccount);
-                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+                int countCsvHeader = 0;            
 
                 while (!parserHeader.EndOfData)
                 {
@@ -2213,9 +2078,7 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                                     //subscResponse = manager.createSubscrWithCsv(productRatePlan1Id, csvColumn, csvColumnHeader);                            
 
                                     string subscResponse = null;
-                                    //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-                                    //subscResponse = manager.actionSubscrWithCsv(productRatePlan1Id, csvColumn, csvColumnHeader);
-                                    subscResponse = manager.actionSubscrWithCsv(productRatePlan1Id, csvColumn, csvColumnHeader,datasetRP,datasetRPC,datasetAccount);
+                                    subscResponse = manager.actionSubscrWithCsv(productRatePlan1Id, csvColumn, csvColumnHeader);
                                     /** //★☆ストップウォッチを止める。
                                     //stopwatch.Stop();
                                     //★☆結果を表示する。
@@ -2584,16 +2447,9 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 //returnValue = subscriptionsApi.POSTSubscriptionCancellation(subKey, cancelSub, "211.0");
                 //string returnValue = subscriptionsApi.POSTSubscriptionCancellationString(subKey, cancelSub, "211.0");
                 //Console.Out.WriteLine("POSTSubscriptionCancellationResponsType: " + returnValue.ToString());
-                // add 20170921 
-                try
-                {
-                    ProxyDeleteResponse returnValue = new ProxyDeleteResponse();
-                    returnValue = subscriptionsApi.ProxyDELETESubscription(subKey);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("deleteSubscription() failed with message: " + ex.Message);
-                }
+                ProxyDeleteResponse returnValue = new ProxyDeleteResponse();
+                returnValue = subscriptionsApi.ProxyDELETESubscription(subKey);
+
             }
         }
 

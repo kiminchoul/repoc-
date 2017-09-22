@@ -11,6 +11,9 @@ using RestSharp.Extensions;
 //★
 using System.IO;
 using Microsoft.VisualBasic.FileIO;
+using System.Net;
+using System.Data.OleDb;
+using System.Data;
 //using ServiceStack;
 //using ServiceStack.Text;
 //★
@@ -41,11 +44,15 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
         // This class contains the API calls relating to the Catalog object
         CatalogApi catalogApi;
 
-        const string apiURL             = "https://rest.apisandbox.zuora.com/v1";
-        //const string userID             = "kim-inchoul@mki.co.jp-tr";
-        //const string passWD             = "9Mki91443";
-        const string userID             = "kimura-tomohiro@mki.co.jp.sd";
-        const string passWD             = "Mki12345";        
+        //const string apiURL             = "https://rest.apisandbox.zuora.com/v1";     //zuoraIni.csvより取得する   
+        //sandBox1
+        //const string userID = "kimura-tomohiro@mki.co.jp.sd";
+        //const string passWD = "Mki12345";
+        //sandBox2
+        //const string userID             = "kmj1@konicaminolta.com.sd2";
+        //const string passWD             = "Kmibs123";
+        const string userID             = ""; //zuoraIni.csvより取得する
+        const string passWD             = ""; //zuoraIni.csvより取得する
         const string accountLog         = "file\\1resultAccount.txt";
         const string accountCSV         = "file\\1accountInfo.csv";
         const string subscMakeLog       = "file\\2resultSubscript.txt";
@@ -57,6 +64,9 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
         const string subscListCSV       = "file\\4makeSubscriptCsv.csv";//更新用としてデータ修正後、3csvForUpdateEdited.csvに改名する
         const string makeSubscCsvList   = "file\\4csvForUpdate.csv";
         const string delSub             = "file\\5delSub.csv";
+        const string oyaAndDate         = "file\\6oyaAndDate.txt";
+        const string connectIni         = "zuoraIni.csv";
+        const string csvForUpdateDB 　　= "file\\4csvForUpdateDB.csv";
 
         private string user;
         private string password;        
@@ -70,6 +80,19 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
          */
         public ApplicationManager(string user, string pass)
         {
+            //TLS1.2対応
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+
+            //get the connect Info
+            string csvfile = connectIni; 
+            TextFieldParser parser = new TextFieldParser(csvfile, Encoding.GetEncoding("UTF-8"));
+            parser.TextFieldType = FieldType.Delimited;
+            parser.SetDelimiters(","); // 区切り文字はコンマ
+            string[] csvColumn = parser.ReadFields(); // 1行読み込み
+            user = csvColumn[0];
+            pass = csvColumn[1];
+            string apiURL = csvColumn[2];
+
             //Creating the API client with the new REST endpoint
             //zApi = new ApiClient(apiURL);
             this.user = user;
@@ -106,7 +129,9 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
         //20170720 status-Pendingのsubscriptionを作成するため 「Action/subscribe」を使用
         //★★ READ csv file to create Subscription by Action/subscribe   
         //public ProxyActionsubscribeResponse actionSubscrWithCsv(string prodId, string[] readedCsvCol, string[] readedCsvColHeader)
-        public string actionSubscrWithCsv(string prodId, string[] readedCsvCol, string[] readedCsvColHeader)
+        //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+        //public string actionSubscrWithCsv(string prodId, string[] readedCsvCol, string[] readedCsvColHeader)        
+        public string actionSubscrWithCsv(string prodId, string[] readedCsvCol, string[] readedCsvColHeader,DataSet datasetRP, DataSet datasetRPC, DataSet datasetAccount)
         {
             try
             {
@@ -127,6 +152,8 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 Subscribes.PaymentMethod = PaymentMethod;
                 Subscribes.PreviewOptions = PreviewOptions;
                 Subscribes.SoldToContact = SoldToContact;
+
+                //SubscribeOptions.GenerateInvoice = true; //お試し：BILL RUN実行::定額のpendingのBillRunにてエラー
                 Subscribes.SubscribeOptions = SubscribeOptions;
 
                 // 2-SubscriptionData
@@ -140,16 +167,28 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 RatePlan RatePlan = new RatePlan();
                 RatePlan.ProductRatePlanId = prodId;
 
+                /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 // 品目コードをratePlan objectに登録                
-                ProxyActionqueryRequest zPrtRatePlan = new ProxyActionqueryRequest();
-                zPrtRatePlan.QueryString = "select ProductCode__c from ProductRatePlan where id = '" + prodId + "'";
-                string selHinmok = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlan);
+                //ProxyActionqueryRequest zPrtRatePlan = new ProxyActionqueryRequest();
+                //zPrtRatePlan.QueryString = "select ProductCode__c from ProductRatePlan where id = '" + prodId + "'";
+                //string selHinmok = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlan);
                 //品目コードがNULLの場合、ProductRatePlanIDがRETURNされるので（親品目）
                 // ⇒ 親も品目コードセットされ、親品目コードがNULLとなることに。。。ロジックはこのまま生かす。品目コード未設定のエラー対応として
-                if (selHinmok == prodId)
-                    RatePlan.ProductCode__c = null;
-                else
+                //if (selHinmok == prodId)
+                //    RatePlan.ProductCode__c = null;
+                //else
+                //    RatePlan.ProductCode__c = selHinmok;
+                */                                
+                string selHinmok = null;
+                foreach (DataTable table in datasetRP.Tables)
+                {
+                    DataRow[] dataRows = table.Select("[0_rateplanid] = '" + prodId + "'");
+                    selHinmok = (string)dataRows[0][2];                                                            
+                }
+                if (!string.IsNullOrEmpty(selHinmok))
                     RatePlan.ProductCode__c = selHinmok;
+                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
                 // 親品目コードをratePlan objectに登録
                 // 親 ->「取得した品目コード(selHinmok)＝CSVの親品目コード(readedCsvCol[3])」) -> 親品目コード＝NULL　
                 if (selHinmok.Equals(readedCsvCol[3]))
@@ -160,13 +199,44 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 RatePlan.NeTTSProduct__c = "0000";
                 RatePlan.NeTTSUnit__c = "00000";
 
+                /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 // 課金対象フラグ(BillingFlag__c)で、TRUE→親はS販売単価を子はマスタの値を、FALSE→ゼロを
                 zPrtRatePlan.QueryString = "select BillingFlag__c from ProductRatePlan where id = '" + prodId + "'";
                 string seledBillFlg = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlan);
-                RatePlan.BillingFlag__c = seledBillFlg;
+                if (!seledBillFlg.Equals(prodId))  //フラグ未設定の場合、prodIdが返ってくるので
+                    RatePlan.BillingFlag__c = seledBillFlg;
+                */
+                string seledBillFlg = null;
+                foreach (DataTable table in datasetRP.Tables)
+                {
+                    DataRow[] dataRows = table.Select("[0_rateplanid] = '" + prodId + "'");
+                    seledBillFlg = (string)dataRows[0][5];
+                }
+                if (!string.IsNullOrEmpty(seledBillFlg))
+                    RatePlan.BillingFlag__c = seledBillFlg;
+                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+                //add st KMIBS-107 ratePlanにカスタム項目の利用許諾要否フラグ追加
+                /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+                // 利用許諾要否フラグ（RequiredLicense__c）
+                zPrtRatePlan.QueryString = "select RequiredLicense__c from ProductRatePlan where id = '" + prodId + "'";
+                string seledRequired = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlan);
+                if (!seledRequired.Equals(prodId))  //フラグ未設定の場合、prodIdが返ってくるので
+                    RatePlan.RequiredLicense__c = seledRequired;
+                */
+                string seledRequired = null;
+                foreach (DataTable table in datasetRP.Tables)
+                {
+                    DataRow[] dataRows = table.Select("[0_rateplanid] = '" + prodId + "'");
+                    seledRequired = (string)dataRows[0][6];
+                }
+                if (!string.IsNullOrEmpty(seledRequired))
+                    RatePlan.RequiredLicense__c = seledRequired;
+                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+                //add ed KMIBS-107
 
                 RatePlanData.RatePlan = RatePlan;  //2-1-1
-                 //▲▲▲ RatePlan
+                //▲▲▲ RatePlan
 
                 //2-1-2 RatePlanChargeData
                 List<RatePlanChargeData> RatePlanChargeDataList = new List<RatePlanChargeData>();
@@ -175,30 +245,96 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 // ▼▼▼ratePlanCharge
                 //2-1-2-1 RatePlanCharge
                 //ProductRatePlanChargeID
+
+                /** //20170901 ★ratePlanChargeDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 ProxyActionqueryRequest zPrtRatePlanCharge = new ProxyActionqueryRequest();
                 zPrtRatePlanCharge.QueryString = "select id from ProductRatePlanCharge where ProductRatePlanId = '" + prodId + "'";
                 RatePlanCharge RatePlanCharge = new RatePlanCharge();
                 RatePlanCharge.ProductRatePlanChargeId = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlanCharge);
+                */
+                RatePlanCharge RatePlanCharge = new RatePlanCharge();
+                foreach (DataTable table in datasetRPC.Tables)
+                {
+                    DataRow[] dataRows = table.Select("[4_rateplanid] = '" + prodId + "'");
+                    RatePlanCharge.ProductRatePlanChargeId = (string)dataRows[0][0];
+                }
+                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
                 //課金対象フラグ(BillingFlag__c)で、TRUE→親はS販売単価を子はマスタの値を、FALSE→ゼロを                
-                if (seledBillFlg.Equals("true"))
+                //if (seledBillFlg.Equals("true") || seledBillFlg.Equals("TRUE"))                
+                if (bool.Parse(seledBillFlg).Equals(true))
                 {
                     if (selHinmok.Equals(readedCsvCol[3]))//課金対象フラグBillingFlag__c=true、親の場合はS販売単価をセット                
-                        RatePlanCharge.Price = double.Parse(readedCsvCol[8]);
+                        if (!string.IsNullOrEmpty(readedCsvCol[8]))
+                            RatePlanCharge.Price = double.Parse(readedCsvCol[8]);
                     //子はマスタの値:何もしない(マスタ値）
                 }
                 else
                     RatePlanCharge.Price = double.Parse("0");
 
-                // CSV Detail 5_数量 : 親 + Per Unit Pricing
+                // ST_DEL KMIBS-25 
+                // 明細CSVの数量が２以上はDBAなので子品目の数量に設定する。
+                //// CSV Detail 5_数量 : 親 + Per Unit Pricing
+                //ProxyActionqueryRequest zRatePlanChargeQuantity = new ProxyActionqueryRequest();
+                //zRatePlanChargeQuantity.QueryString = "select ChargeModel from ProductRatePlanCharge where ProductRatePlanId = '" + prodId + "'";
+                //string chargeModel = actionCreateApi.ProxyActionPOSTquery(zRatePlanChargeQuantity);
+                //// Per Unit PricingのみDESUNE with only type" : "Recurring    a            
+                //if (selHinmok.Equals(readedCsvCol[3]))
+                //    if (chargeModel.Equals("Per Unit Pricing"))
+                //        if (!string.IsNullOrEmpty(readedCsvCol[5]))
+                //            RatePlanCharge.Quantity = double.Parse(readedCsvCol[5]);
+                // ED_DEL KMIBS-25 
+
+                // ST_MOD KMIBS-64
+                // ST_ADD KMIBS-25 
+                //{"Errors":{"Code":"MISSING_REQUIRED_VALUE","Message":
+                //"A quantity is required for One-time and Recurring charge types with Per Unit, Tiered, and Volume charge models."},"Success":false}
+                /** //20170901 ★ratePlanChargeDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 ProxyActionqueryRequest zRatePlanChargeQuantity = new ProxyActionqueryRequest();
+                //chargeModel
                 zRatePlanChargeQuantity.QueryString = "select ChargeModel from ProductRatePlanCharge where ProductRatePlanId = '" + prodId + "'";
                 string chargeModel = actionCreateApi.ProxyActionPOSTquery(zRatePlanChargeQuantity);
-                // Per Unit PricingのみDESUNE with only type" : "Recurring                
-                if (selHinmok.Equals(readedCsvCol[3]))
-                    if (chargeModel.Equals("Per Unit Pricing"))
-                        if (!string.IsNullOrEmpty(readedCsvCol[5]))
-                            RatePlanCharge.Quantity = double.Parse(readedCsvCol[5]);
+                */
+                string chargeModel = null;
+                foreach (DataTable table in datasetRPC.Tables)
+                {
+                    DataRow[] dataRows = table.Select("[4_rateplanid] = '" + prodId + "'");
+                    chargeModel = (string)dataRows[0][2];
+                }                
+                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+                //chargeType
+                /** //20170901 ★ratePlanChargeDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+                zRatePlanChargeQuantity.QueryString = "select ChargeType from ProductRatePlanCharge where ProductRatePlanId = '" + prodId + "'";
+                string chargeType = actionCreateApi.ProxyActionPOSTquery(zRatePlanChargeQuantity);
+                */
+                string chargeType = null;
+                foreach (DataTable table in datasetRPC.Tables)
+                {
+                    DataRow[] dataRows = table.Select("[4_rateplanid] = '" + prodId + "'");
+                    chargeType = (string)dataRows[0][3];
+                }
+                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+                // Per Unit PricingのみDESUNE with only type : Recurring
+                //if (selHinmok.Equals(readedCsvCol[3]))
+                //    if (chargeModel.Equals("Per Unit Pricing"))   // DBA親品目も「単位あたり」に変更された。
+                //        RatePlanCharge.Quantity = int.Parse("1");                                                
+                //// 明細CSVの数量が２以上はDBAなので子品目の数量に設定する。
+                //if (!selHinmok.Equals(readedCsvCol[3])) //子品目：品目コード＜＞親品目コード
+                //    if (int.Parse(readedCsvCol[5]) > 1)
+                //        RatePlanCharge.Quantity = int.Parse(readedCsvCol[5]);
+                // ED_ADD KMIBS-25 
+                /// 数量２以上がDBAではなかった。数量１のDBAもあってリハ２にてエラーになりました。              
+                /// 単位当たり料金の場合、数量をセットしないといけないので明細の数量をセットする。
+                if (chargeModel.Equals("Per Unit Pricing") && chargeType.Equals("Recurring"))
+                    RatePlanCharge.Quantity = int.Parse(readedCsvCol[5]);                
+                // ED_MOD KMIBS-64
+
+                // ST_ADD KMIBS-25 
+                // S販単価：０
+                RatePlanCharge.UserPrice__c = "0";
+                // ED_ADD KMIBS-25 
 
                 RatePlanChargeData.RatePlanCharge = RatePlanCharge; //2-1-2-1
                 //▲▲▲ RatePlanCharge
@@ -216,19 +352,45 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 */
                 if (readedCsvColHeader[4].Equals(readedCsvColHeader[5]))
                 {   //契約先＝請求先：１回検索
+
+                   /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                     ProxyActionqueryRequest zAccount = new ProxyActionqueryRequest();
                     zAccount.QueryString = "select id from account where HARISCostomerNumber__c = '" + readedCsvColHeader[4] + "'";
                     Subscription.AccountId = actionCreateApi.ProxyActionPOSTquery(zAccount);
-                    Subscription.InvoiceOwnerId = Subscription.AccountId;                    
+                    Subscription.InvoiceOwnerId = Subscription.AccountId;
+                    */                    
+                    foreach (DataTable table in datasetAccount.Tables)
+                    {
+                        DataRow[] dataRows = table.Select("[2_HARISCostomerNumber__c] = '" + readedCsvColHeader[4] + "'");
+                        Subscription.AccountId = (string)dataRows[0][0];
+                        Subscription.InvoiceOwnerId = Subscription.AccountId;
+                    }
+                    //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 }
                 else
                 {   //契約先 <> 請求先：それぞれ検索
+                    /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                     ProxyActionqueryRequest zAccount = new ProxyActionqueryRequest();
                     zAccount.QueryString = "select id from account where HARISCostomerNumber__c = '" + readedCsvColHeader[4] + "'";
                     Subscription.AccountId = actionCreateApi.ProxyActionPOSTquery(zAccount);
+                    */
+                    foreach (DataTable table in datasetAccount.Tables)
+                    {
+                        DataRow[] dataRows = table.Select("[2_HARISCostomerNumber__c] = '" + readedCsvColHeader[4] + "'");
+                        Subscription.AccountId = (string)dataRows[0][0];                        
+                    }
+                    //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
+                    /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                     zAccount.QueryString = "select id from account where HARISCostomerNumber__c = '" + readedCsvColHeader[5] + "'";
                     Subscription.InvoiceOwnerId = actionCreateApi.ProxyActionPOSTquery(zAccount);
+                    */
+                    foreach (DataTable table in datasetAccount.Tables)
+                    {
+                        DataRow[] dataRows = table.Select("[2_HARISCostomerNumber__c] = '" + readedCsvColHeader[5] + "'");
+                        Subscription.InvoiceOwnerId = (string)dataRows[0][0];
+                    }
+                    //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 }
 
                 //　CSV Header 1_試算番号
@@ -238,33 +400,69 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 // CSV Header 3_自動更新区分
                 //if (!string.IsNullOrEmpty(readedCsvColHeader[3]))
                 //{
-                    //if (readedCsvColHeader[3].Equals("true"))
-                    if (readedCsvColHeader[3].Equals("X"))
-                        Subscription.AutoRenew = true;
-                    else Subscription.AutoRenew = false;
+                //if (readedCsvColHeader[3].Equals("true"))
+                if (readedCsvColHeader[3].Equals("X"))
+                    Subscription.AutoRenew = true;
+                else Subscription.AutoRenew = false;
                 //}
 
                 //Accountオブジェクトは必須 ：AccountNumberだと新規のAccountの作成となる
                 Account.Id = Subscription.AccountId;
                 Subscribes.Account = Account;
-                
+
                 // CSV Detail 9_契約開始日
-                if (!string.IsNullOrEmpty(readedCsvCol[9])) { 
-                    zPrtRatePlan.QueryString = "select RequiredLicense__c from ProductRatePlan where id = '" + prodId + "'";
-                    string seledRequired = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlan);
+                if (!string.IsNullOrEmpty(readedCsvCol[9]))
+                {
+                    /// mod st KMIBS-107  １有効化待ちサブスクリプションを有効化                                       
+                    ///zPrtRatePlan.QueryString = "select RequiredLicense__c from ProductRatePlan where id = '" + prodId + "'";
+                    ///string seledRequired = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlan);
+                    ///DateTime dateContract = DateTime.Parse(readedCsvCol[9]);                    
+                    /// //RequiredLicense__c = trueの場合、status＝Pending ActivationのためContractEffectiveDateのみ設定
+                    ///if (seledRequired.Equals("true"))
+                    ///{
+                    ///    Subscription.ContractEffectiveDate = dateContract;
+                    ///}
+                    ///else
+                    ///{
+                    ///    Subscription.ContractEffectiveDate = dateContract;
+                    ///    Subscription.ServiceActivationDate = dateContract;
+                    ///    Subscription.ContractAcceptanceDate = dateContract;
+                    ///}
                     DateTime dateContract = DateTime.Parse(readedCsvCol[9]);
-                    // RequiredLicense__c = trueの場合、status＝Pending ActivationのためContractEffectiveDateのみ設定
-                    if (seledRequired.Equals("true"))
-                    {
-                        Subscription.ContractEffectiveDate = dateContract;                        
-                    }
-                    else
-                    {
-                        Subscription.ContractEffectiveDate = dateContract;
-                        Subscription.ServiceActivationDate = dateContract;
-                        Subscription.ContractAcceptanceDate = dateContract;
-                    }
+                    Subscription.ContractEffectiveDate = dateContract;
+                    Subscription.ServiceActivationDate = dateContract;
+                    Subscription.ContractAcceptanceDate = dateContract;
+                    //mod ed KMIBS-107
                 }
+                ///★test EndDate  //field not insertable
+                ///if (!string.IsNullOrEmpty(readedCsvCol[10])){
+                ///    Subscription.SubscriptionEndDate = DateTime.Parse(readedCsvCol[10]);
+                ///    Subscription.TermEndDate = DateTime.Parse(readedCsvCol[10]);
+                ///}
+                //mod st KMIBS-107  カスタム項目追加
+                //19_ERP見積番号
+                if (!string.IsNullOrEmpty(readedCsvCol[19]))
+                    Subscription.ERPQuoteNumber__c = readedCsvCol[19];
+                //20_見積明細番号
+                if (!string.IsNullOrEmpty(readedCsvCol[20]))
+                    Subscription.ERPQuoteDetailsNumber__c = readedCsvCol[20];
+                //mod ed KMIBS-107                
+
+                // KMIBS - 21 期間開始日を明細CSVに追加（readedCsvCol[19]）して、TermStartDateに登録する
+                if (!string.IsNullOrEmpty(readedCsvCol[21]))
+                    Subscription.TermStartDate = DateTime.Parse(readedCsvCol[21]);
+
+                // ST_ADD KMIBS-48 サービス開始日　//なぜかDateTimeではエラーになるので、文字列の"YYYY-MM-DD"とする
+                if (!string.IsNullOrEmpty(readedCsvCol[9]))
+                {
+                    //yyyy/m/dの対応
+                    //Subscription.ServiceStartDate__c = readedCsvCol[9];
+                    DateTime dateKaishi = DateTime.Parse(readedCsvCol[9]);
+                    //string kaisiDate = readedCsvCol[9].Replace("/", "-");
+                    string kaisiDate = dateKaishi.ToString("yyyy-MM-dd");
+                    Subscription.ServiceStartDate__c = kaisiDate;
+                }
+                // ED_ADD KMIBS-48
 
                 //Subscription.Notes = "20170731";
                 //必須項目                
@@ -295,12 +493,23 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 Subscribes.SubscriptionData = SubscriptionData; //2-SubscriptionData
                 SubscribesList.Add(Subscribes);
                 subscribeRequest.Subscribes = SubscribesList;
-                                
+
                 // カスタム項目：プラン数量の取得
                 // プラン数量(PlanQuantity__c)分のサブスクリプションを作成する
+                /** //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
                 zPrtRatePlan.QueryString = "select PlanQuantity__c from ProductRatePlan where id = '" + prodId + "'";                                
                 string strCount = actionCreateApi.ProxyActionPOSTquery(zPrtRatePlan);
-                // （strCount-1）件分を作成し、最後は全体ロジックにて処理するして呼出元のプロシージャに戻る                                
+                */
+                string strCount = null;
+                int countInt = 0;
+                foreach (DataTable table in datasetRP.Tables)
+                {
+                    DataRow[] dataRows = table.Select("[0_rateplanid] = '" + prodId + "'");
+                    countInt = (int)dataRows[0][4];
+                    strCount = countInt.ToString();
+                }
+                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
                 string localVarResponse = null;
                                 
                 //契約先がNULL
@@ -326,10 +535,11 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                         long planCount = long.Parse(strCount);
                         if (planCount > 1)
                         {
+                            //（strCount-1）件分を作成し、最後は全体ロジックにて処理するして呼出元のプロシージャに戻る
                             for (int i = 1; i < planCount; i++)
                             {
                                 localVarResponse = actionCreateApi.ProxyActionPOSTsubscribe(subscribeRequest);
-                                Console.Out.WriteLine("ProxyActionPOSTsubscribe（）: " + localVarResponse.ToString());
+                                Console.Out.WriteLine(planCount + "ProxyActionPOSTsubscribe（PlanQuantity__c）: " + localVarResponse.ToString());
                             }
                         }
                         //ゼロ対応：ゼロ入力はいたずら？                    
@@ -349,8 +559,7 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 return localVarResponse;
             }
         }
-
-        //
+                
         //★★ READ csv file to create Subscription
         //async
         //public async System.Threading.Tasks.Task<POSTSubscriptionResponseType> createSubscrWithCsv(string prodId, string[] readedCsvCol)
@@ -611,6 +820,98 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 return localVarResponse;
             }
         }
+
+        //
+        /// KMIBS-54 親subScription番号を更新登録する
+        /// 29_QuoteNumber__QT、49_ParentCode__c、52_ProductCode__c、8_subscriptionNumber
+        /// 20170901 dataSetを毎回読込むのに時間がかかるので、１回のみ読んで引数で渡す
+        //public PUTSubscriptionResponseType updateOyaSubscriptionNo(string[] readedCsvCol)
+        public PUTSubscriptionResponseType updateOyaSubscriptionNo(string[] readedCsvCol, DataSet dataset)
+        {
+            try
+            {                
+                //Initialize the Subscription container
+                PUTSubscriptionType subscription = new PUTSubscriptionType();
+
+                /** csvファイルをDB化して検索の効率を上げる
+                //ProxyActionqueryRequest zOyaNo = new ProxyActionqueryRequest();
+                //zOyaNo.QueryString = "select Name from subscription where QuoteNumber__QT = '" + readedCsvCol[29] + "' and ";
+                //subscription.ParentSubscriptionNumber__c = actionCreateApi.ProxyActionPOSTquery(zOyaNo);   
+                
+                //★ READ csvDB file : 4csvForUpdate.csvファイルをもう一度読込
+                string csvfile = makeSubscCsvList;   //CSVファイル格納場所
+                TextFieldParser parser = new TextFieldParser(csvfile, Encoding.GetEncoding("UTF-8"));
+                parser.TextFieldType = FieldType.Delimited;
+                parser.SetDelimiters(","); // 区切り文字はコンマ
+                              
+                int countCsv = 0;
+                while (!parser.EndOfData)
+                {
+                    string[] csvDB = parser.ReadFields(); // 1行読み込み
+                    /// 29_QuoteNumber__QT、49_ParentCode__c、52_ProductCode__c、8_subscriptionNumber、11_contractEffectiveDate
+                    
+                    if (readedCsvCol[29].Equals(csvDB[29]))          //csv.試算番号     = DB.試算番号
+                        if (readedCsvCol[49].Equals(csvDB[52]))      //csv.親品目コード = DB.品目コード
+                            if (readedCsvCol[11].Equals(csvDB[11]))  //csv.契約有効日   = DB.契約有効日 : リハ２にて明細CSVに同一試算番号、品目コードのデータがあったので
+                            {
+                                subscription.ParentSubscriptionNumber__c = csvDB[8];
+                                break;
+                            }
+                    countCsv += 1;
+                    continue;//次のCSV処理に 
+                } 
+                */
+
+                /** 20170901 dataSetを毎回読込むのに時間がかかるので、１回のみ読んで引数で渡す
+                // CSV形式のテキストファイルの内容をDataTableに直接格納            
+                string filename = csvForUpdateDB;   //CSVファイル格納場所（実行ファイル同）
+
+                // データベースへ接続する(今回はCSVファイルを開く)
+                OleDbConnection connection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + Path.GetDirectoryName(filename) + "\\; Extended Properties=\"Text;HDR=YES;FMT=Delimited\"");
+
+                // クエリ文字列を作る
+                // ※ファイルパスを[]でくくること！
+                OleDbCommand command = new OleDbCommand("SELECT * FROM [" + Path.GetFileName(filename) + "]", connection);
+
+                DataSet dataset = new DataSet();
+                dataset.Clear();    // 念のためクリア
+
+                // CSVファイルの内容をDataSetに入れる
+                OleDbDataAdapter adapter = new OleDbDataAdapter(command);
+                adapter.Fill(dataset);
+                */
+
+                // 読み込んだ内容を表示してみる
+                foreach (DataTable table in dataset.Tables)
+                {
+                    ////▼▼▼DataTableのSelectメソッドを利用する。                    
+                    DataRow[] dataRows = table.Select("[QuoteNumber__QT] = '" + readedCsvCol[31] + "'");
+                    for (int i = 0; i < dataRows.Length; i++)
+                    {
+                        //Console.WriteLine(dataRows[i][1]);
+                        if (readedCsvCol[31].Equals(dataRows[i][31]))          //csv.試算番号     = DB.試算番号
+                            if (readedCsvCol[57].Equals(dataRows[i][60]))      //csv.親品目コード = DB.品目コード
+                                if (DateTime.Parse(readedCsvCol[11]).Equals(dataRows[i][11]))  //csv.契約有効日   = DB.契約有効日 : リハ２にて明細CSVに同一試算番号、品目コードのデータがあったので
+                                {
+                                    subscription.ParentSubscriptionNumber__c = (string)dataRows[i][8];
+                                    break;
+                                }
+                    }                    
+                }
+
+                //subscription.Notes = "memoUpted";
+                string subscriptionKey = readedCsvCol[8];   //Subscription number
+                return subscriptionsApi.PUTSubscription(subscriptionKey, subscription, "211.0");
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("updateOyaSubscriptionNo() failed with message: " + ex.Message);
+                PUTSubscriptionResponseType localVarResponse = null;
+                return localVarResponse;
+            }
+        }
+
         //
         //★★ READ csv file to create Subscription        
         public PUTSubscriptionResponseType updateSubscrWithCsv(string[] readedCsvCol)
@@ -619,25 +920,26 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
             {
                 ApplicationManager manager = new ApplicationManager(userID, passWD);
                 //Initialize the Subscription container
+
                 PUTSubscriptionType subscription = new PUTSubscriptionType();                               
                 
-                string subscriptionKey = readedCsvCol[24];   //Subscription number:8->24
+                string subscriptionKey = readedCsvCol[8];   //Subscription number
                 //AccountID取得    
                 /** ２０件しか取得できない（API制限）ので、「Get subscriptions by key」に変更            
-                                                            string accountKey = null;
-                                                            if (!string.IsNullOrEmpty(readedCsvCol[9]))
-                                                            {
-                                                                accountKey = readedCsvCol[9];
-                                                                //CSVのaccountKeyがアカウント名だったらAccountIdを取得する。                    
-                                                                ProxyActionqueryRequest zAccount = new ProxyActionqueryRequest();
-                                                                zAccount.QueryString = "select id from account where name = '" + accountKey + "'";
-                                                                string accountId = actionCreateApi.ProxyActionPOSTquery(zAccount);
-                                                                if (!string.IsNullOrEmpty(accountId))
-                                                                {
-                                                                    accountKey = accountId;
-                                                                }
-                                                            }
-                                                            */
+                string accountKey = null;
+                if (!string.IsNullOrEmpty(readedCsvCol[9]))
+                {
+                    accountKey = readedCsvCol[9];
+                    //CSVのaccountKeyがアカウント名だったらAccountIdを取得する。                    
+                    ProxyActionqueryRequest zAccount = new ProxyActionqueryRequest();
+                    zAccount.QueryString = "select id from account where name = '" + accountKey + "'";
+                    string accountId = actionCreateApi.ProxyActionPOSTquery(zAccount);
+                    if (!string.IsNullOrEmpty(accountId))
+                    {
+                        accountKey = accountId;
+                    }
+                }
+                */
                 //AccountIDで「Get subscriptions by account」、ratePlanNameで該当のsubscriptionを選定 
                 /** ２０件しか取得できない（API制限）ので、「Get subscriptions by key」に変更
                 GETSubscriptionWrapper subAccount = subscriptionsApi.GETSubscription(accountKey, chargeDetail);
@@ -668,42 +970,169 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 */
 
                 //set the fields with CSV file columns
-                //// 9_termType:9->32
-                //if (!string.IsNullOrEmpty(readedCsvCol[32]))
-                //    subscription.TermType = readedCsvCol[32];
-                // 15_termStartDate:15->34
-                if (!string.IsNullOrEmpty(readedCsvCol[34]))
-                    subscription.TermStartDate = manager.convertToDate(readedCsvCol[34]);
-                // 19_currentTerm:19->37
-                if (!string.IsNullOrEmpty(readedCsvCol[37]))
-                    subscription.CurrentTerm = long.Parse(readedCsvCol[37]);
-                //// 20_currentTermPeriodType:20->38
-                //if (!string.IsNullOrEmpty(readedCsvCol[38]))
-                //    subscription.CurrentTermPeriodType = readedCsvCol[38];
-                // 21_autoRenew:21->39
-                if (!string.IsNullOrEmpty(readedCsvCol[39]))
-                    subscription.AutoRenew = bool.Parse(readedCsvCol[39]);
-                //// 22_renewalSetting:22->31
-                //if (!string.IsNullOrEmpty(readedCsvCol[31]))
-                //    subscription.RenewalSetting = readedCsvCol[31];
-                // 23_renewalTerm:23->26
-                if (!string.IsNullOrEmpty(readedCsvCol[26]))
-                    subscription.RenewalTerm = long.Parse(readedCsvCol[26]);
-                // 27_notes:27->11
-                if (!string.IsNullOrEmpty(readedCsvCol[11]))
-                    subscription.Notes = readedCsvCol[11];
-                // 31_ParentSubscriptionNumber__c:31->44
-                if (!string.IsNullOrEmpty(readedCsvCol[44]))
-                    subscription.ParentSubscriptionNumber__c = readedCsvCol[44];
-                // 35_AutoRenewVersion__c:35->40
+
+                // ST_ADD KMIBS-25  4．請求先の変更
+                // Amendで請求先変更する。
+                // 5_invoiceOwnerAccountId:請求先IDを全て消した状態で、変更する請求先のみを編集してもらう
+                if (!string.IsNullOrEmpty(readedCsvCol[5]))
+                {
+                    ProxyActionqueryRequest zAccount = new ProxyActionqueryRequest();
+                    zAccount.QueryString = "select id from account where HARISCostomerNumber__c = '" + readedCsvCol[5] + "'";
+                    string invoiceOwnerAccountId = actionCreateApi.ProxyActionPOSTquery(zAccount);
+
+                    if (!string.IsNullOrEmpty(invoiceOwnerAccountId))
+                    {
+                        //Initialize the container
+                        ProxyActionamendRequest amendRequest = new ProxyActionamendRequest();
+                        List<AmendRequest> RequestsList = new List<AmendRequest>();
+                        AmendRequest zChgAmendRequest = new AmendRequest();
+
+                        AmendOptions amendOptions = new AmendOptions();
+                        amendOptions.GenerateInvoice = false;
+                        amendOptions.ProcessPayments = false;
+                        //amendOptions.InvoiceProcessingOptions = { };
+                        List<Amendment> amendmentsList = new List<Amendment>();
+                        Amendment amendMents = new Amendment();
+                        amendMents.SubscriptionId = readedCsvCol[1];
+                        amendMents.Name = readedCsvCol[8] + " : AmendForUpdateInvoiceID";
+                        amendMents.Type = "OwnerTransfer";
+                        amendMents.ContractEffectiveDate = DateTime.Parse(readedCsvCol[11]);
+                        amendMents.DestinationInvoiceOwnerId = invoiceOwnerAccountId;
+                        amendmentsList.Add(amendMents);
+
+                        zChgAmendRequest.AmendOptions = amendOptions;
+                        zChgAmendRequest.Amendments = amendmentsList;
+                        RequestsList.Add(zChgAmendRequest);
+                        amendRequest.Requests = RequestsList;
+                        
+                        //ProxyActionamendResponse updateInvoiceID = actionCreateApi.ProxyActionPOSTamend(amendRequest);
+                        string resultUpdateInvoiceID = actionCreateApi.ProxyActionPOSTamendString(amendRequest);
+                        Console.Out.WriteLine("resultUpdateInvoiceID " + resultUpdateInvoiceID );                        
+                    }
+                    else
+                        Console.Out.WriteLine("更新用の請求先を確認してください。 ");
+                }
+                // ED_ADD KMIBS-25
+
+                // ST_ADD KMIBS-51  納入先の変更
+                // Amendで納入先を変更する。
+                // 2_accountId:納入先IDを全て消した状態で、変更する納入先のみを編集してもらう
+                if (!string.IsNullOrEmpty(readedCsvCol[2]))
+                {
+                    ProxyActionqueryRequest zAccount = new ProxyActionqueryRequest();
+                    zAccount.QueryString = "select id from account where HARISCostomerNumber__c = '" + readedCsvCol[2] + "'";
+                    string changeAccountId = actionCreateApi.ProxyActionPOSTquery(zAccount);
+
+                    if (!string.IsNullOrEmpty(changeAccountId))
+                    {
+                        //Initialize the container
+                        ProxyActionamendRequest amendRequest = new ProxyActionamendRequest();
+                        List<AmendRequest> RequestsList = new List<AmendRequest>();
+                        AmendRequest zChgAmendRequest = new AmendRequest();
+
+                        AmendOptions amendOptions = new AmendOptions();
+                        amendOptions.GenerateInvoice = false;
+                        amendOptions.ProcessPayments = false;
+                        //amendOptions.InvoiceProcessingOptions = { };
+                        List<Amendment> amendmentsList = new List<Amendment>();
+                        Amendment amendMents = new Amendment();
+                        amendMents.SubscriptionId = readedCsvCol[1];
+                        amendMents.Name = readedCsvCol[8] + " : AmendForChangeAccountID";
+                        amendMents.Type = "OwnerTransfer";
+                        amendMents.ContractEffectiveDate = DateTime.Parse(readedCsvCol[11]);
+                        amendMents.DestinationAccountId = changeAccountId;
+                        amendmentsList.Add(amendMents);
+
+                        zChgAmendRequest.AmendOptions = amendOptions;
+                        zChgAmendRequest.Amendments = amendmentsList;
+                        RequestsList.Add(zChgAmendRequest);
+                        amendRequest.Requests = RequestsList;
+
+                        //ProxyActionamendResponse updateInvoiceID = actionCreateApi.ProxyActionPOSTamend(amendRequest);
+                        string resultChangeAccountID = actionCreateApi.ProxyActionPOSTamendString(amendRequest);
+                        Console.Out.WriteLine("resultChangeAccountID " + resultChangeAccountID);
+                    }
+                    else
+                        Console.Out.WriteLine("更新用の納入先を確認してください。 ");
+                }
+                // ED_ADD KMIBS-51
+
+                // 9_termType
+                if (!string.IsNullOrEmpty(readedCsvCol[9]))  
+                    subscription.TermType = readedCsvCol[9];
+                // 15_termStartDate
+                if (!string.IsNullOrEmpty(readedCsvCol[15]))
+                    subscription.TermStartDate = manager.convertToDate(readedCsvCol[15]);
+                // 19_currentTerm                
+                if (!string.IsNullOrEmpty(readedCsvCol[19]))
+                    subscription.CurrentTerm = long.Parse(readedCsvCol[19]);
+                // 20_currentTermPeriodType
+                if (!string.IsNullOrEmpty(readedCsvCol[20]))
+                    subscription.CurrentTermPeriodType = readedCsvCol[20];
+                // 21_autoRenew
+                if (!string.IsNullOrEmpty(readedCsvCol[21]))
+                    subscription.AutoRenew = bool.Parse(readedCsvCol[21]);
+                // 22_renewalSetting
+                if (!string.IsNullOrEmpty(readedCsvCol[22]))
+                    subscription.RenewalSetting = readedCsvCol[22];
+                // 23_renewalTerm
+                if (!string.IsNullOrEmpty(readedCsvCol[23]))
+                    subscription.RenewalTerm = long.Parse(readedCsvCol[23]);
+                // 27_notes
+                if (!string.IsNullOrEmpty(readedCsvCol[27]))
+                    subscription.Notes = readedCsvCol[27];
+                // 31_ParentSubscriptionNumber__c -> 33_ParentSubscriptionNumber__c
+                if (!string.IsNullOrEmpty(readedCsvCol[33]))
+                    subscription.ParentSubscriptionNumber__c = readedCsvCol[33];
+                // 35_AutoRenewVersion__c -> 40_AutoRenewVersion__c
                 if (!string.IsNullOrEmpty(readedCsvCol[40]))
                     subscription.AutoRenewVersion__c = readedCsvCol[40];
-                // 36_ServiceStartDate__c:36->8
-                if (!string.IsNullOrEmpty(readedCsvCol[8]))
-                    subscription.ServiceStartDate__c = manager.convertToDate(readedCsvCol[8]);
-                // 41_NeTTSSyncFlag__c:41->3
-                if (!string.IsNullOrEmpty(readedCsvCol[3]))
-                    subscription.NeTTSSyncFlag__c = readedCsvCol[3];
+                // 36_ServiceStartDate__c -> 44_ServiceStartDate__c
+                //なぜかDateTimeではエラーになるので、文字列の"YYYY-MM-DD"とする
+                if (!string.IsNullOrEmpty(readedCsvCol[44]))
+                { 
+                    //subscription.ServiceStartDate__c = manager.convertToDate(readedCsvCol[36]);
+                    //subscription.ServiceStartDate__c = readedCsvCol[36];
+                    DateTime dateKaishi = DateTime.Parse(readedCsvCol[44]);
+                    string kaisiDate = dateKaishi.ToString("yyyy-MM-dd");
+                    subscription.ServiceStartDate__c = kaisiDate;
+                }
+                // 41_NeTTSSyncFlag__c -> 49_NeTTSSyncFlag__c
+                if (!string.IsNullOrEmpty(readedCsvCol[49]))
+                    subscription.NeTTSSyncFlag__c = readedCsvCol[49];
+
+                //add st KMIBS-107
+                DateTime dateWork;
+                string dateWorkStr;
+                // 利用許諾申し込み日, 35_LicenseOfferDate__c
+                if (!string.IsNullOrEmpty(readedCsvCol[35]))
+                {   
+                    dateWork = DateTime.Parse(readedCsvCol[35]);
+                    dateWorkStr = dateWork.ToString("yyyy-MM-dd");
+                    subscription.LicenseOfferDate__c = dateWorkStr;
+                }
+                // お試し申し込み日,   41_TrialOfferDate__c
+                if (!string.IsNullOrEmpty(readedCsvCol[41]))
+                {
+                    dateWork = DateTime.Parse(readedCsvCol[41]);
+                    dateWorkStr = dateWork.ToString("yyyy-MM-dd");
+                    subscription.TrialOfferDate__c = dateWorkStr;
+                }
+                // 本申し込み日,       29_OfferDate__c
+                if (!string.IsNullOrEmpty(readedCsvCol[29]))
+                {
+                    dateWork = DateTime.Parse(readedCsvCol[29]);
+                    dateWorkStr = dateWork.ToString("yyyy-MM-dd");
+                    subscription.OfferDate__c = dateWorkStr;
+                }
+                // 課金開始日,         36_BillingStartDate__c
+                if (!string.IsNullOrEmpty(readedCsvCol[36]))
+                {
+                    dateWork = DateTime.Parse(readedCsvCol[36]);
+                    dateWorkStr = dateWork.ToString("yyyy-MM-dd");
+                    subscription.BillingStartDate__c = dateWorkStr;
+                }
+                //add ed KMIBS-107
 
                 //★■ ratePlanId,ratePlanChargeId取得                
                 //Initialize the Rate Plan container list (Must use a list as the subscription can have multiple rate plans)
@@ -715,17 +1144,19 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 /** Amend前のIDでも更新されるので、ratePlanIDは最新で、chargeIDは古いモノで試す->できる
                 ratePlan.RatePlanId = ratePlanId;
                 */
-                // subscription ratePlanID(44_id -> 43_id):43->46
-                ratePlan.RatePlanId = readedCsvCol[46];
-                //11_contractEffectiveDate:11->28
-                if (!string.IsNullOrEmpty(readedCsvCol[28])) 
-                    ratePlan.ContractEffectiveDate = manager.convertToDate(readedCsvCol[28]);
-                //12_ serviceActivationDate:12->7
-                if (!string.IsNullOrEmpty(readedCsvCol[7]))
-                    ratePlan.ServiceActivationDate = manager.convertToDate(readedCsvCol[7]);
-                //13_ customerAcceptanceDate:13->25
-                if (!string.IsNullOrEmpty(readedCsvCol[25]))
-                    ratePlan.CustomerAcceptanceDate = manager.convertToDate(readedCsvCol[25]);
+                // subscription ratePlanID(44_id -> 43_id -> 51_id)
+                ratePlan.RatePlanId = readedCsvCol[51];
+
+                //11_contractEffectiveDate : Required
+                if (!string.IsNullOrEmpty(readedCsvCol[11]))
+                    ratePlan.ContractEffectiveDate = manager.convertToDate(readedCsvCol[11]);                                
+                //12_ serviceActivationDate
+                if (!string.IsNullOrEmpty(readedCsvCol[12]))
+                    ratePlan.ServiceActivationDate = manager.convertToDate(readedCsvCol[12]);
+                //13_ customerAcceptanceDate
+                if (!string.IsNullOrEmpty(readedCsvCol[13]))
+                    ratePlan.CustomerAcceptanceDate = manager.convertToDate(readedCsvCol[13]);                
+
                 /**  PUTSrpUpdateTypeにない項目
                 //14_ subscriptionStartDate
                 if (!string.IsNullOrEmpty(readedCsvCol[14]))
@@ -740,104 +1171,145 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 {
                     ratePlan.TermEndDate = manager.convertToDate(readedCsvCol[16]);
                 }*/
-                
+
                 //ratePlanCharge▼▼▼
                 //Initialize the Rate Plan CHARGE container list (Must use a list as the subscription can have multiple rate plans)
                 List<PUTScUpdateType> ratePlanChargeList = new List<PUTScUpdateType>();
                 //Initialize the individual Rate Plan container
                 PUTScUpdateType ratePlanCharge = new PUTScUpdateType();
                 //●Populate the Rate Plan Charge container with the required field                               
-                ratePlanCharge.RatePlanChargeId = readedCsvCol[60];  // ratePlanChargeId (55_id -> 56_id):56->60
+                ratePlanCharge.RatePlanChargeId = readedCsvCol[65];  // ratePlanChargeId (55_id -> 56_id -> 65_id)
 
-                //68_price -> 69_price:69->58 DMRC ???
-                //if (!string.IsNullOrEmpty(readedCsvCol[58]))
-                //    ratePlanCharge.Price = readedCsvCol[58];
+                // del st KMIBS-142
+                ////add st KMIBS-107 利用許諾のないサブスクリプションの金額をゼロにする
+                ////課金対象フラグ(58_BillingFlag__c) = TRUE 利用許諾要否フラグ（61_RequiredLicense__c）＝FALSE 以外は価格をZeroにする
+                //bool goZero = false;
+                ////if (readedCsvCol[58].Equals("true") && readedCsvCol[61].Equals("false") || readedCsvCol[58].Equals("TRUE") && readedCsvCol[61].Equals("FALSE"))
+                //if (bool.Parse(readedCsvCol[58]).Equals(true) && bool.Parse(readedCsvCol[61]).Equals(false))
+                //    goZero = false;
+                //else
+                //    goZero = true;
+                ////add ed KMIBS-107
+                // del ed KMIBS-142
 
-                ////■●★ フィールド「quantity」は課金モデルがFlat Fee Pricingの課金に無効です
-                //// 60->61_type =Recurring  -> 96:定期請求  
-                ////61->62_model = PerUnit -> 97:単位あたり課金 のみ数量変更可能                
-                ////if (!readedCsvCol[61].Equals("FlatFee"))  
-                //if (readedCsvCol[96].Equals("定期請求") && readedCsvCol[97].Equals("単位あたり課金"))                
-                //    if (!string.IsNullOrEmpty(readedCsvCol[80]))
-                //        ratePlanCharge.Quantity = readedCsvCol[80]; //83->84_quantity:84->80
+                if (!string.IsNullOrEmpty(readedCsvCol[78])) { 
+                    ratePlanCharge.Price = readedCsvCol[78]; //68_price -> 69_price -> 78_price
+                    // del st KMIBS-142
+                    ////add st KMIBS-107 利用許諾のないサブスクリプションの金額をゼロにする                    
+                    //if (goZero)
+                    //        ratePlanCharge.Price = "0";
+                    ////add ed KMIBS-107
+                    // del ed KMIBS-142
+                }
 
-                //// 66_priceChangeOption:66->70
-                //if (!string.IsNullOrEmpty(readedCsvCol[70]))
-                //    ratePlanCharge.PriceChangeOption = readedCsvCol[70];
-                // 67_priceIncreasePercentage:67->69
-                if (!string.IsNullOrEmpty(readedCsvCol[69]))
-                    ratePlanCharge.PriceIncreasePercentage = readedCsvCol[69];
-                //// 83_billingPeriodAlignment:83->104
-                //if (!string.IsNullOrEmpty(readedCsvCol[104]))
-                //    ratePlanCharge.BillingPeriodAlignment = readedCsvCol[104];
-                // 71_includedUnits:71->117
+                //■●★ フィールド「quantity」は課金モデルがFlat Fee Pricingの課金に無効です
+                // 60->61_type -> 70_type =Recurring  61->62_model -> 71_model = PerUnit のみ数量変更可能 
+                //if (!readedCsvCol[61].Equals("FlatFee"))
+                if (readedCsvCol[70].Equals("Recurring") && readedCsvCol[71].Equals("PerUnit"))
+                    if (!string.IsNullOrEmpty(readedCsvCol[93]))
+                        ratePlanCharge.Quantity = readedCsvCol[93]; //83->84_quantity -> 93_quantity
+
+                // 66_priceChangeOption -> 75_priceChangeOption
+                if (!string.IsNullOrEmpty(readedCsvCol[75]))
+                    ratePlanCharge.PriceChangeOption = readedCsvCol[75];
+                // 67_priceIncreasePercentage -> 76_priceIncreasePercentage
+                if (!string.IsNullOrEmpty(readedCsvCol[76]))
+                    ratePlanCharge.PriceIncreasePercentage = readedCsvCol[76];
+                // 83_billingPeriodAlignment -> 92_billingPeriodAlignment
+                if (!string.IsNullOrEmpty(readedCsvCol[92]))
+                    ratePlanCharge.BillingPeriodAlignment = readedCsvCol[92];
+                // 71_includedUnits -> 80_includedUnits
+                if (!string.IsNullOrEmpty(readedCsvCol[80]))
+                    ratePlanCharge.IncludedUnits = readedCsvCol[80];
+                // 72_overagePrice -> 81_overagePrice
+                if (!string.IsNullOrEmpty(readedCsvCol[81])) { 
+                    ratePlanCharge.OveragePrice = readedCsvCol[81];
+                    // del st KMIBS-142
+                    ////add st KMIBS-107 利用許諾のないサブスクリプションの金額をゼロにする
+                    //if (goZero)
+                    //    ratePlanCharge.OveragePrice = "0";
+                    ////add ed KMIBS-107
+                    // del ed KMIBS-142
+                }
+
+                // 97_triggerDate -> 106_triggerDate
+                if (!string.IsNullOrEmpty(readedCsvCol[106]))
+                    ratePlanCharge.TriggerDate = manager.convertToDate(readedCsvCol[106]);
+
+                // < UCE > ContractEffective, < USA > ServiceActivation,< UCA > CustomerAcceptance , < USD > SpecificDate                
+                // 98_triggerEvent -> 107_triggerEvent
+                if (!string.IsNullOrEmpty(readedCsvCol[107]))
+                {
+                    if (readedCsvCol[98].Equals("ContractEffective"))
+                        ratePlanCharge.TriggerEvent = "UCE";
+                    else if (readedCsvCol[98].Equals("ServiceActivation"))
+                        ratePlanCharge.TriggerEvent = "USA";
+                    else if (readedCsvCol[98].Equals("CustomerAcceptance"))
+                        ratePlanCharge.TriggerEvent = "UCA";
+                    else if (readedCsvCol[98].Equals("SpecificDate"))
+                    {
+                        ratePlanCharge.TriggerEvent = "USD";
+                        if (!string.IsNullOrEmpty(readedCsvCol[106]))
+                        {
+                            DateTime dateCsv = DateTime.Parse(readedCsvCol[106]);
+                            ratePlanCharge.TriggerDate = dateCsv;
+                        }
+                    }
+                }
+
+                // 107_description -> 116_description
+                if (!string.IsNullOrEmpty(readedCsvCol[116]))
+                    ratePlanCharge.Description = readedCsvCol[116];
+                // 108_UserPrice__c -> 118_UserPrice__c
+                if (!string.IsNullOrEmpty(readedCsvCol[118]))
+                    ratePlanCharge.UserPrice__c = readedCsvCol[118];
+
+                //add st KMIBS-107
+                // 117_UserPriceTotal__c
                 if (!string.IsNullOrEmpty(readedCsvCol[117]))
-                    ratePlanCharge.IncludedUnits = readedCsvCol[117];
-                // 72_overagePrice:72->121
-                if (!string.IsNullOrEmpty(readedCsvCol[121]))
-                    ratePlanCharge.OveragePrice = readedCsvCol[121];
-                // 97_triggerDate:97->108
-                if (!string.IsNullOrEmpty(readedCsvCol[108]))
-                    ratePlanCharge.TriggerDate = manager.convertToDate(readedCsvCol[108]);
-
-                //// < UCE > ContractEffective 契約締結後, < USA > ServiceActivation サービス有効化後,< UCA > CustomerAcceptance 顧客受入後, < USD > SpecificDate  特定の日付に             
-                //// 98_triggerEvent:98->107
-                //if (!string.IsNullOrEmpty(readedCsvCol[107]))
-                //{
-                //    if (readedCsvCol[107].Equals("契約締結後"))
-                //        ratePlanCharge.TriggerEvent = "UCE";
-                //    else if (readedCsvCol[107].Equals("サービス有効化後"))
-                //        ratePlanCharge.TriggerEvent = "USA";
-                //    else if (readedCsvCol[107].Equals("顧客受入後"))
-                //        ratePlanCharge.TriggerEvent = "UCA";
-                //    else if (readedCsvCol[107].Equals("特定の日付に"))
-                //    {
-                //        ratePlanCharge.TriggerEvent = "USD";
-                //        if (!string.IsNullOrEmpty(readedCsvCol[108]))
-                //        {
-                //            DateTime dateCsv = DateTime.Parse(readedCsvCol[108]);
-                //            ratePlanCharge.TriggerDate = dateCsv;                            
-                //        }
-                //    }
-                        
-                //}                   
-
-                // 107_description:107->95
-                if (!string.IsNullOrEmpty(readedCsvCol[95]))
-                    ratePlanCharge.Description = readedCsvCol[95];
-                // 108_UserPrice__c:108->65
-                if (!string.IsNullOrEmpty(readedCsvCol[65]))
-                    ratePlanCharge.UserPrice__c = readedCsvCol[65];
+                    ratePlanCharge.UserPriceTotal__c = readedCsvCol[117];
+                // 119_EffectivePriceTotal__c
+                if (!string.IsNullOrEmpty(readedCsvCol[119]))
+                    ratePlanCharge.EffectivePriceTotal__c = readedCsvCol[119];
+                //add ed KMIBS-107
 
                 //ratePlanChargeTier ▼▼▼▼▼
-                //if (!string.IsNullOrEmpty(readedCsvCol[70]))  // 69->70_tiers=nullなら 112->110_tierのデータはない。。。
-                // tiers項目がないので、110のtierで判断する:tier項目数 6-> 15
-                if (!string.IsNullOrEmpty(readedCsvCol[110]))
+                if (!string.IsNullOrEmpty(readedCsvCol[79]))  // 69->70_tiers->79_tiers=nullなら 112->110_tier->121_tierのデータはない。。。
                 {
                     /** // Tier,Priceだけなら、複数のTierが更新できるが、他を設定するとTier[1] 更新にてTier[2]が削除される。。。    
                         =>  //●■ 20170720 TierのCSV編集を２行→１行にする。
                     */
                     List<POSTTierType> ratePlanChargeTierList = new List<POSTTierType>();
                     long lengthCsvCol = readedCsvCol.Length;
-                    for (int i = 0; (110 + 15 * i) < lengthCsvCol; i++ ) { 
+                    for (int i = 0; (121 + 6 * i) < lengthCsvCol; i++ ) { 
                         //Initialize the Rate Plan CHARGE container list (Must use a list as the subscription can have multiple rate plans)
                         //List<POSTTierType> ratePlanChargeTierList = new List<POSTTierType>();
                         //Initialize the individual Rate Plan container
                         POSTTierType ratePlanChargeTier = new POSTTierType();
                         //Populate the Rate Plan container with the required field                
-                        if (!string.IsNullOrEmpty(readedCsvCol[110 + 15 * i]))   //112_tier -> 110_tier:110->110
-                            ratePlanChargeTier.Tier = long.Parse(readedCsvCol[110 + 15 * i]);                                       
-                        if (!string.IsNullOrEmpty(readedCsvCol[123 + 15 * i]))   //113_startingUnit -> 111_startingUnit:111->123
-                            ratePlanChargeTier.StartingUnit = readedCsvCol[123 + 15 * i];
-                        if (!string.IsNullOrEmpty(readedCsvCol[120 + 15 * i]))  //114_endingUnit -> 112_endingUnit:112->120
-                            ratePlanChargeTier.EndingUnit = readedCsvCol[120 + 15 * i];
-                        if (!string.IsNullOrEmpty(readedCsvCol[113 + 15 * i]))  //115_price -> 113_price:113->113
-                            ratePlanChargeTier.Price = readedCsvCol[113 + 15 * i];
-                        //if (!string.IsNullOrEmpty(readedCsvCol[114 + 15 * i]))  //116_priceFormat -> 114_priceFormat:114->114
-                        //    ratePlanChargeTier.PriceFormat = readedCsvCol[114 + 15 * i];
-                        
-                        //Add the individual Rate Plan container to the list
-                        ratePlanChargeTierList.Add(ratePlanChargeTier);                        
+                        if (!string.IsNullOrEmpty(readedCsvCol[121 + 6 * i]))   //112_tier -> 110_tier -> 121_tier
+                            ratePlanChargeTier.Tier = long.Parse(readedCsvCol[121 + 6 * i]);                                       
+                        if (!string.IsNullOrEmpty(readedCsvCol[122 + 6 * i]))   //113_startingUnit -> 111_startingUnit -> 122_startingUnit
+                            ratePlanChargeTier.StartingUnit = readedCsvCol[122 + 6 * i];
+                        if (!string.IsNullOrEmpty(readedCsvCol[123 + 6 * i]))  //114_endingUnit -> 112_endingUnit -> 123_endingUnit
+                            ratePlanChargeTier.EndingUnit = readedCsvCol[123 + 6 * i];
+                        if (!string.IsNullOrEmpty(readedCsvCol[124 + 6 * i])) //115_price -> 113_price -> 124_price
+                        {   
+                            ratePlanChargeTier.Price = readedCsvCol[124 + 6 * i];
+                            // del st KMIBS-142
+                            ////add st KMIBS-107 利用許諾のないサブスクリプションの金額をゼロにする
+                            //if (goZero)
+                            //    ratePlanChargeTier.Price = "0";
+                            ////add ed KMIBS-107
+                            // del ed KMIBS-142
+                        }
+                        if (!string.IsNullOrEmpty(readedCsvCol[125 + 6 * i]))  //116_priceFormat -> 114_priceFormat -> 125_priceFormat
+                            ratePlanChargeTier.PriceFormat = readedCsvCol[125 + 6 * i];
+                                                
+                        // 20170828 Excel編集にて、Tier1のみのデータにTier2のNULLができてしまうので
+                        if (!string.IsNullOrEmpty(readedCsvCol[121 + 6 * i]))   //112_tier -> 110_tier -> 121_tier
+                            //Add the individual Rate Plan container to the list
+                            ratePlanChargeTierList.Add(ratePlanChargeTier);                        
                     }
                     //Add the list of Rate Plans to the Subscription container
                     ratePlanCharge.Tiers = ratePlanChargeTierList;
@@ -855,10 +1327,7 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
 
                 //Add the list of Rate Plans to the Subscription container
                 subscription.Update = ratePlanList;
-
-                string fordebugString = subscriptionsApi.PUTSubscriptionString(subscriptionKey, subscription, "211.0");
-                Console.WriteLine("★★★★★★★★★() " + fordebugString);
-
+                
                 return subscriptionsApi.PUTSubscription(subscriptionKey, subscription, "211.0");
             }
             catch (Exception ex)
@@ -871,7 +1340,13 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
 
         private DateTime convertToDate(string strDate)
         {
-            DateTime dateConverted = DateTime.Parse(strDate);
+            //20170828 yyyy/mm/ddの対応：yyyy-mm-dd変換する
+            //DateTime dateConverted = DateTime.Parse(strDate);
+            //return dateConverted;
+            DateTime dateWork = DateTime.Parse(strDate);
+            string strWork = dateWork.ToString("yyyy-MM-dd");
+
+            DateTime dateConverted = DateTime.Parse(strWork);
             return dateConverted;
         }
 
@@ -1131,9 +1606,9 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
 
             //Bank Info用のカラムを指定してリストとして格納する。
             zPayDef.Id = accountId;
-            zPayDef.DefaultpaymentMethodId = payMentIdBank;
-            zPayDef.Name = "ikoGitHubPaymMethod_Bank";
-            zPayDef.Notes = "#####note#####";
+            //zPayDef.DefaultpaymentMethodId = payMentIdBank;
+            //zPayDef.Name = "ikoGitHubPaymMethod_Bank";
+            //zPayDef.Notes = "#####note#####";
 
             defPayDefIdList.Add(zPayDef);
 
@@ -1245,6 +1720,17 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 else if (args[0] == "delete")
                 {
                     manager.deleteSubscription();
+                }
+                // KMIBS-54 親subScription番号を更新登録する
+                //update OyaSubscriptionNo
+                else if (args[0] == "oya")
+                {
+                    manager.updateOya();
+                }
+                //#7 品目展開　件数確認
+                else if (args[0] == "check")
+                {
+                    manager.checksubScriptionCount();
                 }
             }
             else
@@ -1526,204 +2012,256 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
          */
         public void createSubscription()
         {
-            //★ Print Log Out
-            // 出力先ファイル名 subscMakeLog   追加書き込み true   文字コードSystem.Text.Encoding.GetEncoding("UTF-8")
-            StreamWriter sw = new StreamWriter(subscMakeLog, true, System.Text.Encoding.GetEncoding("UTF-8"));            
-            Console.SetOut(sw); // 出力先（Outプロパティ）を設定
-            Console.Out.WriteLine("処理開始▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶" + System.DateTime.Now); //処理開始
-            //★ Print Log Out           
+            try
+            { 
+                //★ Print Log Out
+                // 出力先ファイル名 subscMakeLog   追加書き込み true   文字コードSystem.Text.Encoding.GetEncoding("UTF-8")
+                StreamWriter sw = new StreamWriter(subscMakeLog, true, System.Text.Encoding.GetEncoding("UTF-8"));            
+                Console.SetOut(sw); // 出力先（Outプロパティ）を設定
+                Console.Out.WriteLine("処理開始▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶" + System.DateTime.Now); //処理開始
+                //★ Print Log Out           
             
-            //Must set the JSON serializer settings so that null values are not passed to the API
-            //Passing null values will result in a failed API call
-            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
-            {
-                NullValueHandling = NullValueHandling.Ignore
-            };
-
-            //Initialize the Application Manager which contains all methods and objects used for the QuickStart
-            //★ TODO UPDATE WITH YOUR USERNAME AND PASSWORD FOR YOUR ZUORA TEST DRIVE TENANT
-            ApplicationManager manager = new ApplicationManager(userID, passWD);
-
-            //★ READ csv file
-            //header CSV読込▶
-            string csvfileHeader = @subscHeaderCSV;   //CSVファイル格納場所
-            TextFieldParser parserHeader = new TextFieldParser(csvfileHeader, Encoding.GetEncoding("UTF-8"));
-            parserHeader.TextFieldType = FieldType.Delimited;
-            parserHeader.SetDelimiters(","); // 区切り文字はコンマ
-            int countCsvHeader = 0;            
-
-            while (!parserHeader.EndOfData)
-            {
-                string[] csvColumnHeader = parserHeader.ReadFields(); // Header 1行読み込み
-                if (countCsvHeader == 0)
+                //Must set the JSON serializer settings so that null values are not passed to the API
+                //Passing null values will result in a failed API call
+                JsonConvert.DefaultSettings = () => new JsonSerializerSettings
                 {
-                    countCsvHeader += 1;
-                    continue;  //headerは処理しない
-                }
+                    NullValueHandling = NullValueHandling.Ignore
+                };
 
-                Console.WriteLine("▼Header▼" + countCsvHeader + "件目");
-                for (int n = 0; n < csvColumnHeader.Length; n++)
-                {
-                    Console.Write(csvColumnHeader[n] + ",");
-                }
-                Console.WriteLine();
+                //Initialize the Application Manager which contains all methods and objects used for the QuickStart
+                //★ TODO UPDATE WITH YOUR USERNAME AND PASSWORD FOR YOUR ZUORA TEST DRIVE TENANT
+                ApplicationManager manager = new ApplicationManager(userID, passWD);
 
-                //detail　CSV読込▶▶▶
-                string csvfile = @subscMakeCSV;   //CSVファイル格納場所
-                TextFieldParser parser = new TextFieldParser(csvfile, Encoding.GetEncoding("UTF-8"));
-                parser.TextFieldType = FieldType.Delimited;
-                parser.SetDelimiters(","); // 区切り文字はコンマ                     
-                int countCsv = 0;
-                
-                while (!parser.EndOfData)
+                //★ READ csv file
+                //header CSV読込▶
+                string csvfileHeader = @subscHeaderCSV;   //CSVファイル格納場所
+                TextFieldParser parserHeader = new TextFieldParser(csvfileHeader, Encoding.GetEncoding("UTF-8"));
+                parserHeader.TextFieldType = FieldType.Delimited;
+                parserHeader.SetDelimiters(","); // 区切り文字はコンマ
+                int countCsvHeader = 0;
+
+                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+                // CSV形式のテキストファイルの内容をDataTableに直接格納            
+                string fileRP = "file\\2ratePlanDB.csv";   //CSVファイル格納場所（実行ファイル同）
+                // データベースへ接続する(今回はCSVファイルを開く)
+                OleDbConnection connectionRP = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + Path.GetDirectoryName(fileRP) + "\\; Extended Properties=\"Text;HDR=YES;FMT=Delimited\"");
+                // クエリ文字列を作る
+                // ※ファイルパスを[]でくくること！
+                OleDbCommand commandRP = new OleDbCommand("SELECT * FROM [" + Path.GetFileName(fileRP) + "]", connectionRP);
+                DataSet datasetRP = new DataSet();
+                datasetRP.Clear();    // 念のためクリア
+                // CSVファイルの内容をDataSetに入れる
+                OleDbDataAdapter adapterRP = new OleDbDataAdapter(commandRP);
+                adapterRP.Fill(datasetRP);
+
+                string fileRPC = "file\\2ratePlanChargeDB.csv";
+                OleDbConnection connectionRPC = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + Path.GetDirectoryName(fileRPC) + "\\; Extended Properties=\"Text;HDR=YES;FMT=Delimited\"");                
+                OleDbCommand commandRPC = new OleDbCommand("SELECT * FROM [" + Path.GetFileName(fileRPC) + "]", connectionRPC);
+                DataSet datasetRPC = new DataSet();
+                datasetRPC.Clear();                
+                OleDbDataAdapter adapterRPC = new OleDbDataAdapter(commandRPC);
+                adapterRPC.Fill(datasetRPC);
+
+                string fileAccount = "file\\2accountDB.csv";
+                OleDbConnection connectionAccount = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + Path.GetDirectoryName(fileAccount) + "\\; Extended Properties=\"Text;HDR=YES;FMT=Delimited\"");
+                OleDbCommand commandAccount = new OleDbCommand("SELECT * FROM [" + Path.GetFileName(fileAccount) + "]", connectionAccount);
+                DataSet datasetAccount = new DataSet();
+                datasetAccount.Clear();
+                OleDbDataAdapter adapterAccount = new OleDbDataAdapter(commandAccount);
+                adapterAccount.Fill(datasetAccount);
+                //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+                while (!parserHeader.EndOfData)
                 {
-                    string[] csvColumn = parser.ReadFields(); // Detail 1行読み込み
-                    if (countCsv == 0)
+                    string[] csvColumnHeader = parserHeader.ReadFields(); // Header 1行読み込み
+                    if (countCsvHeader == 0)
                     {
-                        countCsv += 1;
+                        countCsvHeader += 1;
                         continue;  //headerは処理しない
                     }
 
-                    //Header CSVの試算番号　＝　Detail CSVの試算番号をサブスクリプション作成する
-                    if (!csvColumnHeader[1].Equals(csvColumn[0]))
+                    Console.WriteLine("▼Header▼" + countCsvHeader + "件目");
+                    for (int n = 0; n < csvColumnHeader.Length; n++)
                     {
-                        continue;
+                        Console.Write(csvColumnHeader[n] + ",");
                     }
+                    Console.WriteLine();
 
-                    /**  //Header情報表示したので。。。                   
-                    // Console.WriteLine("▼▼▼▼▼▼▼▼▼▼" + countCsv + "件目");
-                    // for (int n = 0; n < csvColumn.Length; n++)
-                    // {
-                    // Console.Write(csvColumn[n] + ",");
-                    // }
-                    // Console.WriteLine();
-                    */
-
-                    /** //Name of the initial product rate plan to be added in our new subscription
-                    //★ string productRatePlan1Name = "Quarterly Plan";
-                    //★★ READ csv file to create Subscription
-                    //string productRatePlan1Name = "basicApiPlan";
-                    //Name of the "upgraded" product rate plan to be added to the upgraded subscription                
-                    //string productRatePlan2Name = "実験プラン";
-                    //Creating ojects to store the IDs of the above product rate plans
-                    //★ string productRatePlan2Id = null;
-                    */
-                    string productRatePlan1Id = null;
-                    //★ST>親品目コードでサービス分解
-                    //string productRatePlan1Name = csvColumn[6]; 
-                    string oyaHinmokuCD = csvColumn[3]; //3_品目コード
-                    //★☆ストップウォッチを開始する。カタログ取得
-                    //System.Diagnostics.Stopwatch stopwatch = System.Diagnostics.Stopwatch.StartNew();
-                    /** ★product catalog検索は遅い => nameでProductRatePlanを検索
-                    Console.Out.WriteLine("Calling Get Catalog >");
-                    //Use the GET Catalog call to retrieve the entire product catalog and store it in the catalog container
-                    GETCatalogType catalog = manager.catalogApi.GETCatalog();
-                    //Get the list of products from the catalog container
-                    List<GETProductType> products = catalog.Products;
-                    //Loop through all products to find the ones we will use
-                    foreach (GETProductType p in products)                {
-                        //Get the list of rate plans from the product container
-                        List<GETProductRatePlanType> ratePlans = p.ProductRatePlans;
-                        //Loop through all rate plans for this product
-                        foreach (GETProductRatePlanType rp in ratePlans)                    {
-                            //If the initial product rate plan is identified...
-                            if (productRatePlan1Name.Equals(rp.Name))                        {
-                                Console.Out.WriteLine("Product Rate Plan 1 found: " + rp.ToString());
-                                //Store the ID for our initial product rate plan
-                                productRatePlan1Id = rp.Id;
-                            }                    }                }
-                    */
-                    //nameでProductRatePlanIDを取得
-                    ProxyActionqueryRequest zPtRatePlan = new ProxyActionqueryRequest();
-                    //★ST>親品目コードでサービス分解
-                    //zPtRatePlan.QueryString = "select id from ProductRatePlan where name = '" + productRatePlan1Name + "'";
-                    //productRatePlan1Id =  actionCreateApi.ProxyActionPOSTquery(zPtRatePlan);
-
-                    //★■　親の親品目コードがNULLになったので親は、品目コードで検索する
-                    //zPtRatePlan.QueryString = "select id from ProductRatePlan where ParentCode__c = '" + oyaHinmokuCD + "'";
-                    zPtRatePlan.QueryString = "select id from ProductRatePlan where ParentCode__c = '" + oyaHinmokuCD + "' or ProductCode__c = '" + oyaHinmokuCD + "'";
-
-                    //■　Configuration.ApiClient.DeserializにてNULLになるので、CSV形式でReturnするよう変更
-                    //ProxyActionqueryResponse localVarResponse = actionCreateApi.ProxyActionPOSTqueryOriginal(zPtRatePlan);
-                    string ratePlanIdGroup = actionCreateApi.ProxyActionPOSTqueryServiceRateID(zPtRatePlan);
-                    Console.WriteLine("● 親品目：" + oyaHinmokuCD + " 展開するratePlanID : " + ratePlanIdGroup);
-                    
-                    if (ratePlanIdGroup != null) { 
-                        //■　CSV形式でReturnされたratePlanIDを持ってサブスクリプションを作成
-                        string[] ServiceRatePlanID = ratePlanIdGroup.Split(',');
-                        for (int n = 0; n < ServiceRatePlanID.Length; n++)
+                    //detail　CSV読込▶▶▶
+                    string csvfile = @subscMakeCSV;   //CSVファイル格納場所
+                    TextFieldParser parser = new TextFieldParser(csvfile, Encoding.GetEncoding("UTF-8"));
+                    parser.TextFieldType = FieldType.Delimited;
+                    parser.SetDelimiters(","); // 区切り文字はコンマ                     
+                    int countCsv = 0;
+                
+                    while (!parser.EndOfData)
+                    {
+                        string[] csvColumn = parser.ReadFields(); // Detail 1行読み込み
+                        if (countCsv == 0)
                         {
-                            productRatePlan1Id = ServiceRatePlanID[n];
-                            //★ED>親品目コードでサービス分解
-                            /** //★☆ストップウォッチを止める。カタログ
-                            //stopwatch.Stop();
-                            //★☆結果を表示する。カタログ
-                            //Console.WriteLine("Product Rate Plan SELECT★ : " + stopwatch.Elapsed);
-                            */
-                            //If the initial product rate plan was found...
-                            if (productRatePlan1Id != null)
+                            countCsv += 1;
+                            continue;  //headerは処理しない
+                        }
+
+                        //Header CSVの試算番号　＝　Detail CSVの試算番号をサブスクリプション作成する
+                        if (!csvColumnHeader[1].Equals(csvColumn[0]))
+                        {
+                            continue;
+                        }
+
+                        /**  //Header情報表示したので。。。                   
+                        // Console.WriteLine("▼▼▼▼▼▼▼▼▼▼" + countCsv + "件目");
+                        // for (int n = 0; n < csvColumn.Length; n++)
+                        // {
+                        // Console.Write(csvColumn[n] + ",");
+                        // }
+                        // Console.WriteLine();
+                        */
+
+                        /** //Name of the initial product rate plan to be added in our new subscription
+                        //★ string productRatePlan1Name = "Quarterly Plan";
+                        //★★ READ csv file to create Subscription
+                        //string productRatePlan1Name = "basicApiPlan";
+                        //Name of the "upgraded" product rate plan to be added to the upgraded subscription                
+                        //string productRatePlan2Name = "実験プラン";
+                        //Creating ojects to store the IDs of the above product rate plans
+                        //★ string productRatePlan2Id = null;
+                        */
+                        string productRatePlan1Id = null;
+                        //★ST>親品目コードでサービス分解
+                        //string productRatePlan1Name = csvColumn[6]; 
+                        string oyaHinmokuCD = csvColumn[3]; //3_品目コード
+                        //★☆ストップウォッチを開始する。カタログ取得
+                        //System.Diagnostics.Stopwatch stopwatch = System.Diagnostics.Stopwatch.StartNew();
+                        /** ★product catalog検索は遅い => nameでProductRatePlanを検索
+                        Console.Out.WriteLine("Calling Get Catalog >");
+                        //Use the GET Catalog call to retrieve the entire product catalog and store it in the catalog container
+                        GETCatalogType catalog = manager.catalogApi.GETCatalog();
+                        //Get the list of products from the catalog container
+                        List<GETProductType> products = catalog.Products;
+                        //Loop through all products to find the ones we will use
+                        foreach (GETProductType p in products)                {
+                            //Get the list of rate plans from the product container
+                            List<GETProductRatePlanType> ratePlans = p.ProductRatePlans;
+                            //Loop through all rate plans for this product
+                            foreach (GETProductRatePlanType rp in ratePlans)                    {
+                                //If the initial product rate plan is identified...
+                                if (productRatePlan1Name.Equals(rp.Name))                        {
+                                    Console.Out.WriteLine("Product Rate Plan 1 found: " + rp.ToString());
+                                    //Store the ID for our initial product rate plan
+                                    productRatePlan1Id = rp.Id;
+                                }                    }                }
+                        */
+                        //nameでProductRatePlanIDを取得
+                        ProxyActionqueryRequest zPtRatePlan = new ProxyActionqueryRequest();
+                        //★ST>親品目コードでサービス分解
+                        //zPtRatePlan.QueryString = "select id from ProductRatePlan where name = '" + productRatePlan1Name + "'";
+                        //productRatePlan1Id =  actionCreateApi.ProxyActionPOSTquery(zPtRatePlan);
+
+                        //★■　親の親品目コードがNULLになったので親は、品目コードで検索する
+                        //zPtRatePlan.QueryString = "select id from ProductRatePlan where ParentCode__c = '" + oyaHinmokuCD + "'";
+                        zPtRatePlan.QueryString = "select id from ProductRatePlan where ParentCode__c = '" + oyaHinmokuCD + "' or ProductCode__c = '" + oyaHinmokuCD + "'";
+
+                        //■　Configuration.ApiClient.DeserializにてNULLになるので、CSV形式でReturnするよう変更
+                        //ProxyActionqueryResponse localVarResponse = actionCreateApi.ProxyActionPOSTqueryOriginal(zPtRatePlan);
+                        string ratePlanIdGroup = actionCreateApi.ProxyActionPOSTqueryServiceRateID(zPtRatePlan);
+                        //Console.WriteLine("●試算番号：" + csvColumn[0]  + ",親品目：" + oyaHinmokuCD + " 展開するratePlanID : " + ratePlanIdGroup);    //20170823 作成件数確認
+
+                        if (ratePlanIdGroup != null) { 
+                            //■　CSV形式でReturnされたratePlanIDを持ってサブスクリプションを作成
+                            string[] ServiceRatePlanID = ratePlanIdGroup.Split(',');
+
+                            //20170823 作成件数確認
+                            Console.WriteLine("●試算番号：" + csvColumn[0] + ", 親品目：," + oyaHinmokuCD + ", 展開するratePlanID(合計:," + ServiceRatePlanID.Length + ",):," + ratePlanIdGroup);
+                            int checkDoneCount = 0;    //20170823 作成件数確認
+
+                            for (int n = 0; n < ServiceRatePlanID.Length; n++)
                             {
-                                Console.WriteLine("▲サービス展開　：　" + productRatePlan1Id);
-                                //★★ READ csv file to create Subscription
-                                //Create an object to store the result of the Create Account call
-                                /** //async
-                                System.Threading.Tasks.Task<POSTSubscriptionResponseType> subscResponse = null;
-                                subscResponse = manager.createSubscrWithCsv(productRatePlan1Id, csvColumn);
-                                Console.Out.WriteLine("POSTSubscriptionResponseType: " + subscResponse.ToString());
-                                Console.Out.WriteLine(System.DateTime.Now);
-                                Console.WriteLine("▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲" + countCsv + "件目");
-                                countCsv += 1;
-                                System.Threading.Thread.Sleep(10); //処理が飛んでたりするので、ちょっとbreak
-                                continue;//次の処理に飛ばす。以下省略
-                                */
-                                //sync                            
-                                /** //★☆ストップウォッチをリセットしてから再開する
-                                //stopwatch.Reset();
-                                //stopwatch.Start();
-                                */
-                                //20170720 status-Pendingのsubscriptionを作成するため 「Action/subscribe」を使用
-                                // 20170721 Cannot deserialize the current JSON array～対応
-                                //POSTSubscriptionResponseType subscResponse = null;
-                                //subscResponse = manager.createSubscrWithCsv(productRatePlan1Id, csvColumn, csvColumnHeader);                            
-                                string subscResponse = null;
-                                subscResponse = manager.actionSubscrWithCsv(productRatePlan1Id, csvColumn, csvColumnHeader);
-                                /** //★☆ストップウォッチを止める。
+                                checkDoneCount = n + 1;
+
+                                productRatePlan1Id = ServiceRatePlanID[n];
+                                //★ED>親品目コードでサービス分解
+                                /** //★☆ストップウォッチを止める。カタログ
                                 //stopwatch.Stop();
-                                //★☆結果を表示する。
-                                //Console.WriteLine("subscription INSERT★★ : " + stopwatch.Elapsed);
+                                //★☆結果を表示する。カタログ
+                                //Console.WriteLine("Product Rate Plan SELECT★ : " + stopwatch.Elapsed);
                                 */
-                                if (subscResponse != null)    //try catchにてNULLが返された場合のため
+                                //If the initial product rate plan was found...
+                                if (productRatePlan1Id != null)
                                 {
+                                    Console.WriteLine(checkDoneCount + "_サービス展開　：," + productRatePlan1Id);
+                                    //★★ READ csv file to create Subscription
+                                    //Create an object to store the result of the Create Account call
+                                    /** //async
+                                    System.Threading.Tasks.Task<POSTSubscriptionResponseType> subscResponse = null;
+                                    subscResponse = manager.createSubscrWithCsv(productRatePlan1Id, csvColumn);
+                                    Console.Out.WriteLine("POSTSubscriptionResponseType: " + subscResponse.ToString());
+                                    Console.Out.WriteLine(System.DateTime.Now);
+                                    Console.WriteLine("▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲" + countCsv + "件目");
+                                    countCsv += 1;
+                                    System.Threading.Thread.Sleep(10); //処理が飛んでたりするので、ちょっとbreak
+                                    continue;//次の処理に飛ばす。以下省略
+                                    */
+                                    //sync                            
+                                    /** //★☆ストップウォッチをリセットしてから再開する
+                                    //stopwatch.Reset();
+                                    //stopwatch.Start();
+                                    */
                                     //20170720 status-Pendingのsubscriptionを作成するため 「Action/subscribe」を使用
-                                    //Console.Out.WriteLine("POSTSubscriptionResponseType: " + subscResponse.ToString());
-                                    Console.Out.WriteLine("ProxyActionPOSTsubscribe（）: " + subscResponse.ToString());
+                                    // 20170721 Cannot deserialize the current JSON array～対応
+                                    //POSTSubscriptionResponseType subscResponse = null;
+                                    //subscResponse = manager.createSubscrWithCsv(productRatePlan1Id, csvColumn, csvColumnHeader);                            
+
+                                    string subscResponse = null;
+                                    //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+                                    //subscResponse = manager.actionSubscrWithCsv(productRatePlan1Id, csvColumn, csvColumnHeader);
+                                    subscResponse = manager.actionSubscrWithCsv(productRatePlan1Id, csvColumn, csvColumnHeader,datasetRP,datasetRPC,datasetAccount);
+                                    /** //★☆ストップウォッチを止める。
+                                    //stopwatch.Stop();
+                                    //★☆結果を表示する。
+                                    //Console.WriteLine("subscription INSERT★★ : " + stopwatch.Elapsed);
+                                    */
+                                    if (subscResponse != null)    //try catchにてNULLが返された場合のため
+                                    {
+                                        //20170720 status-Pendingのsubscriptionを作成するため 「Action/subscribe」を使用
+                                        //Console.Out.WriteLine("POSTSubscriptionResponseType: " + subscResponse.ToString());
+                                        Console.Out.WriteLine("ProxyActionPOSTsubscribe（）: " + subscResponse.ToString());
+                                    }
+                                    Console.Out.WriteLine(System.DateTime.Now);
+                                    continue;//次のCSV処理に
                                 }
-                                Console.Out.WriteLine(System.DateTime.Now);
-                                continue;//次のCSV処理に
-                            }
-                            else
-                            {
-                                Console.Out.WriteLine("Product Rate Plan 1, 'Quarterly Plan', was not found");
-                            }
-                        }//■　CSV形式でReturnされたratePlanIDを持ってサブスクリプションを作成
+                                else
+                                {
+                                    Console.Out.WriteLine("Product Rate Plan 1, 'Quarterly Plan', was not found");
+                                }
+                            }//■　CSV形式でReturnされたratePlanIDを持ってサブスクリプションを作成
+
+                            //20170823 作成件数確認
+                            if (ServiceRatePlanID.Length != checkDoneCount)
+                                Console.WriteLine("★★★ error : checkOutサービス展開件数");
+
+                        }
+                        else
+                        {
+                            Console.WriteLine( " 展開するratePlanID がNULL ");
+                        }
+                        countCsv += 1;
                     }
-                    else
-                    {
-                        Console.WriteLine( " 展開するratePlanID がNULL ");
-                    }
-                    countCsv += 1;
+                    //◀◀◀ End of detail CSV
+
+                    countCsvHeader += 1;
                 }
-                //◀◀◀ End of detail CSV
+                //◀ End of Header CSV
 
-                countCsvHeader += 1;
+                //★ Print Log Out            
+                sw.Dispose(); // ファイルを閉じてオブジェクトを破棄  
+                //★★ READ csv file to create Subscription    
+                //System.Threading.Thread.Sleep(1000); //for Async
             }
-            //◀ End of Header CSV
-
-            //★ Print Log Out            
-            sw.Dispose(); // ファイルを閉じてオブジェクトを破棄  
-
-            //★★ READ csv file to create Subscription    
-            //System.Threading.Thread.Sleep(1000); //for Async
+            catch (Exception ex)
+            {                
+                Console.WriteLine("createSubscription() failed with message: " + ex.Message);                
+            }            
         }//End of createSubscription()
 
         /** #3 update susscription
@@ -1772,18 +2310,54 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                     Console.Write(csvColumn[n] + ",");
 
                 Console.WriteLine();
-
+                
                 // Status＝Activeのみ更新処理を行う：pendingの更新はできん
-                //if (csvColumn[28].Equals("Active"))
-                if (csvColumn[9].Equals("有効"))
-                {                   
-                    PUTSubscriptionResponseType subscResponse = null;
+                PUTSubscriptionResponseType subscResponse = null;
+                if (csvColumn[28].Equals("Active"))
+                {                    
                     subscResponse = manager.updateSubscrWithCsv(csvColumn);
                     if (subscResponse != null)    //try catchにてNULLが返された場合のため
-                        Console.Out.WriteLine("PUTSubscriptionType: " + subscResponse.ToString());
+                        Console.Out.WriteLine("updateSubscrWithCsv(csvColumn) " + subscResponse.ToString());
                 }
-                else                
-                    Console.WriteLine( "Statusが「Active」ではないため更新処理できません。");
+                else
+                {
+                    // Action/updateでステータスを更新する(有効日追加)の後、Subscription/updateを実施。
+                    // 12_serviceActivationDate,13_customerAcceptanceDateが編集されてるpendingをActiveに更新する
+                    if (!string.IsNullOrEmpty(csvColumn[12]) && !string.IsNullOrEmpty(csvColumn[13]))
+                    {
+                        //Initialize the container　：：： paymentMethodIdの構造体を流用する
+                        ProxyActionupdateRequestDefPay zDefPayID = new ProxyActionupdateRequestDefPay();
+                        List<ZObjectPayDef> defPayDefIdList = new List<ZObjectPayDef>();
+                        ZObjectPayDef zPayDef = new ZObjectPayDef();
+
+                        zPayDef.Id = csvColumn[1];
+                        //zPayDef.ServiceActivationDate = DateTime.Parse(csvColumn[12]);
+                        //zPayDef.ContractAcceptanceDate = DateTime.Parse(csvColumn[13]);
+                        //何で文字列になるんだ～～～
+                        //zPayDef.ServiceActivationDate = csvColumn[12];
+                        DateTime dateService = DateTime.Parse(csvColumn[12]);
+                        string serviceDate = dateService.ToString("yyyy-MM-dd");
+                        zPayDef.ServiceActivationDate = serviceDate;
+                        //zPayDef.ContractAcceptanceDate = csvColumn[13];
+                        DateTime dateContract = DateTime.Parse(csvColumn[13]);
+                        string contractDate = dateContract.ToString("yyyy-MM-dd");
+                        zPayDef.ContractAcceptanceDate = contractDate;                        
+
+                        defPayDefIdList.Add(zPayDef);
+
+                        zDefPayID.Objects = defPayDefIdList;
+                        zDefPayID.Type = "Subscription";
+                        
+                        ProxyActionupdateResponse updateSubToActive = actionCreateApi.ProxyActionPOSTupdate(zDefPayID);
+                        Console.Out.WriteLine("pendingToActive : " + updateSubToActive.ToString());
+
+                        subscResponse = manager.updateSubscrWithCsv(csvColumn);
+                        if (subscResponse != null)    //try catchにてNULLが返された場合のため
+                            Console.Out.WriteLine("updateSubscrWithCsv(csvColumn)_AfterActivation: " + subscResponse.ToString());
+                    }
+                    else
+                        Console.WriteLine("Statusが「Active」ではないため更新処理できません。");
+                }
 
                 countCsv += 1;
                 continue;//次のCSV処理に
@@ -1942,7 +2516,7 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                             {
                                 //TierのHeaderを追加する　by OnCoding 「,tier,startingUnit,endingUnit,price,priceFormat,ratePlanCharges_Id」
                                 //if (csvHeader.Length == 1607) //TR sandBox
-                                if (csvHeader.Length == 1617)   //MKI sandBox
+                                if (csvHeader.Length == 1837)   //MKI sandBox
                                 {
                                     swCsvWrite.WriteLine(csvHeader + ",tier,startingUnit,endingUnit,price,priceFormat,ratePlanCharges_Id");
                                 }
@@ -1991,7 +2565,7 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
 
             //Populate the container with all required fields
             cancelSub.CancellationPolicy = "SpecificDate";
-            cancelSub.Invoice = false;
+            //cancelSub.Invoice = false;
             cancelSub.CancellationEffectiveDate = new DateTime(2017, 07, 01);
             
             string csvfile = @delSub;   //CSVファイル格納場所
@@ -2004,13 +2578,154 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 string[] subNum = parser.ReadFields();
 
                 string subKey = subNum[0];
-                Console.Out.WriteLine(" csvRead " + subKey);
+                Console.Out.WriteLine(" csvRead : " + subKey);
 
-                POSTSubscriptionCancellationResponseType returnValue = new POSTSubscriptionCancellationResponseType();
-                returnValue = subscriptionsApi.POSTSubscriptionCancellation(subKey, cancelSub, "211.0");
-                Console.Out.WriteLine("POSTSubscriptionCancellationResponsType: " + returnValue.ToString());
+                //POSTSubscriptionCancellationResponseType returnValue = new POSTSubscriptionCancellationResponseType();
+                //returnValue = subscriptionsApi.POSTSubscriptionCancellation(subKey, cancelSub, "211.0");
+                //string returnValue = subscriptionsApi.POSTSubscriptionCancellationString(subKey, cancelSub, "211.0");
+                //Console.Out.WriteLine("POSTSubscriptionCancellationResponsType: " + returnValue.ToString());
+                // add 20170921 
+                try
+                {
+                    ProxyDeleteResponse returnValue = new ProxyDeleteResponse();
+                    returnValue = subscriptionsApi.ProxyDELETESubscription(subKey);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("deleteSubscription() failed with message: " + ex.Message);
+                }
             }
         }
+
+
+        /** #6 update OyaSubscriptionNo 
+        * KMIBS-54 親subScription番号を更新登録する
+        */
+        public void updateOya()
+        {
+            //★ Print Log Out
+            // 出力先ファイル名 "6oyaAndDate.txt"   追加書き込み true   文字コードSystem.Text.Encoding.GetEncoding("UTF-8")
+            StreamWriter sw = new StreamWriter(oyaAndDate , true, System.Text.Encoding.GetEncoding("UTF-8"));
+            Console.SetOut(sw); // 出力先（Outプロパティ）を設定
+            Console.Out.WriteLine("処理開始▶▶▶▶▶" + System.DateTime.Now); //処理開始
+
+            //Must set the JSON serializer settings so that null values are not passed to the API
+            //Passing null values will result in a failed API call
+            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore
+            };
+
+            //Initialize the Application Manager which contains all methods and objects used for the QuickStart
+            //★ TODO UPDATE WITH YOUR USERNAME AND PASSWORD FOR YOUR ZUORA TEST DRIVE TENANT
+            ApplicationManager manager = new ApplicationManager(userID, passWD);
+
+            //★ READ csv file
+            string csvfile = makeSubscCsvList;   //CSVファイル格納場所
+            TextFieldParser parser = new TextFieldParser(csvfile, Encoding.GetEncoding("UTF-8"));
+            parser.TextFieldType = FieldType.Delimited;
+            parser.SetDelimiters(","); // 区切り文字はコンマ
+
+            // 20170901 dataSetを毎回読込むのに時間がかかるので、１回のみ読んで引数で渡す
+            // CSV形式のテキストファイルの内容をDataTableに直接格納            
+            string filename = csvForUpdateDB;   //CSVファイル格納場所（実行ファイル同）
+            // データベースへ接続する(今回はCSVファイルを開く)
+            OleDbConnection connection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + Path.GetDirectoryName(filename) + "\\; Extended Properties=\"Text;HDR=YES;FMT=Delimited\"");
+            // クエリ文字列を作る
+            // ※ファイルパスを[]でくくること！
+            OleDbCommand command = new OleDbCommand("SELECT * FROM [" + Path.GetFileName(filename) + "]", connection);
+            DataSet dataset = new DataSet();
+            dataset.Clear();    // 念のためクリア
+            // CSVファイルの内容をDataSetに入れる
+            OleDbDataAdapter adapter = new OleDbDataAdapter(command);
+            adapter.Fill(dataset);            
+
+            int countCsv = 0;
+            while (!parser.EndOfData)
+            {
+                string[] csvColumn = parser.ReadFields(); // 1行読み込み
+
+                if (countCsv == 0)
+                {
+                    countCsv += 1;
+                    continue;  //headerは処理しない
+                }
+
+                Console.Out.WriteLine(System.DateTime.Now);
+                Console.WriteLine("▼ " + countCsv + "件目");
+
+                for (int n = 0; n < csvColumn.Length; n++)
+                    Console.Write(csvColumn[n] + ",");
+
+                Console.WriteLine();
+                                
+                PUTSubscriptionResponseType subUpResponse = null;
+
+                //子品目の場合、資産番号、親品目コードをキーに親品目のサブスクリプション番号を取得する
+                if (!string.IsNullOrEmpty(csvColumn[57]))
+                {
+                    //20170901 dataSetを毎回読込むのに時間がかかるので、１回のみ読んで引数で渡す
+                    //subUpResponse = manager.updateOyaSubscriptionNo(csvColumn);                    
+                    subUpResponse = manager.updateOyaSubscriptionNo(csvColumn, dataset);
+                    if (subUpResponse != null)    //try catchにてNULLが返された場合のため
+                    Console.Out.WriteLine("updateOyaSubscriptionNo() " + subUpResponse.ToString());
+                }
+                countCsv += 1;
+                continue;//次のCSV処理に
+            }
+            // End of READ csv file
+            // Print Log Out            
+            sw.Dispose(); // ファイルを閉じてオブジェクトを破棄
+            System.Threading.Thread.Sleep(100);
+        } //End of updateOya()
+
+        /** #7 品目展開　件数確認
+        * 
+        */
+        public void checksubScriptionCount()
+        {
+            try
+            {
+                //★ Print Log Out
+                // 出力先ファイル名 subscMakeLog   追加書き込み true   文字コードSystem.Text.Encoding.GetEncoding("UTF-8")
+                StreamWriter sw = new StreamWriter("file\\7checksubScriptionCount.csv", true, System.Text.Encoding.GetEncoding("UTF-8"));
+                Console.SetOut(sw); // 出力先（Outプロパティ）を設定
+                
+                //Must set the JSON serializer settings so that null values are not passed to the API
+                //Passing null values will result in a failed API call
+                JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                };
+
+                //Initialize the Application Manager which contains all methods and objects used for the QuickStart
+                //★ TODO UPDATE WITH YOUR USERNAME AND PASSWORD FOR YOUR ZUORA TEST DRIVE TENANT
+                //ApplicationManager manager = new ApplicationManager(userID, passWD);
+                
+                string csvfileHeader = @"file\\logGrep.csv";   
+                TextFieldParser parserHeader = new TextFieldParser(csvfileHeader, Encoding.GetEncoding("UTF-8"));
+                parserHeader.TextFieldType = FieldType.Delimited;
+                parserHeader.SetDelimiters(","); // 区切り文字はコンマ
+
+                int ind = 1;
+                while (!parserHeader.EndOfData)
+                {
+                    string[] csvColumnHeader = parserHeader.ReadFields(); // Header 1行読み込み                    
+                    Console.Out.WriteLine(ind + "," + csvColumnHeader[0] + "," + (csvColumnHeader.Length - 1) );
+                    ind += 1;
+                }
+                //◀ End of Header CSV
+
+                //★ Print Log Out            
+                sw.Dispose(); // ファイルを閉じてオブジェクトを破棄  
+                //★★ READ csv file to create Subscription    
+                //System.Threading.Thread.Sleep(1000); //for Async
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("checksubScriptionCount() failed with message: " + ex.Message);
+            }
+        }//End of createSubscription()
 
     } //End of class ApplicationManager
 } // End of namespace
