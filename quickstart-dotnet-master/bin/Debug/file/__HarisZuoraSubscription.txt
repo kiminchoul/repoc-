@@ -1,7 +1,0 @@
-Zuora.Account Object
-
- HARISCostomerNumber__c
-Harisの受注CSVのアカウントID,請求先IDに紐づくaccountIdを
-サブスクリプションの顧客名、請求先名にセットする。
-
-
