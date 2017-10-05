@@ -261,8 +261,11 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 //20170901 ★ratePlanDB★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
                 //課金対象フラグ(BillingFlag__c)で、TRUE→親はS販売単価を子はマスタの値を、FALSE→ゼロを                
-                //if (seledBillFlg.Equals("true") || seledBillFlg.Equals("TRUE"))                
-                if (bool.Parse(seledBillFlg).Equals(true))
+                //if (seledBillFlg.Equals("true") || seledBillFlg.Equals("TRUE"))
+                //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                //if (bool.Parse(seledBillFlg).Equals(true))
+                if (bool.Parse(seledBillFlg).Equals(true) && bool.Parse(seledRequired).Equals(false))
+                //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し
                 {
                     if (selHinmok.Equals(readedCsvCol[3]))//課金対象フラグBillingFlag__c=true、親の場合はS販売単価をセット                
                         if (!string.IsNullOrEmpty(readedCsvCol[8]))
@@ -914,16 +917,20 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
 
         //
         //★★ READ csv file to create Subscription        
-        public PUTSubscriptionResponseType updateSubscrWithCsv(string[] readedCsvCol)
+        //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し
+        //public PUTSubscriptionResponseType updateSubscrWithCsv(string[] readedCsvCol){
+        public PUTSubscriptionResponseType updateSubscrWithCsv(string[] readedCsvCol, DataSet dataset)
         {
+            //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し
             try
             {
                 ApplicationManager manager = new ApplicationManager(userID, passWD);
                 //Initialize the Subscription container
 
-                PUTSubscriptionType subscription = new PUTSubscriptionType();                               
-                
+                PUTSubscriptionType subscription = new PUTSubscriptionType();
+
                 string subscriptionKey = readedCsvCol[8];   //Subscription number
+
                 //AccountID取得    
                 /** ２０件しか取得できない（API制限）ので、「Get subscriptions by key」に変更            
                 string accountKey = null;
@@ -971,95 +978,13 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
 
                 //set the fields with CSV file columns
 
-                // ST_ADD KMIBS-25  4．請求先の変更
-                // Amendで請求先変更する。
-                // 5_invoiceOwnerAccountId:請求先IDを全て消した状態で、変更する請求先のみを編集してもらう
-                if (!string.IsNullOrEmpty(readedCsvCol[5]))
-                {
-                    ProxyActionqueryRequest zAccount = new ProxyActionqueryRequest();
-                    zAccount.QueryString = "select id from account where HARISCostomerNumber__c = '" + readedCsvCol[5] + "'";
-                    string invoiceOwnerAccountId = actionCreateApi.ProxyActionPOSTquery(zAccount);
+                //請求先・納入先のアメンドは、カスタム項目のアップデートの後にする       
 
-                    if (!string.IsNullOrEmpty(invoiceOwnerAccountId))
-                    {
-                        //Initialize the container
-                        ProxyActionamendRequest amendRequest = new ProxyActionamendRequest();
-                        List<AmendRequest> RequestsList = new List<AmendRequest>();
-                        AmendRequest zChgAmendRequest = new AmendRequest();
-
-                        AmendOptions amendOptions = new AmendOptions();
-                        amendOptions.GenerateInvoice = false;
-                        amendOptions.ProcessPayments = false;
-                        //amendOptions.InvoiceProcessingOptions = { };
-                        List<Amendment> amendmentsList = new List<Amendment>();
-                        Amendment amendMents = new Amendment();
-                        amendMents.SubscriptionId = readedCsvCol[1];
-                        amendMents.Name = readedCsvCol[8] + " : AmendForUpdateInvoiceID";
-                        amendMents.Type = "OwnerTransfer";
-                        amendMents.ContractEffectiveDate = DateTime.Parse(readedCsvCol[11]);
-                        amendMents.DestinationInvoiceOwnerId = invoiceOwnerAccountId;
-                        amendmentsList.Add(amendMents);
-
-                        zChgAmendRequest.AmendOptions = amendOptions;
-                        zChgAmendRequest.Amendments = amendmentsList;
-                        RequestsList.Add(zChgAmendRequest);
-                        amendRequest.Requests = RequestsList;
-                        
-                        //ProxyActionamendResponse updateInvoiceID = actionCreateApi.ProxyActionPOSTamend(amendRequest);
-                        string resultUpdateInvoiceID = actionCreateApi.ProxyActionPOSTamendString(amendRequest);
-                        Console.Out.WriteLine("resultUpdateInvoiceID " + resultUpdateInvoiceID );                        
-                    }
-                    else
-                        Console.Out.WriteLine("更新用の請求先を確認してください。 ");
-                }
-                // ED_ADD KMIBS-25
-
-                // ST_ADD KMIBS-51  納入先の変更
-                // Amendで納入先を変更する。
-                // 2_accountId:納入先IDを全て消した状態で、変更する納入先のみを編集してもらう
-                if (!string.IsNullOrEmpty(readedCsvCol[2]))
-                {
-                    ProxyActionqueryRequest zAccount = new ProxyActionqueryRequest();
-                    zAccount.QueryString = "select id from account where HARISCostomerNumber__c = '" + readedCsvCol[2] + "'";
-                    string changeAccountId = actionCreateApi.ProxyActionPOSTquery(zAccount);
-
-                    if (!string.IsNullOrEmpty(changeAccountId))
-                    {
-                        //Initialize the container
-                        ProxyActionamendRequest amendRequest = new ProxyActionamendRequest();
-                        List<AmendRequest> RequestsList = new List<AmendRequest>();
-                        AmendRequest zChgAmendRequest = new AmendRequest();
-
-                        AmendOptions amendOptions = new AmendOptions();
-                        amendOptions.GenerateInvoice = false;
-                        amendOptions.ProcessPayments = false;
-                        //amendOptions.InvoiceProcessingOptions = { };
-                        List<Amendment> amendmentsList = new List<Amendment>();
-                        Amendment amendMents = new Amendment();
-                        amendMents.SubscriptionId = readedCsvCol[1];
-                        amendMents.Name = readedCsvCol[8] + " : AmendForChangeAccountID";
-                        amendMents.Type = "OwnerTransfer";
-                        amendMents.ContractEffectiveDate = DateTime.Parse(readedCsvCol[11]);
-                        amendMents.DestinationAccountId = changeAccountId;
-                        amendmentsList.Add(amendMents);
-
-                        zChgAmendRequest.AmendOptions = amendOptions;
-                        zChgAmendRequest.Amendments = amendmentsList;
-                        RequestsList.Add(zChgAmendRequest);
-                        amendRequest.Requests = RequestsList;
-
-                        //ProxyActionamendResponse updateInvoiceID = actionCreateApi.ProxyActionPOSTamend(amendRequest);
-                        string resultChangeAccountID = actionCreateApi.ProxyActionPOSTamendString(amendRequest);
-                        Console.Out.WriteLine("resultChangeAccountID " + resultChangeAccountID);
-                    }
-                    else
-                        Console.Out.WriteLine("更新用の納入先を確認してください。 ");
-                }
-                // ED_ADD KMIBS-51
-
+                //del st 20170929【KMIBS-188】金額Zero、金額更新見直し : 更新項目対象外
+                /**
                 // 9_termType
-                if (!string.IsNullOrEmpty(readedCsvCol[9]))  
-                    subscription.TermType = readedCsvCol[9];
+                if (!string.IsNullOrEmpty(readedCsvCol[9]))
+                   subscription.TermType = readedCsvCol[9];
                 // 15_termStartDate
                 if (!string.IsNullOrEmpty(readedCsvCol[15]))
                     subscription.TermStartDate = manager.convertToDate(readedCsvCol[15]);
@@ -1078,15 +1003,23 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 // 23_renewalTerm
                 if (!string.IsNullOrEmpty(readedCsvCol[23]))
                     subscription.RenewalTerm = long.Parse(readedCsvCol[23]);
-                // 27_notes
+                // 27_notes                
                 if (!string.IsNullOrEmpty(readedCsvCol[27]))
                     subscription.Notes = readedCsvCol[27];
+                **/
+                //del ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+
+                // ▼▼▼▼▼サブ カスタム項目
+                //del st 20170929【KMIBS-188】金額Zero、金額更新見直し : 更新項目対象外
+                /**
                 // 31_ParentSubscriptionNumber__c -> 33_ParentSubscriptionNumber__c
                 if (!string.IsNullOrEmpty(readedCsvCol[33]))
                     subscription.ParentSubscriptionNumber__c = readedCsvCol[33];
+
                 // 35_AutoRenewVersion__c -> 40_AutoRenewVersion__c
                 if (!string.IsNullOrEmpty(readedCsvCol[40]))
                     subscription.AutoRenewVersion__c = readedCsvCol[40];
+
                 // 36_ServiceStartDate__c -> 44_ServiceStartDate__c
                 //なぜかDateTimeではエラーになるので、文字列の"YYYY-MM-DD"とする
                 if (!string.IsNullOrEmpty(readedCsvCol[44]))
@@ -1100,39 +1033,81 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 // 41_NeTTSSyncFlag__c -> 49_NeTTSSyncFlag__c
                 if (!string.IsNullOrEmpty(readedCsvCol[49]))
                     subscription.NeTTSSyncFlag__c = readedCsvCol[49];
+                **/
+                //del ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+
+                //add st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                // ▶▶▶▶▶サブ カスタム項目 UPDATE
+                bool subCustomUpdate = false; //元がNULLなのでNULLではない項目があれば、TRUE
+                ProxyActionupdateRequestDefPay zDefPayID = new ProxyActionupdateRequestDefPay();
+                List<ZObjectPayDef> defPayDefIdList = new List<ZObjectPayDef>();
+                ZObjectPayDef zPayDef = new ZObjectPayDef();
+                zPayDef.Id = readedCsvCol[1];
+                // ◀◀◀◀◀サブ カスタム項目 UPDATE
+                //add ed 20170929【KMIBS-188】金額Zero、金額更新見直し
 
                 //add st KMIBS-107
                 DateTime dateWork;
                 string dateWorkStr;
-                // 利用許諾申し込み日, 35_LicenseOfferDate__c
-                if (!string.IsNullOrEmpty(readedCsvCol[35]))
-                {   
-                    dateWork = DateTime.Parse(readedCsvCol[35]);
-                    dateWorkStr = dateWork.ToString("yyyy-MM-dd");
-                    subscription.LicenseOfferDate__c = dateWorkStr;
-                }
-                // お試し申し込み日,   41_TrialOfferDate__c
-                if (!string.IsNullOrEmpty(readedCsvCol[41]))
-                {
-                    dateWork = DateTime.Parse(readedCsvCol[41]);
-                    dateWorkStr = dateWork.ToString("yyyy-MM-dd");
-                    subscription.TrialOfferDate__c = dateWorkStr;
-                }
                 // 本申し込み日,       29_OfferDate__c
                 if (!string.IsNullOrEmpty(readedCsvCol[29]))
                 {
                     dateWork = DateTime.Parse(readedCsvCol[29]);
                     dateWorkStr = dateWork.ToString("yyyy-MM-dd");
-                    subscription.OfferDate__c = dateWorkStr;
+                    //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                    //subscription.OfferDate__c = dateWorkStr;
+                    zPayDef.OfferDate__c = dateWorkStr;
+                    subCustomUpdate = true;
+                    //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+                }
+                // 利用許諾申し込み日, 35_LicenseOfferDate__c
+                if (!string.IsNullOrEmpty(readedCsvCol[35]))
+                {
+                    dateWork = DateTime.Parse(readedCsvCol[35]);
+                    dateWorkStr = dateWork.ToString("yyyy-MM-dd");
+                    //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                    //subscription.LicenseOfferDate__c = dateWorkStr;
+                    zPayDef.LicenseOfferDate__c = dateWorkStr;
+                    subCustomUpdate = true;
+                    //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し                    
                 }
                 // 課金開始日,         36_BillingStartDate__c
                 if (!string.IsNullOrEmpty(readedCsvCol[36]))
                 {
                     dateWork = DateTime.Parse(readedCsvCol[36]);
                     dateWorkStr = dateWork.ToString("yyyy-MM-dd");
-                    subscription.BillingStartDate__c = dateWorkStr;
+                    //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                    //subscription.BillingStartDate__c = dateWorkStr;
+                    zPayDef.BillingStartDate__c = dateWorkStr;
+                    subCustomUpdate = true;
+                    //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+                }
+                // お試し申し込み日,   41_TrialOfferDate__c
+                if (!string.IsNullOrEmpty(readedCsvCol[41]))
+                {
+                    dateWork = DateTime.Parse(readedCsvCol[41]);
+                    dateWorkStr = dateWork.ToString("yyyy-MM-dd");
+                    //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                    //subscription.TrialOfferDate__c = dateWorkStr;
+                    zPayDef.TrialOfferDate__c = dateWorkStr;
+                    subCustomUpdate = true;
+                    //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し                    
                 }
                 //add ed KMIBS-107
+
+                //add st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                // ▶▶▶▶▶サブ カスタム項目 UPDATE
+                if (subCustomUpdate)
+                {
+                    defPayDefIdList.Add(zPayDef);
+                    zDefPayID.Objects = defPayDefIdList;
+                    zDefPayID.Type = "Subscription";
+                    ProxyActionupdateResponse updateSubWithoutAmend = actionCreateApi.ProxyActionPOSTupdate(zDefPayID);
+                    Console.Out.WriteLine("updateSubWithoutAmend " + updateSubWithoutAmend);
+                }
+                // ◀◀◀◀◀サブ カスタム項目 UPDATE
+                //add ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+                // ▲▲▲▲▲サブ カスタム項目
 
                 //★■ ratePlanId,ratePlanChargeId取得                
                 //Initialize the Rate Plan container list (Must use a list as the subscription can have multiple rate plans)
@@ -1149,13 +1124,13 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
 
                 //11_contractEffectiveDate : Required
                 if (!string.IsNullOrEmpty(readedCsvCol[11]))
-                    ratePlan.ContractEffectiveDate = manager.convertToDate(readedCsvCol[11]);                                
+                    ratePlan.ContractEffectiveDate = manager.convertToDate(readedCsvCol[11]);
                 //12_ serviceActivationDate
                 if (!string.IsNullOrEmpty(readedCsvCol[12]))
                     ratePlan.ServiceActivationDate = manager.convertToDate(readedCsvCol[12]);
                 //13_ customerAcceptanceDate
                 if (!string.IsNullOrEmpty(readedCsvCol[13]))
-                    ratePlan.CustomerAcceptanceDate = manager.convertToDate(readedCsvCol[13]);                
+                    ratePlan.CustomerAcceptanceDate = manager.convertToDate(readedCsvCol[13]);
 
                 /**  PUTSrpUpdateTypeにない項目
                 //14_ subscriptionStartDate
@@ -1192,6 +1167,8 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 ////add ed KMIBS-107
                 // del ed KMIBS-142
 
+                //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                /**                
                 if (!string.IsNullOrEmpty(readedCsvCol[78])) { 
                     ratePlanCharge.Price = readedCsvCol[78]; //68_price -> 69_price -> 78_price
                     // del st KMIBS-142
@@ -1201,14 +1178,37 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                     ////add ed KMIBS-107
                     // del ed KMIBS-142
                 }
+                **/
+                //　サブIdでCsvDBを検索
+                bool updateOk = false;
+                if (!string.IsNullOrEmpty(readedCsvCol[78]))
+                {
+                    int intCsvDBPrice = 0;
+                    foreach (DataTable table in dataset.Tables)
+                    {
+                        DataRow[] dataRows = table.Select("[4csvForUpdateDB#csv.id] = '" + readedCsvCol[1] + "'");
+                        intCsvDBPrice = (int)dataRows[0][78];
+                    }
 
+                    if (intCsvDBPrice != int.Parse(readedCsvCol[78]))
+                    {
+                        //if (!string.IsNullOrEmpty(readedCsvCol[78])) {
+                        ratePlanCharge.Price = readedCsvCol[78]; //68_price -> 69_price -> 78_price
+                        updateOk = true;
+                        //}
+                    }
+                }
+                //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+
+                //del st 20170929【KMIBS-188】金額Zero、金額更新見直し : 更新項目対象外
+                /**
                 //■●★ フィールド「quantity」は課金モデルがFlat Fee Pricingの課金に無効です
                 // 60->61_type -> 70_type =Recurring  61->62_model -> 71_model = PerUnit のみ数量変更可能 
                 //if (!readedCsvCol[61].Equals("FlatFee"))
                 if (readedCsvCol[70].Equals("Recurring") && readedCsvCol[71].Equals("PerUnit"))
                     if (!string.IsNullOrEmpty(readedCsvCol[93]))
                         ratePlanCharge.Quantity = readedCsvCol[93]; //83->84_quantity -> 93_quantity
-
+                                
                 // 66_priceChangeOption -> 75_priceChangeOption
                 if (!string.IsNullOrEmpty(readedCsvCol[75]))
                     ratePlanCharge.PriceChangeOption = readedCsvCol[75];
@@ -1221,6 +1221,7 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 // 71_includedUnits -> 80_includedUnits
                 if (!string.IsNullOrEmpty(readedCsvCol[80]))
                     ratePlanCharge.IncludedUnits = readedCsvCol[80];
+                                
                 // 72_overagePrice -> 81_overagePrice
                 if (!string.IsNullOrEmpty(readedCsvCol[81])) { 
                     ratePlanCharge.OveragePrice = readedCsvCol[81];
@@ -1230,12 +1231,12 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                     //    ratePlanCharge.OveragePrice = "0";
                     ////add ed KMIBS-107
                     // del ed KMIBS-142
-                }
+                }                
 
                 // 97_triggerDate -> 106_triggerDate
                 if (!string.IsNullOrEmpty(readedCsvCol[106]))
                     ratePlanCharge.TriggerDate = manager.convertToDate(readedCsvCol[106]);
-
+                
                 // < UCE > ContractEffective, < USA > ServiceActivation,< UCA > CustomerAcceptance , < USD > SpecificDate                
                 // 98_triggerEvent -> 107_triggerEvent
                 if (!string.IsNullOrEmpty(readedCsvCol[107]))
@@ -1255,66 +1256,167 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                             ratePlanCharge.TriggerDate = dateCsv;
                         }
                     }
-                }
+                }              
 
                 // 107_description -> 116_description
                 if (!string.IsNullOrEmpty(readedCsvCol[116]))
                     ratePlanCharge.Description = readedCsvCol[116];
-                // 108_UserPrice__c -> 118_UserPrice__c
-                if (!string.IsNullOrEmpty(readedCsvCol[118]))
-                    ratePlanCharge.UserPrice__c = readedCsvCol[118];
+                 **/
+                //del ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+
+                // ▼▼▼▼▼RatePlanCharge カスタム項目
+                //add st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                // ▶▶▶▶▶RatePlanCharge カスタム項目 UPDATE
+                bool chargeCustomUpdate = false; //元がZEROなのでZEROではない項目があれば、TRUE
+                ProxyActionupdateRequestDefPay zRateChargeID = new ProxyActionupdateRequestDefPay();
+                List<ZObjectPayDef> RateChargeIdList = new List<ZObjectPayDef>();
+                ZObjectPayDef zRateCharge = new ZObjectPayDef();
+                zRateCharge.Id = readedCsvCol[65];
+                // ◀◀◀◀◀RatePlanCharge カスタム項目 UPDATE
+                //add ed 20170929【KMIBS-188】金額Zero、金額更新見直し
 
                 //add st KMIBS-107
                 // 117_UserPriceTotal__c
                 if (!string.IsNullOrEmpty(readedCsvCol[117]))
-                    ratePlanCharge.UserPriceTotal__c = readedCsvCol[117];
+                    //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                    //ratePlanCharge.UserPriceTotal__c = readedCsvCol[117];
+                    if (!readedCsvCol[117].Equals("0"))
+                    {
+                        zRateCharge.UserPriceTotal__c = readedCsvCol[117];
+                        chargeCustomUpdate = true;
+                    }
+                //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+
+                // 108_UserPrice__c -> 118_UserPrice__c
+                if (!string.IsNullOrEmpty(readedCsvCol[118]))
+                    //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し                    
+                    //ratePlanCharge.UserPrice__c = readedCsvCol[118];
+                    if (!readedCsvCol[118].Equals("0"))
+                    {
+                        zRateCharge.UserPrice__c = readedCsvCol[118];
+                        chargeCustomUpdate = true;
+                    }
+                //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+
                 // 119_EffectivePriceTotal__c
                 if (!string.IsNullOrEmpty(readedCsvCol[119]))
-                    ratePlanCharge.EffectivePriceTotal__c = readedCsvCol[119];
+                    //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                    //ratePlanCharge.EffectivePriceTotal__c = readedCsvCol[119];
+                    if (!readedCsvCol[119].Equals("0"))
+                    { 
+                        zRateCharge.EffectivePriceTotal__c = readedCsvCol[119];
+                        chargeCustomUpdate = true;
+                    }
+                //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+
                 //add ed KMIBS-107
 
+                // 追加項目　20170927
+                // 120_ListPriceTotal__c
+                if (!string.IsNullOrEmpty(readedCsvCol[120]))
+                    //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                    //ratePlanCharge.ListPriceTotal__c = readedCsvCol[120];
+                    if (!readedCsvCol[120].Equals("0"))
+                    {
+                        zRateCharge.ListPriceTotal__c = readedCsvCol[120];
+                        chargeCustomUpdate = true;
+                    }
+                //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+
+                //add st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                // ▶▶▶▶▶RatePlanCharge カスタム項目 UPDATE
+                if (chargeCustomUpdate)
+                {
+                    RateChargeIdList.Add(zRateCharge);
+                    zRateChargeID.Objects = RateChargeIdList;
+                    zRateChargeID.Type = "RatePlanCharge";
+                    ProxyActionupdateResponse updateRateChargeWithoutAmend = actionCreateApi.ProxyActionPOSTupdate(zRateChargeID);
+                    Console.Out.WriteLine("updateRateChargeWithoutAmend " + updateRateChargeWithoutAmend);
+                }
+                // ◀◀◀◀◀RatePlanCharge カスタム項目 UPDATE
+                //add ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+                // ▲▲▲▲▲RatePlanCharge カスタム項目
+
+                //add st 20170929【KMIBS-188】金額Zero、金額更新見直し                                
+                int[] intCsvDBTierStartUnit = new int[5];
+                int[] intCsvDBTierEndUnit = new int[5];
+                int[] intCsvDBTierPrice = new int[5];
+                //add ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+
                 //ratePlanChargeTier ▼▼▼▼▼
-                if (!string.IsNullOrEmpty(readedCsvCol[79]))  // 69->70_tiers->79_tiers=nullなら 112->110_tier->121_tierのデータはない。。。
+                if (!string.IsNullOrEmpty(readedCsvCol[79]))  // 69->70_tiers->79_tiers=nullなら 112->110_tier->121->122_tierのデータはない。。。
                 {
                     /** // Tier,Priceだけなら、複数のTierが更新できるが、他を設定するとTier[1] 更新にてTier[2]が削除される。。。    
                         =>  //●■ 20170720 TierのCSV編集を２行→１行にする。
                     */
-                    List<POSTTierType> ratePlanChargeTierList = new List<POSTTierType>();
-                    long lengthCsvCol = readedCsvCol.Length;
-                    for (int i = 0; (121 + 6 * i) < lengthCsvCol; i++ ) { 
-                        //Initialize the Rate Plan CHARGE container list (Must use a list as the subscription can have multiple rate plans)
-                        //List<POSTTierType> ratePlanChargeTierList = new List<POSTTierType>();
-                        //Initialize the individual Rate Plan container
-                        POSTTierType ratePlanChargeTier = new POSTTierType();
-                        //Populate the Rate Plan container with the required field                
-                        if (!string.IsNullOrEmpty(readedCsvCol[121 + 6 * i]))   //112_tier -> 110_tier -> 121_tier
-                            ratePlanChargeTier.Tier = long.Parse(readedCsvCol[121 + 6 * i]);                                       
-                        if (!string.IsNullOrEmpty(readedCsvCol[122 + 6 * i]))   //113_startingUnit -> 111_startingUnit -> 122_startingUnit
-                            ratePlanChargeTier.StartingUnit = readedCsvCol[122 + 6 * i];
-                        if (!string.IsNullOrEmpty(readedCsvCol[123 + 6 * i]))  //114_endingUnit -> 112_endingUnit -> 123_endingUnit
-                            ratePlanChargeTier.EndingUnit = readedCsvCol[123 + 6 * i];
-                        if (!string.IsNullOrEmpty(readedCsvCol[124 + 6 * i])) //115_price -> 113_price -> 124_price
-                        {   
-                            ratePlanChargeTier.Price = readedCsvCol[124 + 6 * i];
-                            // del st KMIBS-142
-                            ////add st KMIBS-107 利用許諾のないサブスクリプションの金額をゼロにする
-                            //if (goZero)
-                            //    ratePlanChargeTier.Price = "0";
-                            ////add ed KMIBS-107
-                            // del ed KMIBS-142
+                    
+                    //add st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                    long lengCsvCol = readedCsvCol.Length;
+                    for (int i = 0; (122 + 6 * i) < lengCsvCol; i++)
+                    {
+                        foreach (DataTable table in dataset.Tables)
+                        {
+                            DataRow[] dataRows = table.Select("[4csvForUpdateDB#csv.id] = '" + readedCsvCol[1] + "'");
+                            intCsvDBTierStartUnit[i] = (int)dataRows[0][123 + 6 * i];
+                            if (!string.IsNullOrEmpty(readedCsvCol[124 + 6 * i])) //EndUnitないTier対応
+                                intCsvDBTierEndUnit[i] = (int)dataRows[0][124 + 6 * i];
+                            intCsvDBTierPrice[i] = (int)dataRows[0][125 + 6 * i];
                         }
-                        if (!string.IsNullOrEmpty(readedCsvCol[125 + 6 * i]))  //116_priceFormat -> 114_priceFormat -> 125_priceFormat
-                            ratePlanChargeTier.PriceFormat = readedCsvCol[125 + 6 * i];
-                                                
-                        // 20170828 Excel編集にて、Tier1のみのデータにTier2のNULLができてしまうので
-                        if (!string.IsNullOrEmpty(readedCsvCol[121 + 6 * i]))   //112_tier -> 110_tier -> 121_tier
-                            //Add the individual Rate Plan container to the list
-                            ratePlanChargeTierList.Add(ratePlanChargeTier);                        
+                        if (intCsvDBTierStartUnit[i] != int.Parse(readedCsvCol[123 + 6 * i]))
+                            updateOk = true;
+                        if (!string.IsNullOrEmpty(readedCsvCol[124 + 6 * i])) //EndUnitないTier対応
+                            if (intCsvDBTierEndUnit[i] != int.Parse(readedCsvCol[124 + 6 * i]))
+                                updateOk = true;
+                        if (intCsvDBTierPrice[i] != int.Parse(readedCsvCol[125 + 6 * i]))
+                            updateOk = true;                        
                     }
-                    //Add the list of Rate Plans to the Subscription container
-                    ratePlanCharge.Tiers = ratePlanChargeTierList;
+                    //add ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+
+                    if (updateOk)    //add st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                    {
+                        List<POSTTierType> ratePlanChargeTierList = new List<POSTTierType>();
+                        long lengthCsvCol = readedCsvCol.Length;
+                        for (int i = 0; (122 + 6 * i) < lengthCsvCol; i++)
+                        {
+                            //Initialize the Rate Plan CHARGE container list (Must use a list as the subscription can have multiple rate plans)
+                            //List<POSTTierType> ratePlanChargeTierList = new List<POSTTierType>();
+                            //Initialize the individual Rate Plan container
+                            POSTTierType ratePlanChargeTier = new POSTTierType();
+                            //Populate the Rate Plan container with the required field                
+                            if (!string.IsNullOrEmpty(readedCsvCol[122 + 6 * i]))   //112_tier -> 110_tier -> 121-> 122_tier
+                                ratePlanChargeTier.Tier = long.Parse(readedCsvCol[122 + 6 * i]);
+
+                            if (!string.IsNullOrEmpty(readedCsvCol[123 + 6 * i]))   //113_startingUnit -> 111_startingUnit -> 122-> 123_startingUnit
+                                ratePlanChargeTier.StartingUnit = readedCsvCol[123 + 6 * i];
+
+                            if (!string.IsNullOrEmpty(readedCsvCol[124 + 6 * i]))  //114_endingUnit -> 112_endingUnit -> 123-> 124_endingUnit
+                                ratePlanChargeTier.EndingUnit = readedCsvCol[124 + 6 * i];
+
+                            if (!string.IsNullOrEmpty(readedCsvCol[125 + 6 * i])) //115_price -> 113_price -> 124-> 125_price
+                            {
+                                ratePlanChargeTier.Price = readedCsvCol[125 + 6 * i];
+                                // del st KMIBS-142
+                                ////add st KMIBS-107 利用許諾のないサブスクリプションの金額をゼロにする
+                                //if (goZero)
+                                //    ratePlanChargeTier.Price = "0";
+                                ////add ed KMIBS-107
+                                // del ed KMIBS-142
+                            }
+
+                            if (!string.IsNullOrEmpty(readedCsvCol[126 + 6 * i]))  //116_priceFormat -> 114_priceFormat -> 125-> 126_priceFormat
+                                ratePlanChargeTier.PriceFormat = readedCsvCol[126 + 6 * i];
+
+                            // 20170828 Excel編集にて、Tier1のみのデータにTier2のNULLができてしまうので
+                            if (!string.IsNullOrEmpty(readedCsvCol[122 + 6 * i]))   //112_tier -> 110_tier -> 121_tier-> 122_tier
+                                //Add the individual Rate Plan container to the list
+                                ratePlanChargeTierList.Add(ratePlanChargeTier);
+                        }
+                        //Add the list of Rate Plans to the Subscription container
+                        ratePlanCharge.Tiers = ratePlanChargeTierList;
+
+                    }  //if (updateOk) //add st 20170929【KMIBS-188】金額Zero、金額更新見直し
                 }
-                //ratePlanCharge▲▲▲▲▲
+                //ratePlanChargeTier▲▲▲▲▲
 
                 //Add the individual Rate Plan container to the list
                 ratePlanChargeList.Add(ratePlanCharge);
@@ -1328,7 +1430,129 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 //Add the list of Rate Plans to the Subscription container
                 subscription.Update = ratePlanList;
                 
-                return subscriptionsApi.PUTSubscription(subscriptionKey, subscription, "211.0");
+                //add st 20170929【KMIBS-188】
+                // AmendでサブID変更になり請求書アメンド後のアップデートが古いサブに適用されるので請求先・納入先アメンドをここでやる
+                string subscriptionID = readedCsvCol[1];   //Subscription ID
+                //add ed 20170929【KMIBS-188】
+
+                // ST_ADD KMIBS-25  4．請求先の変更
+                // Amendで請求先変更する。
+                // 5_invoiceOwnerAccountId:請求先IDを全て消した状態で、変更する請求先のみを編集してもらう
+                if (!string.IsNullOrEmpty(readedCsvCol[5]))
+                {
+                    ProxyActionqueryRequest zAccount = new ProxyActionqueryRequest();
+                    zAccount.QueryString = "select id from account where HARISCostomerNumber__c = '" + readedCsvCol[5] + "'";
+                    string invoiceOwnerAccountId = actionCreateApi.ProxyActionPOSTquery(zAccount);
+
+                    if (!string.IsNullOrEmpty(invoiceOwnerAccountId))
+                    {
+                        //Initialize the container
+                        ProxyActionamendRequest amendRequest = new ProxyActionamendRequest();
+                        List<AmendRequest> RequestsList = new List<AmendRequest>();
+                        AmendRequest zChgAmendRequest = new AmendRequest();
+
+                        AmendOptions amendOptions = new AmendOptions();
+                        amendOptions.GenerateInvoice = false;
+                        amendOptions.ProcessPayments = false;
+                        //amendOptions.InvoiceProcessingOptions = { };
+                        List<Amendment> amendmentsList = new List<Amendment>();
+                        Amendment amendMents = new Amendment();
+                        //mod st 20170929【KMIBS-188】アメンドでサブIDが変わるので追っていく
+                        //amendMents.SubscriptionId = readedCsvCol[1];
+                        amendMents.SubscriptionId = subscriptionID;
+                        //mod ed 20170929【KMIBS-188】
+                        amendMents.Name = readedCsvCol[8] + " : AmendForUpdateInvoiceID";
+                        amendMents.Type = "OwnerTransfer";
+                        amendMents.ContractEffectiveDate = DateTime.Parse(readedCsvCol[11]);
+                        amendMents.DestinationInvoiceOwnerId = invoiceOwnerAccountId;
+                        amendmentsList.Add(amendMents);
+
+                        zChgAmendRequest.AmendOptions = amendOptions;
+                        zChgAmendRequest.Amendments = amendmentsList;
+                        RequestsList.Add(zChgAmendRequest);
+                        amendRequest.Requests = RequestsList;
+
+                        //ProxyActionamendResponse updateInvoiceID = actionCreateApi.ProxyActionPOSTamend(amendRequest);
+                        string resultUpdateInvoiceID = actionCreateApi.ProxyActionPOSTamendString(amendRequest);
+                        Console.Out.WriteLine("resultUpdateInvoiceID " + resultUpdateInvoiceID);
+
+                        //add st 20170929【KMIBS-188】アメンドでサブIDが変わるので追っていく                     
+                        int foundIndex = resultUpdateInvoiceID.IndexOf("TotalDeltaTcv");
+                        if (foundIndex > 0)
+                        {
+                            subscriptionID = resultUpdateInvoiceID.Substring(foundIndex - 35, 32);
+                        }
+                        //add ed 20170929【KMIBS-188】
+                    }
+                    else
+                        Console.Out.WriteLine("更新用の請求先を確認してください。 ");
+                }
+                // ED_ADD KMIBS-25
+
+                // ST_ADD KMIBS-51  納入先の変更
+                // Amendで納入先を変更する。
+                // 2_accountId:納入先IDを全て消した状態で、変更する納入先のみを編集してもらう
+                if (!string.IsNullOrEmpty(readedCsvCol[2]))
+                {
+                    ProxyActionqueryRequest zAccount = new ProxyActionqueryRequest();
+                    zAccount.QueryString = "select id from account where HARISCostomerNumber__c = '" + readedCsvCol[2] + "'";
+                    string changeAccountId = actionCreateApi.ProxyActionPOSTquery(zAccount);
+
+                    if (!string.IsNullOrEmpty(changeAccountId))
+                    {
+                        //Initialize the container
+                        ProxyActionamendRequest amendRequest = new ProxyActionamendRequest();
+                        List<AmendRequest> RequestsList = new List<AmendRequest>();
+                        AmendRequest zChgAmendRequest = new AmendRequest();
+
+                        AmendOptions amendOptions = new AmendOptions();
+                        amendOptions.GenerateInvoice = false;
+                        amendOptions.ProcessPayments = false;
+                        //amendOptions.InvoiceProcessingOptions = { };
+                        List<Amendment> amendmentsList = new List<Amendment>();
+                        Amendment amendMents = new Amendment();
+                        //mod st 20170929【KMIBS-188】アメンドでサブIDが変わるので追っていく
+                        //amendMents.SubscriptionId = readedCsvCol[1];
+                        amendMents.SubscriptionId = subscriptionID;
+                        //mod ed 20170929【KMIBS-188】
+                        amendMents.Name = readedCsvCol[8] + " : AmendForChangeAccountID";
+                        amendMents.Type = "OwnerTransfer";
+                        amendMents.ContractEffectiveDate = DateTime.Parse(readedCsvCol[11]);
+                        amendMents.DestinationAccountId = changeAccountId;
+                        amendmentsList.Add(amendMents);
+
+                        zChgAmendRequest.AmendOptions = amendOptions;
+                        zChgAmendRequest.Amendments = amendmentsList;
+                        RequestsList.Add(zChgAmendRequest);
+                        amendRequest.Requests = RequestsList;
+
+                        //ProxyActionamendResponse updateInvoiceID = actionCreateApi.ProxyActionPOSTamend(amendRequest);
+                        string resultChangeAccountID = actionCreateApi.ProxyActionPOSTamendString(amendRequest);
+                        Console.Out.WriteLine("resultChangeAccountID " + resultChangeAccountID);
+
+                        //add st 20170929【KMIBS-188】アメンドでサブIDが変わるので追っていく                       
+                        int foundIndex = resultChangeAccountID.IndexOf("TotalDeltaTcv");
+                        if (foundIndex > 0)
+                        {
+                            subscriptionID = resultChangeAccountID.Substring(foundIndex - 35, 32);
+                        }
+                        //add ed 20170929【KMIBS-188】
+                    }
+                    else
+                        Console.Out.WriteLine("更新用の納入先を確認してください。 ");
+                }
+                // ED_ADD KMIBS-51
+
+                //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し                
+                //return subscriptionsApi.PUTSubscription(subscriptionKey, subscription, "211.0");
+                if (updateOk)
+                    return subscriptionsApi.PUTSubscription(subscriptionKey, subscription, "211.0");
+                else
+                {
+                    PUTSubscriptionResponseType localVarResponse = null;
+                    return localVarResponse;
+                }
+                //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し                
             }
             catch (Exception ex)
             {
@@ -2292,6 +2516,21 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
             parser.TextFieldType = FieldType.Delimited;
             parser.SetDelimiters(","); // 区切り文字はコンマ
 
+            //add st 20170929【KMIBS-188】金額Zero、金額更新見直し
+            // CSV形式のテキストファイルの内容をDataTableに直接格納            
+            string filename = csvForUpdateDB;   //CSVファイル格納場所（実行ファイル同）
+            // データベースへ接続する(今回はCSVファイルを開く)
+            OleDbConnection connection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + Path.GetDirectoryName(filename) + "\\; Extended Properties=\"Text;HDR=YES;FMT=Delimited\"");
+            // クエリ文字列を作る
+            // ※ファイルパスを[]でくくること！
+            OleDbCommand command = new OleDbCommand("SELECT * FROM [" + Path.GetFileName(filename) + "]", connection);
+            DataSet dataset = new DataSet();
+            dataset.Clear();    // 念のためクリア
+            // CSVファイルの内容をDataSetに入れる
+            OleDbDataAdapter adapter = new OleDbDataAdapter(command);
+            adapter.Fill(dataset);
+            //add ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+
             int countCsv = 0;
             while (!parser.EndOfData)
             {
@@ -2314,8 +2553,12 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 // Status＝Activeのみ更新処理を行う：pendingの更新はできん
                 PUTSubscriptionResponseType subscResponse = null;
                 if (csvColumn[28].Equals("Active"))
-                {                    
-                    subscResponse = manager.updateSubscrWithCsv(csvColumn);
+                {
+                    //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                    //subscResponse = manager.updateSubscrWithCsv(csvColumn);
+                    subscResponse = manager.updateSubscrWithCsv(csvColumn, dataset);
+                    //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+
                     if (subscResponse != null)    //try catchにてNULLが返された場合のため
                         Console.Out.WriteLine("updateSubscrWithCsv(csvColumn) " + subscResponse.ToString());
                 }
@@ -2351,7 +2594,11 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                         ProxyActionupdateResponse updateSubToActive = actionCreateApi.ProxyActionPOSTupdate(zDefPayID);
                         Console.Out.WriteLine("pendingToActive : " + updateSubToActive.ToString());
 
-                        subscResponse = manager.updateSubscrWithCsv(csvColumn);
+                        //mod st 20170929【KMIBS-188】金額Zero、金額更新見直し
+                        //subscResponse = manager.updateSubscrWithCsv(csvColumn);
+                        subscResponse = manager.updateSubscrWithCsv(csvColumn, dataset);
+                        //mod ed 20170929【KMIBS-188】金額Zero、金額更新見直し
+
                         if (subscResponse != null)    //try catchにてNULLが返された場合のため
                             Console.Out.WriteLine("updateSubscrWithCsv(csvColumn)_AfterActivation: " + subscResponse.ToString());
                     }
@@ -2516,7 +2763,8 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                             {
                                 //TierのHeaderを追加する　by OnCoding 「,tier,startingUnit,endingUnit,price,priceFormat,ratePlanCharges_Id」
                                 //if (csvHeader.Length == 1607) //TR sandBox
-                                if (csvHeader.Length == 1837)   //MKI sandBox
+                                //if (csvHeader.Length == 1837)   //MKI sandBox
+                                if (csvHeader.Length == 1855)
                                 {
                                     swCsvWrite.WriteLine(csvHeader + ",tier,startingUnit,endingUnit,price,priceFormat,ratePlanCharges_Id");
                                 }
@@ -2560,6 +2808,12 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
         */
         public void deleteSubscription()
         {
+            //★ Print Log Out
+            // 出力先ファイル名 "5delete.txt"   追加書き込み true   文字コードSystem.Text.Encoding.GetEncoding("UTF-8")
+            StreamWriter sw = new StreamWriter("file\\5delete.txt", true, System.Text.Encoding.GetEncoding("UTF-8"));
+            Console.SetOut(sw); // 出力先（Outプロパティ）を設定
+            Console.Out.WriteLine("処理開始▶▶▶▶▶" + System.DateTime.Now); //処理開始
+
             //Initialize the Cancel Subscription request container
             POSTSubscriptionCancellationType cancelSub = new POSTSubscriptionCancellationType();
 
@@ -2567,7 +2821,7 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
             cancelSub.CancellationPolicy = "SpecificDate";
             //cancelSub.Invoice = false;
             cancelSub.CancellationEffectiveDate = new DateTime(2017, 07, 01);
-            
+
             string csvfile = @delSub;   //CSVファイル格納場所
             TextFieldParser parser = new TextFieldParser(csvfile, Encoding.GetEncoding("UTF-8"));
             parser.TextFieldType = FieldType.Delimited;
@@ -2592,11 +2846,14 @@ namespace SampleRESTClient.src.main.CsharpDotNet2.IO.Swagger.Managers
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("deleteSubscription() failed with message: " + ex.Message);
+                    Console.Out.WriteLine("deleteSubscription() failed with message: " + ex.Message);
                 }
             }
+            Console.Out.WriteLine("処理終了" + System.DateTime.Now); //処理終了
+            // Print Log Out            
+            sw.Dispose(); // ファイルを閉じてオブジェクトを破棄
+            System.Threading.Thread.Sleep(100);
         }
-
 
         /** #6 update OyaSubscriptionNo 
         * KMIBS-54 親subScription番号を更新登録する
